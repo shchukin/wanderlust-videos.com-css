@@ -24,7 +24,7 @@
         margin-top: 55px;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 3fr));
-        gap: 81px;
+        gap: 71px;
     }
         .about__feature {
             position: relative;
@@ -37,7 +37,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            left: -41px;
+            left: -36px;
             width: 1px;
             background-color: #D1D1D1;
         }
@@ -81,12 +81,15 @@
 
         .about__summary {
             margin-top: 74px;
-            gap: 4%;
+            gap: 101px;
         }
             .about__feature {
                 padding-top: 10px;
                 padding-bottom: 18px;
             }
+                .about__feature::before {
+                    left: -51px;
+                }
 
             .about__separator {
 
