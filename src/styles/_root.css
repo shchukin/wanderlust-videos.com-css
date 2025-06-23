@@ -1,14 +1,14 @@
 :root {
     --font: "DM Sans", sans-serif;
     --body-font-size: 15px;
-    --body-line-height: 26px;
+    --body-line-height: 24px;
     --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
     --transition-hover: 100ms ease;
     --transition-show: 1200ms var(--ease-out-quint);
     --image-fallback: #F3F5F4;
     --container-padding: 40px;
-    --action-color: #0D7FC5;
-    --action-color-hover: #2FA5ED;
+    --action-color: #670aea;
+    --action-color-hover: #9962e6;
     --input-border: #B3B3B3;
     --input-border-hover-and-focus: #7E7E7E;
     --placeholder-color: #999999;
