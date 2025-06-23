@@ -10,8 +10,6 @@
     --container-wide: 1200px;
     --container-narrow: 1140px;
     --container-padding: 30px;
-    --action-color: #670aea;
-    --action-color-hover: #9962e6;
     --input-border: #B3B3B3;
     --input-border-hover-and-focus: #7E7E7E;
     --placeholder-color: #999999;
@@ -19,6 +17,9 @@
     --disabled-color: #999999;
     --error: #FF0033;
     --pink: #f2289f;
+    --pink-hover: #ef5db3;
+    --blue: #670aea;
+    --blue-hover: #813ae5;
 }
 
 @media (1850px <= width) {

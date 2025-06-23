@@ -8,6 +8,11 @@
     margin-right: auto;
 }
 
+.container--wide {
+    max-width: 1580px;
+}
+
+
 @media (1850px <= width) {
 
     .container {
@@ -15,7 +20,12 @@
         min-width: 0;
         max-width: none;
     }
+
+    .container--wide {
+        width: 1820px;
+    }
 }
+
 
 @media (width < 740px) {
 
@@ -25,3 +35,5 @@
         max-width: none;
     }
 }
+
+
