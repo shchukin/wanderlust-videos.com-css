@@ -1,18 +1,19 @@
 .stats {
+    margin-top: 60px;
     display: grid;
-    grid-template-columns: minmax(0, 754px) 1fr;
+    grid-template-columns: minmax(0, 500px) 1fr;
     align-items: center;
-    gap: 108px;
+    gap: 60px;
 }
     .stats__video {
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 7px;
+        margin-bottom: 7px;
     }
 
     .stats__list {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 40px 48px;
+        gap: 30px 36px;
     }
         .stats__item {
 
@@ -21,9 +22,9 @@
                 margin-top: 0;
                 margin-bottom: 0;
                 font-weight: normal;
-                font-size: 48px;
-                line-height: 58px;
-                letter-spacing: -2px;
+                font-size: 34px;
+                line-height: 42px;
+                letter-spacing: -1.5px;
                 color: var(--pink);
             }
 
@@ -32,14 +33,59 @@
                 margin-bottom: 0;
                 display: block;
                 font-weight: normal;
-                font-size: 30px;
-                line-height: 38px;
+                font-size: 22px;
+                line-height: 26px;
                 color: #3d3d3d;
             }
 
             .stats__description {
-                margin-top: 12px;
-                font-size: 16px;
-                line-height: 24px;
+                margin-top: 9px;
+                font-size: 15px;
+                line-height: 22px;
                 color: #3d3d3d;
             }
+
+
+
+@media (1850px <= width) {
+
+    .stats {
+        margin-top: 90px;
+        grid-template-columns: minmax(0, 754px) 1fr;
+        gap: 108px;
+    }
+        .stats__video {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .stats__list {
+            gap: 40px 48px;
+        }
+            .stats__item {
+
+            }
+                .stats__value {
+                    font-size: 48px;
+                    line-height: 58px;
+                    letter-spacing: -2px;
+                    /*color: var(--pink);*/
+                }
+
+                .stats__heading {
+                    /*margin-top: 2px;*/
+                    /*margin-bottom: 0;*/
+                    /*display: block;*/
+                    /*font-weight: normal;*/
+                    font-size: 30px;
+                    line-height: 38px;
+                    /*color: #3d3d3d;*/
+                }
+
+                .stats__description {
+                    margin-top: 9px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    /*color: #3d3d3d;*/
+                }
+}
