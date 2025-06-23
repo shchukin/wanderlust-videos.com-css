@@ -15,7 +15,7 @@
         .about__description {
             margin-left: 30px;
             margin-top: 6px;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 26px;
         }
 
@@ -54,7 +54,7 @@
                 margin-top: 18px;
                 margin-bottom: 0;
                 font-size: 15px;
-                line-height: 26px;
+                line-height: 25px;
             }
 
 
@@ -102,3 +102,65 @@
                     line-height: 30px;
                 }
 }
+
+
+
+@media (width < 740px) {
+
+    .about {
+
+    }
+        .about__intro {
+            display: block;
+        }
+            .about__heading {
+                margin-right: 0;
+            }
+
+            .about__description {
+                margin-left: 0;
+                margin-top: 20px;
+                /*font-size: 15px;*/
+                /*line-height: 26px;*/
+            }
+
+
+        .about__summary {
+            margin-top: 40px;
+            border-top: 1px solid #D1D1D1;
+            padding-top: 40px;
+            display: block;
+            /*grid-template-columns: repeat(3, minmax(0, 3fr));*/
+            /*gap: 81px;*/
+        }
+            .about__feature {
+                /*position: relative;*/
+                margin-top: 32px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .about__feature:first-child {
+                margin-top: 0;
+            }
+
+            .about__feature::before {
+                display: none;
+            }
+
+            .about__feature:first-child::before {
+                /*display: none;*/
+            }
+                .about__sub-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                }
+
+                .about__entry {
+                    /*margin-top: 18px;*/
+                    /*margin-bottom: 0;*/
+                    /*font-size: 15px;*/
+                    /*line-height: 26px;*/
+                }
+}
+
