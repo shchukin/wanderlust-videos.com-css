@@ -18,6 +18,7 @@
     --disabled-background: #F6F6F6;
     --disabled-color: #999999;
     --error: #FF0033;
+    --pink: #f2289f;
 }
 
 @media (1850px <= width) {
