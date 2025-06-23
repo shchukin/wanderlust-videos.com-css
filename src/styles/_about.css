@@ -11,28 +11,28 @@
             margin-top: 0;
             margin-bottom: 0;
             font-weight: normal;
-            font-size: 48px;
-            line-height: 58px;
+            font-size: 36px;
+            line-height: 44px;
         }
 
         .about__description {
-            margin-left: 20px;
-            margin-top: 8px;
+            margin-left: 14px;
+            margin-top: 6px;
         }
 
 
     .about__summary {
-        margin-top: 74px;
+        margin-top: 55px;
         display: flex;
         align-items: stretch;
-        gap: 4%;
+        gap: 3%;
     }
         .about__feature {
             flex-grow: 1;
             flex-shrink: 0;
             flex-basis: 0;
-            padding-top: 10px;
-            padding-bottom: 18px;
+            padding-top: 6px;
+            padding-bottom: 13px;
         }
 
         .about__separator {
@@ -49,8 +49,70 @@
             }
 
             .about__entry {
-                margin-top: 22px;
+                margin-top: 18px;
                 margin-bottom: 0;
-                font-size: 16px;
-                line-height: 30px;
+                font-size: 15px;
+                line-height: 26px;
             }
+
+
+
+@media (1850px <= width) {
+
+    .about {
+
+    }
+        .about__intro {
+            /*display: grid;*/
+            /*grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);*/
+            /*gap: 4%;*/
+            /*align-items: center;*/
+        }
+            .about__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                /*font-weight: normal;*/
+                font-size: 48px;
+                line-height: 58px;
+            }
+
+            .about__description {
+                margin-left: 20px;
+                margin-top: 8px;
+            }
+
+
+        .about__summary {
+            margin-top: 74px;
+            /*display: flex;*/
+            /*align-items: stretch;*/
+            gap: 4%;
+        }
+            .about__feature {
+                /*flex-grow: 1;*/
+                /*flex-shrink: 0;*/
+                /*flex-basis: 0;*/
+                padding-top: 10px;
+                padding-bottom: 18px;
+            }
+
+            .about__separator {
+                /*width: 1px;*/
+                /*background-color: #D1D1D1;*/
+                /*text-indent: 200%;*/
+                /*white-space: nowrap;*/
+                /*overflow: hidden;*/
+            }
+
+                .about__sub-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                }
+
+                .about__entry {
+                    /*margin-top: 22px;*/
+                    /*margin-bottom: 0;*/
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+}
