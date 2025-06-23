@@ -1,7 +1,17 @@
 .title {
     font-weight: normal;
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.025em;
+}
+
+
+@media (1850px <= width) {
+
+    .title {
+        font-size: 48px;
+        line-height: 58px;
+    }
 }
 
 
