@@ -20,6 +20,9 @@
     --pink-hover: #ef5db3;
     --blue: #670aea;
     --blue-hover: #813ae5;
+    --red: #F12853;
+    --yellow: #F2A828;
+    --orange: #F37928;
 }
 
 @media (1850px <= width) {

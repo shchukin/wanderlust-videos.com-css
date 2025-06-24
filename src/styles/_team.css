@@ -1,0 +1,83 @@
+.team {
+    padding-top: 116px;
+    padding-bottom: 128px;
+    background-color: #120620;
+    background-image: url("../images/team-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color-scheme: dark;
+    color: #f2f2f2;
+}
+    .team__wrapper {
+
+    }
+        .team__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .team__description {
+            max-width: 940px;
+            margin-top: 28px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .team__list {
+            margin-top: 90px;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 30px;
+            justify-content: stretch;
+        }
+            .team__member {
+
+            }
+                .team__photo {
+                    padding: 6px;
+                    background-color: #F2F2F2;
+                    border-radius: 18px;
+                }
+                    .team__image {
+                        vertical-align: top;
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        border-radius: 12px;
+                    }
+
+                .team__name {
+                    margin-top: 20px;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: #FFFFFF;
+                }
+
+                .team__post {
+                    margin-top: 2px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+        .team__addition {
+            margin-top: 143px;
+            max-width: 1070px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 30px;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        .team__portfolio-link {
+            margin-top: 61px;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
