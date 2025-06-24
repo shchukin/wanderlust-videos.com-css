@@ -17,6 +17,14 @@
 @font-face {
     font-display: swap;
     font-family: "DM Sans";
+    font-weight: 500;
+    font-style: normal;
+    src: url("../fonts/dm-sans-v16-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "DM Sans";
     font-weight: 700;
     font-style: normal;
     src: url("../fonts/dm-sans-v16-latin-700.woff2") format("woff2");
