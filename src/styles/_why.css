@@ -60,9 +60,13 @@
                 padding-bottom: 15px;
             }
                 .why__item-icon {
-                    font-size: 30px;
-                    color: var(--blue);
+
                 }
+                    .why__item-icon.icon,
+                    .why__item-icon .icon {
+                        font-size: 30px;
+                        color: var(--blue);
+                    }
 
                 .why__reason {
                     display: block;
@@ -98,8 +102,11 @@
                     width: fit-content;
                     margin-left: auto;
                     margin-right: auto;
-                    font-size: 22px;
                 }
+                    .why__arrow.icon,
+                    .why__arrow .icon {
+                        font-size: 22px;
+                    }
 
                 .why__request {
                     margin-top: 22px;
@@ -131,8 +138,13 @@
         }
 
         .why--how-it-works .why__item-icon {
-            color: #FFFFFF;
+
         }
+
+            .why--how-it-works .why__item-icon.icon,
+            .why--how-it-works .why__item-icon .icon {
+                color: #FFFFFF;
+            }
 
         .why--how-it-works .why__reason {
             color: #FFFFFF;
@@ -187,8 +199,12 @@
                     padding-bottom: 20px;
                 }
                     .why__item-icon {
-                        font-size: 36px;
+
                     }
+                        .why__item-icon.icon,
+                        .why__item-icon .icon {
+                            font-size: 36px;
+                        }
 
                     .why__reason {
                         margin-top: 12px;
@@ -212,8 +228,11 @@
 
                     .why__arrow {
                         margin-top: 30px;
-                        font-size: 26px;
                     }
+                        .why__arrow.icon,
+                        .why__arrow .icon {
+                            font-size: 26px;
+                        }
 
                     .why__request {
                         margin-top: 28px;
