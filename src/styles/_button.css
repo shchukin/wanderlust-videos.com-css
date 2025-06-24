@@ -2,7 +2,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 6px;
     vertical-align: top;
     border: none;
     padding: 13px 28px;
@@ -24,6 +24,10 @@
     .button__icon {
         font-size: 20px;
         font-weight: 400;
+    }
+
+    .button__icon:first-child {
+        margin-left: -2px;
     }
 
 .button:hover {
