@@ -14,6 +14,14 @@
     }
 }
 
+@media (width < 740px) {
+
+    .title {
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
 
 
 .title--smaller {
@@ -29,6 +37,15 @@
     }
 }
 
+@media (width < 740px) {
+
+    .title--smaller {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+
 
 .title--smallest {
     font-size: 21px;
@@ -40,5 +57,13 @@
     .title--smallest {
         font-size: 24px;
         line-height: 32px;
+    }
+}
+
+@media (width < 740px) {
+
+    .title--smallest {
+        font-size: 18px;
+        line-height: 24px;
     }
 }
