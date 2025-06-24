@@ -1,6 +1,6 @@
 .why {
-    padding-top: 84px;
-    padding-bottom: 114px;
+    padding-top: 60px;
+    padding-bottom: 80px;
 }
     .why__wrapper {
         overflow: hidden; /* cut top border of the .why__item */
@@ -13,25 +13,25 @@
         }
 
         .why__description {
-            margin-top: 24px;
-            width: 1230px;
+            margin-top: 18px;
+            width: 1080px;
             margin-left: auto;
             margin-right: auto;
-            font-size: 18px;
-            line-height: 30px;
+            font-size: 16px;
+            line-height: 26px;
             text-align: center;
         }
 
         .why__action {
-            margin-top: 55px;
+            margin-top: 40px;
             width: fit-content;
             margin-left: auto;
             margin-right: auto;
         }
 
         .why__list {
-            --why-padding: 46px;
-            margin-top: 89px;
+            --why-padding: 32px;
+            margin-top: 60px;
             margin-left: calc(-1 * var(--why-padding));
             margin-right: calc(-1 * var(--why-padding));
             display: grid;
@@ -40,7 +40,7 @@
             .why__item {
                 border-top: 1px solid #D1D1D1;
                 border-left: 1px solid #D1D1D1;
-                padding: 56px var(--why-padding) 88px;
+                padding: 42px var(--why-padding) 54px;
             }
 
             .why__item:nth-child(3n+1) {
@@ -57,27 +57,27 @@
             .why__item:nth-last-child(1),
             .why__item:nth-last-child(2),
             .why__item:nth-last-child(3) {
-                padding-bottom: 20px;
+                padding-bottom: 15px;
             }
                 .why__item-icon {
-                    font-size: 36px;
+                    font-size: 30px;
                     color: var(--blue);
                 }
 
                 .why__reason {
                     display: block;
-                    margin-top: 12px;
+                    margin-top: 9px;
                     margin-bottom: 0;
                     font-weight: 500;
-                    font-size: 24px;
-                    line-height: 28px;
+                    font-size: 20px;
+                    line-height: 26px;
                     color: #252525;
                 }
 
                 .why__note {
-                    margin-top: 18px;
-                    font-size: 16px;
-                    line-height: 24px;
+                    margin-top: 14px;
+                    font-size: 15px;
+                    line-height: 22px;
                 }
 
             .why__item--action {
@@ -93,20 +93,20 @@
                 }
 
                 .why__arrow {
-                    margin-top: 30px;
+                    margin-top: 24px;
                     display: block;
                     width: fit-content;
                     margin-left: auto;
                     margin-right: auto;
-                    font-size: 26px;
+                    font-size: 22px;
                 }
 
                 .why__request {
-                    margin-top: 28px;
+                    margin-top: 22px;
                     width: fit-content;
                     margin-left: auto;
                     margin-right: auto;
-                    margin-bottom: 30px;
+                    margin-bottom: 24px;
                 }
                     .why__request.button,
                     .why__request .button {
@@ -115,8 +115,6 @@
 
 
 .why--how-it-works {
-    /*padding-top: 84px;*/
-    /*padding-bottom: 114px;*/
     background-color: #120421;
     background-image: url("../images/why-desktop.jpg");
     background-size: cover;
@@ -126,57 +124,104 @@
     color: #efefef;
 }
     .why--how-it-works .why__wrapper {
-        /*overflow: hidden; !* cut top border of the .why__item *!*/
+
     }
         .why--how-it-works .why__heading {
-            /*margin-top: 0;*/
-            /*margin-bottom: 0;*/
-            /*text-align: center;*/
             color: #FFFFFF;
         }
 
-        .why--how-it-works .why__description {
-            /*margin-top: 24px;*/
-            /*width: 1230px;*/
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
-            /*font-size: 18px;*/
-            /*line-height: 30px;*/
-            /*text-align: center;*/
+        .why--how-it-works .why__item-icon {
+            color: #FFFFFF;
         }
 
-        .why--how-it-works .why__action {
-            /*margin-top: 55px;*/
-            /*width: fit-content;*/
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
+        .why--how-it-works .why__reason {
+            color: #FFFFFF;
         }
 
-        .why--how-it-works .why__list {
-            /*--why-padding: 46px;*/
-            /*margin-top: 89px;*/
-            /*margin-left: calc(-1 * var(--why-padding));*/
-            /*margin-right: calc(-1 * var(--why-padding));*/
-            /*display: grid;*/
-            /*grid-template-columns: repeat(3, minmax(0, 1fr));*/
+@media (1850px <= width) {
+
+    .why {
+        padding-top: 84px;
+        padding-bottom: 114px;
+    }
+        .why__wrapper {
+
         }
-            .why--how-it-works .why__item {
-                /*border-top: 1px solid #D1D1D1;*/
-                /*border-left: 1px solid #D1D1D1;*/
-                /*padding: 56px var(--why-padding) 88px;*/
+            .why__heading {
+
             }
 
-            .why--how-it-works .why__item:nth-child(3n+1) {
-                /*border-left: none;*/
+            .why__description {
+                margin-top: 24px;
+                width: 1230px;
+                font-size: 18px;
+                line-height: 30px;
             }
-                .why--how-it-works .why__item-icon {
-                    color: #FFFFFF;
+
+            .why__action {
+                margin-top: 55px;
+            }
+
+            .why__list {
+                --why-padding: 46px;
+                margin-top: 89px;
+            }
+                .why__item {
+                    padding-top: 56px;
+                    padding-bottom: 88px;
                 }
 
-                .why--how-it-works .why__reason {
-                    color: #FFFFFF;
-                }
-
-                .why--how-it-works .why__note {
+                .why__item:nth-child(3n+1) {
 
                 }
+
+                .why__item:nth-child(1),
+                .why__item:nth-child(2),
+                .why__item:nth-child(3) {
+
+                }
+
+                .why__item:nth-last-child(1),
+                .why__item:nth-last-child(2),
+                .why__item:nth-last-child(3) {
+                    padding-bottom: 20px;
+                }
+                    .why__item-icon {
+                        font-size: 36px;
+                    }
+
+                    .why__reason {
+                        margin-top: 12px;
+                        font-size: 24px;
+                        line-height: 28px;
+                    }
+
+                    .why__note {
+                        margin-top: 18px;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                .why__item--action {
+
+                }
+
+                    .why__question {
+
+                    }
+
+                    .why__arrow {
+                        margin-top: 30px;
+                        font-size: 26px;
+                    }
+
+                    .why__request {
+                        margin-top: 28px;
+                        margin-bottom: 30px;
+                    }
+                        .why__request.button,
+                        .why__request .button {
+                            /*width: 266px;*/
+                        }
+}
+
