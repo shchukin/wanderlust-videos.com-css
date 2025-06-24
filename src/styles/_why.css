@@ -1,21 +1,19 @@
 .why {
-    padding-top: 84px;
+    padding-top: 96px;
     padding-bottom: 114px;
-    background-color: #120421;
-    color-scheme: dark;
-    color: #efefef;
 }
     .why__wrapper {
-        overflow: hidden; /* cut top border of the .why__reason */
+        overflow: hidden; /* cut top border of the .why__item */
     }
         .why__heading {
             margin-top: 0;
             margin-bottom: 0;
+            color: #252525;
             text-align: center;
         }
 
         .why__description {
-            margin-top: 24px;
+            margin-top: 14px;
             width: 1230px;
             margin-left: auto;
             margin-right: auto;
@@ -33,50 +31,119 @@
 
         .why__list {
             --why-padding: 46px;
-            margin-top: 89px;
+            margin-top: 99px;
             margin-left: calc(-1 * var(--why-padding));
             margin-right: calc(-1 * var(--why-padding));
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
-            .why__reason {
+            .why__item {
                 border-top: 1px solid #D1D1D1;
                 border-left: 1px solid #D1D1D1;
                 padding: 56px var(--why-padding) 88px;
             }
 
-            .why__reason:nth-child(3n+1) {
+            .why__item:nth-child(3n+1) {
                 border-left: none;
             }
 
-            .why__reason:nth-child(1),
-            .why__reason:nth-child(2),
-            .why__reason:nth-child(3) {
+            .why__item:nth-child(1),
+            .why__item:nth-child(2),
+            .why__item:nth-child(3) {
                 border-top: none;
                 padding-top: 0;
             }
 
-            .why__reason:nth-last-child(1),
-            .why__reason:nth-last-child(2),
-            .why__reason:nth-last-child(3) {
+            .why__item:nth-last-child(1),
+            .why__item:nth-last-child(2),
+            .why__item:nth-last-child(3) {
                 padding-bottom: 20px;
             }
-                .why__reason-icon {
+                .why__item-icon {
                     font-size: 36px;
-                    color: #FFFFFF;
+                    color: var(--blue);
                 }
 
-                .why__reason-heading {
+                .why__reason {
                     display: block;
                     margin-top: 12px;
                     margin-bottom: 0;
                     font-weight: 500;
                     font-size: 24px;
                     line-height: 28px;
+                    color: #252525;
                 }
 
-                .why__reason-description {
+                .why__note {
                     margin-top: 18px;
                     font-size: 16px;
                     line-height: 24px;
+                }
+
+
+.why--how-it-works {
+    padding-top: 84px;
+    /*padding-bottom: 114px;*/
+    background-color: #120421;
+    background-image: url("../images/why-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color-scheme: dark;
+    color: #efefef;
+}
+    .why--how-it-works .why__wrapper {
+        /*overflow: hidden; !* cut top border of the .why__item *!*/
+    }
+        .why--how-it-works .why__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+            /*text-align: center;*/
+            color: #FFFFFF;
+        }
+
+        .why--how-it-works .why__description {
+            margin-top: 24px;
+            /*width: 1230px;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*font-size: 18px;*/
+            /*line-height: 30px;*/
+            /*text-align: center;*/
+        }
+
+        .why--how-it-works .why__action {
+            /*margin-top: 55px;*/
+            /*width: fit-content;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+        }
+
+        .why--how-it-works .why__list {
+            /*--why-padding: 46px;*/
+            margin-top: 89px;
+            /*margin-left: calc(-1 * var(--why-padding));*/
+            /*margin-right: calc(-1 * var(--why-padding));*/
+            /*display: grid;*/
+            /*grid-template-columns: repeat(3, minmax(0, 1fr));*/
+        }
+            .why--how-it-works .why__item {
+                /*border-top: 1px solid #D1D1D1;*/
+                /*border-left: 1px solid #D1D1D1;*/
+                /*padding: 56px var(--why-padding) 88px;*/
+            }
+
+            .why--how-it-works .why__item:nth-child(3n+1) {
+                /*border-left: none;*/
+            }
+                .why--how-it-works .why__item-icon {
+                    color: #FFFFFF;
+                }
+
+                .why--how-it-works .why__reason {
+                    color: #FFFFFF;
+                }
+
+                .why--how-it-works .why__note {
+
                 }
