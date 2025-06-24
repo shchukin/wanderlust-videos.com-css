@@ -1,5 +1,5 @@
 .why {
-    padding-top: 96px;
+    padding-top: 84px;
     padding-bottom: 114px;
 }
     .why__wrapper {
@@ -13,7 +13,7 @@
         }
 
         .why__description {
-            margin-top: 14px;
+            margin-top: 24px;
             width: 1230px;
             margin-left: auto;
             margin-right: auto;
@@ -31,7 +31,7 @@
 
         .why__list {
             --why-padding: 46px;
-            margin-top: 99px;
+            margin-top: 89px;
             margin-left: calc(-1 * var(--why-padding));
             margin-right: calc(-1 * var(--why-padding));
             display: grid;
@@ -82,7 +82,7 @@
 
 
 .why--how-it-works {
-    padding-top: 84px;
+    /*padding-top: 84px;*/
     /*padding-bottom: 114px;*/
     background-color: #120421;
     background-image: url("../images/why-desktop.jpg");
@@ -103,7 +103,7 @@
         }
 
         .why--how-it-works .why__description {
-            margin-top: 24px;
+            /*margin-top: 24px;*/
             /*width: 1230px;*/
             /*margin-left: auto;*/
             /*margin-right: auto;*/
@@ -121,7 +121,7 @@
 
         .why--how-it-works .why__list {
             /*--why-padding: 46px;*/
-            margin-top: 89px;
+            /*margin-top: 89px;*/
             /*margin-left: calc(-1 * var(--why-padding));*/
             /*margin-right: calc(-1 * var(--why-padding));*/
             /*display: grid;*/
