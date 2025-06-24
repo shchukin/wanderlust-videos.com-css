@@ -80,6 +80,39 @@
                     line-height: 24px;
                 }
 
+            .why__item--action {
+                 background-color: #EFF0F0;
+            }
+
+                .why__question {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    display: block;
+                    font-weight: normal;
+                    text-align: center;
+                }
+
+                .why__arrow {
+                    margin-top: 30px;
+                    display: block;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                    font-size: 26px;
+                }
+
+                .why__request {
+                    margin-top: 28px;
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 30px;
+                }
+                    .why__request.button,
+                    .why__request .button {
+                        width: 266px;
+                    }
+
 
 .why--how-it-works {
     /*padding-top: 84px;*/

@@ -70,8 +70,6 @@
             max-width: 850px;
             margin-left: auto;
             margin-right: auto;
-            font-size: 24px;
-            line-height: 28px;
             text-align: center;
         }
 
@@ -133,8 +131,6 @@
             .team__addition {
                 margin-top: 143px;
                 max-width: 1070px;
-                font-size: 30px;
-                line-height: 36px;
             }
 
             .team__portfolio-link {
@@ -220,13 +216,12 @@
 
             .team__addition {
                 margin-top: 40px;
-                /*max-width: 850px;*/
-                /*margin-left: auto;*/
-                /*margin-right: auto;*/
-                font-size: 20px;
-                line-height: 32px;
-                /*text-align: center;*/
             }
+                .team__addition.title,
+                .team__addition .title {
+                    font-size: 20px;
+                    line-height: 32px;
+                }
 
             .team__portfolio-link {
                 /*margin-top: 45px;*/
