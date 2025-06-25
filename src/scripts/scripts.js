@@ -73,6 +73,7 @@
             const $preview = $accordion.find('.accordion__preview');
             const $header = $('.header');
             const headerHeight = $header.length ? $header.outerHeight() : 0;
+            const slideAnimationTime = 300;
 
             if (allowAllClosed || !isDesktop) {
                 // Logic for accordion where all items can be closed
@@ -80,36 +81,39 @@
                     // Collapse the current item
                     $item.removeClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
-                      .slideUp(300);
+                      .slideUp(slideAnimationTime);
                 } else {
                     // Expand the current item and collapse others
                     $item.addClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
-                      .slideDown(300);
+                      .slideDown(slideAnimationTime);
 
                     // Scroll to the item with offset for header
-
+                    // Have to do it after timeout because need to wait until things collapsed to get the final cooridinate
                     if(!isDesktop) {
-                        $('html, body').animate({
-                            scrollTop: $accordionBody.offset().top
-                        }, 300);
+                        setTimeout(function (){
+                            $('html, body').animate({
+                                scrollTop: $item.offset().top
+                            }, 200);
+                        }, slideAnimationTime);
                     }
+
 
                     $item.siblings('.accordion__item')
                       .removeClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
-                      .slideUp(300);
+                      .slideUp(slideAnimationTime);
 
                     // Update preview if it exists, though unlikely to be used with allowAllClosed
                     if ($preview.length) {
                         $preview.find('.accordion__slide')
                           .removeClass('accordion__slide--current')
-                          .fadeOut(300);
+                          .fadeOut(slideAnimationTime);
 
                         $preview.find('.accordion__slide')
                           .eq(index)
                           .addClass('accordion__slide--current')
-                          .fadeIn(300);
+                          .fadeIn(slideAnimationTime);
                     }
                 }
             } else {
@@ -121,31 +125,33 @@
                 // Expand the current item and collapse others
                 $item.addClass('accordion__item--expanded')
                   .find('.accordion__dropdown')
-                  .slideDown(300);
+                  .slideDown(slideAnimationTime);
 
                 // Scroll to the item with offset for header
-
+                // Have to do it after timeout because need to wait until things collapsed to get the final cooridinate
                 if(!isDesktop) {
-                    $('html, body').animate({
-                        scrollTop: $accordionBody.offset().top
-                    }, 300);
+                    setTimeout(function (){
+                        $('html, body').animate({
+                            scrollTop: $item.offset().top
+                        }, 200);
+                    }, slideAnimationTime);
                 }
 
                 $item.siblings('.accordion__item')
                   .removeClass('accordion__item--expanded')
                   .find('.accordion__dropdown')
-                  .slideUp(300);
+                  .slideUp(slideAnimationTime);
 
                 // Update preview if it exists
                 if ($preview.length) {
                     $preview.find('.accordion__slide')
                       .removeClass('accordion__slide--current')
-                      .fadeOut(300);
+                      .fadeOut(slideAnimationTime);
 
                     $preview.find('.accordion__slide')
                       .eq(index)
                       .addClass('accordion__slide--current')
-                      .fadeIn(300);
+                      .fadeIn(slideAnimationTime);
                 }
             }
         });
