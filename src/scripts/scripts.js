@@ -52,9 +52,15 @@
         /* Accordion */
 
         $('.accordion__handler').on('click', function() {
-            var $item = $(this).closest('.accordion__item');
-            var $accordion = $item.closest('.accordion');
-            var index = $item.index();
+
+            const $item = $(this).closest('.accordion__item')
+
+            if ($item.hasClass('accordion__item--expanded')) {
+                return;
+            }
+
+            const $accordion = $item.closest('.accordion');
+            const index = $item.index();
 
             // Toggle expanded class and animate accordion items
             $item.addClass('accordion__item--expanded')
@@ -67,7 +73,7 @@
               .slideUp(300);
 
             /* Если в аккордионе есть сайдбар с картинками */
-            var $preview = $accordion.find('.accordion__preview');
+            const $preview = $accordion.find('.accordion__preview');
             if ($preview.length) {
                 $preview.find('.accordion__slide')
                   .removeClass('accordion__slide--current')
@@ -79,5 +85,6 @@
                   .fadeIn(300);
             }
         });
+        
     });
 })(jQuery);

@@ -41,6 +41,12 @@
                     Offload your video editing without giving up quality or creative control. Wanderlust Videos works like an extension of your team, minus the hiring overhead. No contracts, no minimums, no hassle.
                 </div>
                 <div class="how__body">
+                    <!--
+                        First of .accordion__slide has class accordion__slide--current while remaining ones have style="display: none;"
+                        First of .accordion__item has class accordion__item--expanded while remaining ones have .accordion__dropdown CHILD with style="display: none;"
+                        Output it HTML just like that so the elements won't flash on document load.
+                        Note that at least one element is always expanded.
+                    -->
                     <div class="accordion">
                         <div class="accordion__preview">
                             <div class="accordion__slide accordion__slide--current">
@@ -79,7 +85,7 @@
                                 <button class="accordion__handler" type="button">
                                     Step 1: Set up your Wanderlust Videos account
                                 </button>
-                                <div class="accordion__dropdown" style="display: none;">
+                                <div class="accordion__dropdown">
                                     <div class="wysiwyg wysiwyg--halved">
                                         <p>Getting started is easy. Just sign up for your account to access your dashboard, upload footage, editing preferences and stay connected throughout the editing process. It only takes a minute!</p>
                                     </div>

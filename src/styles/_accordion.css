@@ -57,7 +57,7 @@
                     transition: background-color var(--transition-hover);
                 }
 
-                .accordion__handler:hover::before {
+                .accordion__item:not(.accordion__item--expanded) .accordion__handler:hover::before {
                     background-color: rgb(232 232 232 / 30%);
                 }
 
@@ -89,6 +89,7 @@
 
 }
     .accordion__item--expanded .accordion__handler {
+        cursor: default;
         color: var(--blue);
     }
         .accordion__item--expanded .accordion__handler::after {
