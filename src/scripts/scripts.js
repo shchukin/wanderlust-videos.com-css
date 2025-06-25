@@ -1,6 +1,19 @@
 (function($) {
     $(document).ready(function() {
 
+        /* Global constants  */
+
+        let isDesktop;
+
+        function initGlobalConstant() {
+            isDesktop = window.matchMedia("(min-width: 740px)").matches;
+        }
+
+        initGlobalConstant();
+        window.addEventListener('resize', initGlobalConstant);
+
+
+
         /* Select placeholder */
         function selectPlaceholder($element) {
             if ($element.val() === 'placeholder') {
@@ -58,7 +71,7 @@
             const allowAllClosed = $accordion.hasClass('accordion--allow-all-closed');
             const $preview = $accordion.find('.accordion__preview');
 
-            if (allowAllClosed) {
+            if (allowAllClosed || !isDesktop) {
                 // Логика для аккордеона, где можно закрывать все элементы
                 if ($item.hasClass('accordion__item--expanded')) {
                     // Сворачиваем текущий элемент
