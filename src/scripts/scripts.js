@@ -52,27 +52,46 @@
         /* Accordion */
 
         $('.accordion__handler').on('click', function() {
-
-            const $item = $(this).closest('.accordion__item')
-
-            if ($item.hasClass('accordion__item--expanded')) {
-                return;
-            }
-
+            const $item = $(this).closest('.accordion__item');
             const $accordion = $item.closest('.accordion');
             const index = $item.index();
+            const allowAllClosed = $accordion.hasClass('accordion--allow-all-closed');
 
-            // Toggle expanded class and animate accordion items
+            // Если аккордеон позволяет закрывать все элементы и текущий элемент активен
+            if (allowAllClosed && $item.hasClass('accordion__item--expanded')) {
+                // Сворачиваем текущий элемент
+                $item.removeClass('accordion__item--expanded')
+                  .find('.accordion__dropdown')
+                  .slideUp(300);
+
+                // Скрываем соответствующее превью, если есть
+                const $preview = $accordion.find('.accordion__preview');
+                if ($preview.length) {
+                    $preview.find('.accordion__slide')
+                      .removeClass('accordion__slide--current')
+                      .fadeOut(300);
+                }
+
+                return; // Прерываем выполнение, так как элемент свёрнут
+            }
+
+            // Если аккордеон не позволяет закрывать все элементы и элемент уже активен
+            if (!allowAllClosed && $item.hasClass('accordion__item--expanded')) {
+                return; // Игнорируем клик
+            }
+
+            // Разворачиваем текущий элемент
             $item.addClass('accordion__item--expanded')
               .find('.accordion__dropdown')
               .slideDown(300);
 
+            // Сворачиваем остальные элементы
             $item.siblings('.accordion__item')
               .removeClass('accordion__item--expanded')
               .find('.accordion__dropdown')
               .slideUp(300);
 
-            /* Если в аккордионе есть сайдбар с картинками */
+            // Обновляем превью, если оно есть
             const $preview = $accordion.find('.accordion__preview');
             if ($preview.length) {
                 $preview.find('.accordion__slide')
@@ -85,6 +104,6 @@
                   .fadeIn(300);
             }
         });
-        
+
     });
 })(jQuery);

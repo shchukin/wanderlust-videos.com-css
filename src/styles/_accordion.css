@@ -57,7 +57,7 @@
                     transition: background-color var(--transition-hover);
                 }
 
-                .accordion__item:not(.accordion__item--expanded) .accordion__handler:hover::before {
+                .accordion__handler:hover::before {
                     background-color: rgb(232 232 232 / 30%);
                 }
 
@@ -89,7 +89,6 @@
 
 }
     .accordion__item--expanded .accordion__handler {
-        cursor: default;
         color: var(--blue);
     }
         .accordion__item--expanded .accordion__handler::after {
@@ -98,5 +97,17 @@
 
     .accordion__item--expanded .accordion__dropdown {
 
+    }
+
+
+.accordion--allow-all-closed {
+
+}
+    .accordion:not(.accordion--allow-all-closed) .accordion__item--expanded .accordion__handler {
+        cursor: default;
+    }
+
+    .accordion:not(.accordion--allow-all-closed) .accordion__item--expanded .accordion__handler:hover::before {
+        background-color: transparent;
     }
 
