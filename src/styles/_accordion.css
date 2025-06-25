@@ -2,9 +2,10 @@
     display: flex;
     align-items: flex-start;
     --accordion-h-padding: 18px;
+    --right-padding-under-icon: 46px;
     gap: 80px;
 }
-    .accordion__preview {
+    .accordion__desktop-preview {
         flex-shrink: 0;
         position: relative;
         width: 405px;
@@ -35,7 +36,10 @@
         }
             .accordion__handler {
                 position: relative;
-                padding: 33px var(--accordion-h-padding) 35px;
+                padding-top: 33px;
+                padding-bottom: 35px;
+                padding-left: var(--accordion-h-padding);
+                padding-right: calc(var(--accordion-h-padding) + var(--right-padding-under-icon));
                 margin-left: calc(-1 * var(--accordion-h-padding));
                 margin-right: calc(-1 * var(--accordion-h-padding));
                 width: calc(100% + 2 * var(--accordion-h-padding));
@@ -80,8 +84,12 @@
             .accordion__dropdown {
                 margin-top: -8px;
                 padding-bottom: 36px;
+                padding-right: var(--right-padding-under-icon);
                 color: #575757;
             }
+                .accordion__mobile-preview {
+                    display: none;
+                }
 
 
 .accordion__item--expanded {
@@ -117,9 +125,10 @@
 
     .accordion {
         --accordion-h-padding: 24px;
+        --right-padding-under-icon: 54px;
         gap: 164px;
     }
-        .accordion__preview {
+        .accordion__desktop-preview {
             width: 540px;
             height: 480px;
         }
@@ -170,5 +179,95 @@
                     margin-top: -10px;
                     padding-bottom: 50px;
                 }
+                    .accordion__mobile-preview {
+
+                    }
+}
+
+
+
+@media (width < 740px) {
+
+    .accordion {
+        display: block;
+    }
+        .accordion__desktop-preview {
+            display: none;
+        }
+            .accordion__slide {
+
+            }
+                .accordion__image {
+
+                }
+
+        .accordion__body {
+            margin-top: 24px;
+        }
+            .accordion__item {
+
+            }
+
+            .accordion__item:first-child {
+                /*margin-top: 0;*/
+            }
+                .accordion__handler {
+                    /*position: relative;*/
+                    /*padding-top: 33px;*/
+                    /*padding-bottom: 35px;*/
+                    /*padding-left: var(--accordion-h-padding);*/
+                    /*padding-right: calc(var(--accordion-h-padding) + var(--right-padding-under-icon));*/
+                    margin: 0;
+                    padding: 20px 40px 20px 0;
+                    width: 100%;
+                    /*background-color: transparent;*/
+                    /*border: none;*/
+                    font-size: 20px;
+                    line-height: 26px;
+                    /*text-align: left;*/
+                    /*cursor: pointer;*/
+                }
+                    /* hover */
+                    .accordion__handler::before {
+                        display: none;
+                    }
+
+                    .accordion__handler:hover::before {
+                        /*background-color: rgb(232 232 232 / 30%);*/
+                    }
+
+                    /* plus */
+                    .accordion__handler::after {
+                        /*content: "";*/
+                        /*position: absolute;*/
+                        right: 0;
+                        /*top: 50%;*/
+                        /*margin-top: -14px;*/
+                        /*width: 28px;*/
+                        /*height: 28px;*/
+                        /*background-color: #E8E8E8;*/
+                        /*background-image: url("../vectors/add.svg");*/
+                        /*background-size: 22px 22px;*/
+                        /*background-repeat: no-repeat;*/
+                        /*background-position: center center;*/
+                        /*border-radius: 6px;*/
+                    }
+
+                .accordion__dropdown {
+                    /*margin-top: -8px;*/
+                    padding-right: 0;
+                    /*padding-bottom: 36px;*/
+                    /*padding-right: var(--right-padding-under-icon);*/
+                    /*color: #575757;*/
+                }
+                    .accordion__mobile-preview {
+                        display: block;
+                        margin-top: 18px;
+                    }
+                        .accordion__mobile-image {
+                            width: 100%;
+                            height: auto;
+                            vertical-align: top;
+                        }
 }
 
