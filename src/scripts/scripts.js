@@ -47,4 +47,29 @@
         showCloseBtn: false
     });
 
+
+    /* Accordion */
+
+    $(document).ready(function() {
+        $('.accordion__handler').on('click', function() {
+            var $item = $(this).closest('.accordion__item');
+            var $accordion = $item.closest('.accordion');
+            var index = $item.index();
+
+            // Toggle expanded class on accordion items
+            $item.addClass('accordion__item--expanded')
+              .siblings('.accordion__item')
+              .removeClass('accordion__item--expanded');
+
+            // If accordion__preview exists, update slide classes
+            var $preview = $accordion.find('.accordion__preview');
+            if ($preview.length) {
+                $preview.find('.accordion__slide')
+                  .removeClass('accordion__slide--current')
+                  .eq(index)
+                  .addClass('accordion__slide--current');
+            }
+        });
+    });
+
 })(jQuery);
