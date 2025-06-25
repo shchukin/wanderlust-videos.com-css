@@ -136,10 +136,10 @@ gulp.task('favicon', function () {
 
 // Temp: copy
 
-gulp.task('temp', function () {
-    return gulp.src('src/temp/**/*', {encoding: false})
+gulp.task('team', function () {
+    return gulp.src('src/team/**/*', {encoding: false})
         .pipe(plumber())
-        .pipe(gulp.dest('build/temp/'))
+        .pipe(gulp.dest('build/team/'))
         ;
 });
 
@@ -268,7 +268,7 @@ gulp.task('lint', function () {
 
 
 gulp.task('default', function (fn) {
-    run('clean', 'manifest', 'favicon', 'temp', 'content', 'images', 'markups', 'layouts', 'vendors', 'scripts', 'symbols', 'styles', 'lint', fn);
+    run('clean', 'manifest', 'favicon', 'team', 'content', 'images', 'markups', 'layouts', 'vendors', 'scripts', 'symbols', 'styles', 'lint', fn);
 });
 
 

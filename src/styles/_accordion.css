@@ -1,10 +1,18 @@
 .accordion {
     display: flex;
     align-items: flex-start;
+    --accordion-h-padding: 24px;
+    gap: 164px;
 }
     .accordion__preview {
-        flex-grow: 1;
+        flex-shrink: 0;
+        width: 540px;
+        height: 480px;
     }
+        .accordion__image {
+            vertical-align: top;
+            width: 100%;
+        }
 
     .accordion__body {
         flex-shrink: 0;
@@ -21,10 +29,10 @@
         }
             .accordion__handler {
                 position: relative;
-                padding: 44px 24px 47px;
-                margin-left: calc(-1 * 24px);
-                margin-right: calc(-1 * 24px);
-                width: calc(100% + 2 * 20px);
+                padding: 44px var(--accordion-h-padding) 47px;
+                margin-left: calc(-1 * var(--accordion-h-padding));
+                margin-right: calc(-1 * var(--accordion-h-padding));
+                width: calc(100% + 2 * var(--accordion-h-padding));
                 background-color: transparent;
                 border: none;
                 font-size: 24px;
@@ -32,6 +40,7 @@
                 text-align: left;
                 cursor: pointer;
             }
+                /* hover */
                 .accordion__handler::before {
                     content: "";
                     position: absolute;
@@ -43,6 +52,23 @@
 
                 .accordion__handler:hover::before {
                     background-color: rgb(232 232 232 / 30%);
+                }
+
+                /* plus */
+                .accordion__handler::after {
+                    content: "";
+                    position: absolute;
+                    right: var(--accordion-h-padding);
+                    top: 50%;
+                    margin-top: -16px;
+                    width: 32px;
+                    height: 32px;
+                    background-color: #E8E8E8;
+                    background-image: url("../vectors/add.svg");
+                    background-size: 24px 24px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    border-radius: 7px;
                 }
 
             .accordion__dropdown {
@@ -59,7 +85,11 @@
     .accordion__item--expanded .accordion__handler {
         color: var(--blue);
     }
+        .accordion__item--expanded .accordion__handler::after {
+            background-image: url("../vectors/remove.svg");
+        }
 
     .accordion__item--expanded .accordion__dropdown {
         display: block;
     }
+
