@@ -67,29 +67,40 @@
         $('.accordion__handler').on('click', function() {
             const $item = $(this).closest('.accordion__item');
             const $accordion = $item.closest('.accordion');
+            const $accordionBody = $item.closest('.accordion__body');
             const index = $item.index();
             const allowAllClosed = $accordion.hasClass('accordion--allow-all-closed');
             const $preview = $accordion.find('.accordion__preview');
+            const $header = $('.header');
+            const headerHeight = $header.length ? $header.outerHeight() : 0;
 
             if (allowAllClosed || !isDesktop) {
-                // Логика для аккордеона, где можно закрывать все элементы
+                // Logic for accordion where all items can be closed
                 if ($item.hasClass('accordion__item--expanded')) {
-                    // Сворачиваем текущий элемент
+                    // Collapse the current item
                     $item.removeClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
                       .slideUp(300);
                 } else {
-                    // Разворачиваем текущий элемент и сворачиваем остальные
+                    // Expand the current item and collapse others
                     $item.addClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
                       .slideDown(300);
+
+                    // Scroll to the item with offset for header
+
+                    if(!isDesktop) {
+                        $('html, body').animate({
+                            scrollTop: $accordionBody.offset().top
+                        }, 300);
+                    }
 
                     $item.siblings('.accordion__item')
                       .removeClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
                       .slideUp(300);
 
-                    // Обновляем превью, если есть, хотя в случае allowAllClosed оно вряд ли будет использоваться
+                    // Update preview if it exists, though unlikely to be used with allowAllClosed
                     if ($preview.length) {
                         $preview.find('.accordion__slide')
                           .removeClass('accordion__slide--current')
@@ -102,22 +113,30 @@
                     }
                 }
             } else {
-                // Логика для аккордеона, где один элемент всегда активен
+                // Logic for accordion where one item is always active
                 if ($item.hasClass('accordion__item--expanded')) {
-                    return; // Игнорируем клик на активный элемент
+                    return; // Ignore click on active item
                 }
 
-                // Разворачиваем текущий элемент и сворачиваем остальные
+                // Expand the current item and collapse others
                 $item.addClass('accordion__item--expanded')
                   .find('.accordion__dropdown')
                   .slideDown(300);
+
+                // Scroll to the item with offset for header
+
+                if(!isDesktop) {
+                    $('html, body').animate({
+                        scrollTop: $accordionBody.offset().top
+                    }, 300);
+                }
 
                 $item.siblings('.accordion__item')
                   .removeClass('accordion__item--expanded')
                   .find('.accordion__dropdown')
                   .slideUp(300);
 
-                // Обновляем превью, если есть
+                // Update preview if it exists
                 if ($preview.length) {
                     $preview.find('.accordion__slide')
                       .removeClass('accordion__slide--current')
