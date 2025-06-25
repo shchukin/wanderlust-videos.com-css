@@ -56,52 +56,65 @@
             const $accordion = $item.closest('.accordion');
             const index = $item.index();
             const allowAllClosed = $accordion.hasClass('accordion--allow-all-closed');
+            const $preview = $accordion.find('.accordion__preview');
 
-            // Если аккордеон позволяет закрывать все элементы и текущий элемент активен
-            if (allowAllClosed && $item.hasClass('accordion__item--expanded')) {
-                // Сворачиваем текущий элемент
-                $item.removeClass('accordion__item--expanded')
+            if (allowAllClosed) {
+                // Логика для аккордеона, где можно закрывать все элементы
+                if ($item.hasClass('accordion__item--expanded')) {
+                    // Сворачиваем текущий элемент
+                    $item.removeClass('accordion__item--expanded')
+                      .find('.accordion__dropdown')
+                      .slideUp(300);
+                } else {
+                    // Разворачиваем текущий элемент и сворачиваем остальные
+                    $item.addClass('accordion__item--expanded')
+                      .find('.accordion__dropdown')
+                      .slideDown(300);
+
+                    $item.siblings('.accordion__item')
+                      .removeClass('accordion__item--expanded')
+                      .find('.accordion__dropdown')
+                      .slideUp(300);
+
+                    // Обновляем превью, если есть, хотя в случае allowAllClosed оно вряд ли будет использоваться
+                    if ($preview.length) {
+                        $preview.find('.accordion__slide')
+                          .removeClass('accordion__slide--current')
+                          .fadeOut(300);
+
+                        $preview.find('.accordion__slide')
+                          .eq(index)
+                          .addClass('accordion__slide--current')
+                          .fadeIn(300);
+                    }
+                }
+            } else {
+                // Логика для аккордеона, где один элемент всегда активен
+                if ($item.hasClass('accordion__item--expanded')) {
+                    return; // Игнорируем клик на активный элемент
+                }
+
+                // Разворачиваем текущий элемент и сворачиваем остальные
+                $item.addClass('accordion__item--expanded')
+                  .find('.accordion__dropdown')
+                  .slideDown(300);
+
+                $item.siblings('.accordion__item')
+                  .removeClass('accordion__item--expanded')
                   .find('.accordion__dropdown')
                   .slideUp(300);
 
-                // Скрываем соответствующее превью, если есть
-                const $preview = $accordion.find('.accordion__preview');
+                // Обновляем превью, если есть
                 if ($preview.length) {
                     $preview.find('.accordion__slide')
                       .removeClass('accordion__slide--current')
                       .fadeOut(300);
+
+                    $preview.find('.accordion__slide')
+                      .eq(index)
+                      .addClass('accordion__slide--current')
+                      .fadeIn(300);
                 }
-
-                return; // Прерываем выполнение, так как элемент свёрнут
-            }
-
-            // Если аккордеон не позволяет закрывать все элементы и элемент уже активен
-            if (!allowAllClosed && $item.hasClass('accordion__item--expanded')) {
-                return; // Игнорируем клик
-            }
-
-            // Разворачиваем текущий элемент
-            $item.addClass('accordion__item--expanded')
-              .find('.accordion__dropdown')
-              .slideDown(300);
-
-            // Сворачиваем остальные элементы
-            $item.siblings('.accordion__item')
-              .removeClass('accordion__item--expanded')
-              .find('.accordion__dropdown')
-              .slideUp(300);
-
-            // Обновляем превью, если оно есть
-            const $preview = $accordion.find('.accordion__preview');
-            if ($preview.length) {
-                $preview.find('.accordion__slide')
-                  .removeClass('accordion__slide--current')
-                  .fadeOut(300);
-
-                $preview.find('.accordion__slide')
-                  .eq(index)
-                  .addClass('accordion__slide--current')
-                  .fadeIn(300);
             }
         });
 
