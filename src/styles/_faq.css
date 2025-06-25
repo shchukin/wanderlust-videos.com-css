@@ -1,0 +1,32 @@
+.faq {
+
+}
+    .faq__head {
+        position: relative;
+    }
+        .faq__inner {
+            max-width: 830px;
+        }
+
+        .faq__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .faq__description {
+
+        }
+
+        .faq__answers {
+
+        }
+
+        .faq__request {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+    .faq__body {
+
+    }

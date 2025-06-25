@@ -318,81 +318,83 @@
                     </div>
                 </div>
             </search>
-            <section>
-
-                <div class="accordion accordion--allow-all-closed">
-                    <!--
-                        Note "accordion--allow-all-closed" option
-                        First of .accordion__slide has class accordion__slide--current while remaining ones have style="display: none;"
-                        First of .accordion__item has class accordion__item--expanded while remaining ones have .accordion__dropdown CHILD with style="display: none;"
-                        Output it HTML just like that so the elements won't flash on document load.
-                    -->
-                    <div class="accordion__body">
-                        <div class="accordion__item accordion__item--expanded">
-                            <button class="accordion__handler" type="button">
-                                How are prices calculated?
-                            </button>
-                            <div class="accordion__dropdown">
-                                <div class="wysiwyg wysiwyg--halved">
-                                    <p>Getting started is easy. Just sign up for your account to access your dashboard, upload footage, editing preferences and stay connected throughout the editing process. It only takes a minute!</p>
+            <section class="faq container">
+                <div class="faq__head">
+                    <div class="faq__inner">
+                        <h2 class="faq__heading title">
+                            Still have questions? No problem!
+                        </h2>
+                        <div class="faq__description">
+                            Our team is here to answer questions, guide you through the process, and make sure you feel confident every step of the way.
+                        </div>
+                        <div class="faq__answers">
+                            <a class="link" href="contacts.html">Get more answers</a>
+                        </div>
+                        <div class="faq__request">
+                            <a class="button" href="contacts.html">
+                                <span class="icon">call</span>
+                                Request a call
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq__body">
+                    <div class="accordion accordion--allow-all-closed">
+                        <!--
+                            Note "accordion--allow-all-closed" option
+                            First of .accordion__slide has class accordion__slide--current while remaining ones have style="display: none;"
+                            First of .accordion__item has class accordion__item--expanded while remaining ones have .accordion__dropdown CHILD with style="display: none;"
+                            Output it HTML just like that so the elements won't flash on document load.
+                        -->
+                        <div class="accordion__body">
+                            <div class="accordion__item accordion__item--expanded">
+                                <button class="accordion__handler" type="button">
+                                    How are prices calculated?
+                                </button>
+                                <div class="accordion__dropdown">
+                                    <div class="wysiwyg wysiwyg--halved">
+                                        <p>Getting started is easy. Just sign up for your account to access your dashboard, upload footage, editing preferences and stay connected throughout the editing process. It only takes a minute!</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion__item">
-                            <button class="accordion__handler" type="button">
-                                What’s the difference between Wanderlust Lite and Pro?
-                            </button>
-                            <div class="accordion__dropdown" style="display: none;">
-                                <div class="wysiwyg wysiwyg--halved">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi deleniti doloribus eum expedita, in iusto magnam maiores molestiae non, repellat unde voluptate. Accusantium ad at consectetur</p>
-                                    <p>Deserunt dolore eius error eum ex hic ipsum iusto molestias nam natus nemo nesciunt numquam odit, officia perferendis quam quasi rem rerum sed sequi sint tenetur totam veniam? Ab adipisci animi aut blanditiis</p>
+                            <div class="accordion__item">
+                                <button class="accordion__handler" type="button">
+                                    What’s the difference between Wanderlust Lite and Pro?
+                                </button>
+                                <div class="accordion__dropdown" style="display: none;">
+                                    <div class="wysiwyg wysiwyg--halved">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi deleniti doloribus eum expedita, in iusto magnam maiores molestiae non, repellat unde voluptate. Accusantium ad at consectetur</p>
+                                        <p>Deserunt dolore eius error eum ex hic ipsum iusto molestias nam natus nemo nesciunt numquam odit, officia perferendis quam quasi rem rerum sed sequi sint tenetur totam veniam? Ab adipisci animi aut blanditiis</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion__item">
-                            <button class="accordion__handler" type="button">
-                                Can I ship you my hard drives?
-                            </button>
-                            <div class="accordion__dropdown" style="display: none;">
-                                <div class="wysiwyg wysiwyg--halved">
-                                    <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
-                                    <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                            <div class="accordion__item">
+                                <button class="accordion__handler" type="button">
+                                    Can I ship you my hard drives?
+                                </button>
+                                <div class="accordion__dropdown" style="display: none;">
+                                    <div class="wysiwyg wysiwyg--halved">
+                                        <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
+                                        <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="accordion__item">
-                            <button class="accordion__handler" type="button">
-                                I am just a beginner, can you help me?
-                            </button>
-                            <div class="accordion__dropdown" style="display: none;">
-                                <div class="wysiwyg wysiwyg--halved">
-                                    <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
-                                    <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                            <div class="accordion__item">
+                                <button class="accordion__handler" type="button">
+                                    I am just a beginner, can you help me?
+                                </button>
+                                <div class="accordion__dropdown" style="display: none;">
+                                    <div class="wysiwyg wysiwyg--halved">
+                                        <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
+                                        <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </section>
         </div>
-
-
-        <!-- .mfp -->
-<!--        <div class="window mfp-hide" id="login">-->
-<!--            <button class="window__close mfp-close" type="button">-->
-<!--                Close-->
-<!--            </button>-->
-<!--            <div class="login">-->
-<!--                <h2 class="login__heading">-->
-<!--                    Magnific Popup!-->
-<!--                </h2>-->
-<!--                <div class="login__body">-->
-<!--                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur debitis eligendi fugiat provident sed, velit! At debitis dolore fuga ipsum laudantium nemo reiciendis temporibus voluptates? Ab, accusantium aspernatur cumque dicta ducimus eaque eius eos eum in maxime nihil nulla numquam velit. Accusamus, aliquid atque beatae culpa cupiditate fugiat iure iusto non odit pariatur quae saepe ullam voluptatibus.-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
 
         <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
         <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
