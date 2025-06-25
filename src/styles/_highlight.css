@@ -1,3 +1,7 @@
 .highlight {
     color: var(--pink);
 }
+
+.highlight--blue {
+    color: var(--blue);
+}

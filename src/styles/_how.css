@@ -1,0 +1,57 @@
+.how {
+    padding-top: 95px;
+}
+    .how__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+        width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .how__description {
+        width: 940px;
+        margin: 18px auto 0;
+        font-size: var(--body-font-size);
+        line-height: var(--body-line-height);
+        text-align: center;
+    }
+
+    .how__body {
+
+    }
+
+    .how__footer {
+        width: 795px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+        .how__submit {
+            flex-shrink: 0;
+        }
+
+        .how__icon {
+            flex-shrink: 0;
+            color: #000000;
+        }
+            .how__icon.icon,
+            .how__icon .icon {
+                font-size: 20px;
+            }
+
+        .how__starting-message {
+
+        }
+            .how__note {
+                margin-top: 7px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #2f2f2f;
+            }
+
+            .how__note:first-child {
+                margin-top: 0;
+            }
