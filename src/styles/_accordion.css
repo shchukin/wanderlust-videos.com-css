@@ -6,13 +6,13 @@
 }
     .accordion__preview {
         flex-shrink: 0;
+        position: relative;
         width: 540px;
         height: 480px;
     }
         .accordion__slide {
-            width: 100%;
-            height: 100%;
-            display: none;
+            position: absolute;
+            inset: 0;
         }
             .accordion__image {
                 vertical-align: top;
@@ -79,7 +79,6 @@
                 }
 
             .accordion__dropdown {
-                display: none;
                 margin-top: -10px;
                 padding-bottom: 50px;
                 color: #575757;
@@ -97,10 +96,6 @@
         }
 
     .accordion__item--expanded .accordion__dropdown {
-        display: block;
-    }
 
-.accordion__slide--current {
-    display: block;
-}
+    }
 
