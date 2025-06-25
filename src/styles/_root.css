@@ -23,8 +23,6 @@
     --red: #F12853;
     --yellow: #F2A828;
     --orange: #F37928;
-
-    --how-content-width: 796px;
 }
 
 @media (1850px <= width) {
