@@ -2,12 +2,9 @@
     padding-top: 95px;
 }
     .how__heading {
-        margin-top: 0;
-        margin-bottom: 0;
-        text-align: center;
+        margin: 0 auto;
         width: 1100px;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: center;
     }
 
     .how__description {
@@ -19,11 +16,12 @@
     }
 
     .how__body {
-
+        margin-top: 143px;
     }
 
     .how__footer {
-        width: 795px;
+        margin-top: 51px;
+        width: var(--how-content-width);
         margin-left: auto;
         display: flex;
         align-items: center;
@@ -34,6 +32,8 @@
         }
 
         .how__icon {
+            margin-left: 4px;
+            line-height: 0;
             flex-shrink: 0;
             color: #000000;
         }
@@ -46,7 +46,7 @@
 
         }
             .how__note {
-                margin-top: 7px;
+                margin-top: 6px;
                 font-size: 16px;
                 line-height: 24px;
                 color: #2f2f2f;

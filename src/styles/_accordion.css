@@ -1,0 +1,65 @@
+.accordion {
+    display: flex;
+    align-items: flex-start;
+}
+    .accordion__preview {
+        flex-grow: 1;
+    }
+
+    .accordion__body {
+        flex-shrink: 0;
+        width: var(--how-content-width);
+    }
+        .accordion__item {
+            margin-top: -1px;
+            box-shadow: inset 0 1px 0 #000000,
+                        inset 0 -1px 0 #000000;
+        }
+
+        .accordion__item:first-child {
+            margin-top: 0;
+        }
+            .accordion__handler {
+                position: relative;
+                padding: 44px 24px 47px;
+                margin-left: calc(-1 * 24px);
+                margin-right: calc(-1 * 24px);
+                width: calc(100% + 2 * 20px);
+                background-color: transparent;
+                border: none;
+                font-size: 24px;
+                line-height: 32px;
+                text-align: left;
+                cursor: pointer;
+            }
+                .accordion__handler::before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    inset: 12px 0;
+                    border-radius: 12px;
+                    transition: background-color var(--transition-hover);
+                }
+
+                .accordion__handler:hover::before {
+                    background-color: rgb(232 232 232 / 30%);
+                }
+
+            .accordion__dropdown {
+                display: none;
+                margin-top: -10px;
+                padding-bottom: 50px;
+                color: #575757;
+            }
+
+
+.accordion__item--expanded {
+
+}
+    .accordion__item--expanded .accordion__handler {
+        color: var(--blue);
+    }
+
+    .accordion__item--expanded .accordion__dropdown {
+        display: block;
+    }
