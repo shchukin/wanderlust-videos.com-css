@@ -11,3 +11,12 @@
         padding-bottom: 63px;
     }
 }
+
+
+@media (width < 740px) {
+
+    .rush-edits {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}

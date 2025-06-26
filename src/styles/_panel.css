@@ -63,3 +63,34 @@
             font-size: 150px;
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .panel {
+        padding: 20px 28px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+        .panel__body {
+            margin-top: 12px;
+        }
+            .panel__heading {
+
+            }
+
+            .panel__description {
+                /*margin-top: 24px;*/
+            }
+
+        .panel__icon {
+            order: -1;
+            width: auto;
+            /*width: 348px;*/
+            margin-left: -8px;
+            font-weight: 200;
+            font-size: 64px;
+        }
+}
