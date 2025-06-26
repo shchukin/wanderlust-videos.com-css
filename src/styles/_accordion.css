@@ -103,19 +103,6 @@
     }
 
 
-.accordion--allow-all-closed {
-
-}
-    .accordion:not(.accordion--allow-all-closed) .accordion__item--expanded .accordion__handler {
-        cursor: default;
-    }
-
-    .accordion:not(.accordion--allow-all-closed) .accordion__item--expanded .accordion__handler:hover::before {
-        background-color: transparent;
-    }
-
-
-
 
 @media (1850px <= width) {
 
@@ -208,20 +195,11 @@
 
             }
                 .accordion__handler {
-                    /*position: relative;*/
-                    /*padding-top: 33px;*/
-                    /*padding-bottom: 35px;*/
-                    /*padding-left: var(--accordion-h-padding);*/
-                    /*padding-right: calc(var(--accordion-h-padding) + var(--right-padding-under-icon));*/
                     margin: 0;
                     padding: 20px 40px 20px 0;
                     width: 100%;
-                    /*background-color: transparent;*/
-                    /*border: none;*/
                     font-size: 20px;
                     line-height: 26px;
-                    /*text-align: left;*/
-                    /*cursor: pointer;*/
                 }
                     /* hover */
                     .accordion__handler::before {
@@ -229,32 +207,16 @@
                     }
 
                     .accordion__handler:hover::before {
-                        /*background-color: rgb(232 232 232 / 30%);*/
+
                     }
 
                     /* plus */
                     .accordion__handler::after {
-                        /*content: "";*/
-                        /*position: absolute;*/
                         right: 0;
-                        /*top: 50%;*/
-                        /*margin-top: -14px;*/
-                        /*width: 28px;*/
-                        /*height: 28px;*/
-                        /*background-color: #E8E8E8;*/
-                        /*background-image: url("../vectors/add.svg");*/
-                        /*background-size: 22px 22px;*/
-                        /*background-repeat: no-repeat;*/
-                        /*background-position: center center;*/
-                        /*border-radius: 6px;*/
                     }
 
                 .accordion__dropdown {
-                    /*margin-top: -8px;*/
                     padding-right: 0;
-                    /*padding-bottom: 36px;*/
-                    /*padding-right: var(--right-padding-under-icon);*/
-                    /*color: #575757;*/
                 }
                     .accordion__mobile-preview {
                         display: block;
@@ -269,12 +231,32 @@
 
 
 
-.accordion--two-columns {
+/* Code above is common to all accordions.
+   Code below is specific to unique accordions.
+ */
+
+
+.accordion--steps {
+
+}
+    @media (740px <= width) {
+        .accordion--steps .accordion__item--expanded .accordion__handler {
+            cursor: default;
+        }
+
+        .accordion--steps .accordion__item--expanded .accordion__handler:hover::before {
+            background-color: transparent;
+        }
+    }
+
+
+
+.accordion--faq {
 
 }
     @media (740px <= width) {
 
-        .accordion--two-columns .accordion__body {
+        .accordion--faq .accordion__body {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 0 30px;
@@ -283,7 +265,7 @@
 
     @media (1850px <= width) {
 
-        .accordion--two-columns .accordion__body {
+        .accordion--faq .accordion__body {
             gap: 0 42px;
         }
     }
