@@ -8,11 +8,15 @@
     </head>
     <body>
 
-        <div style="max-width: 1500px; margin: 0 auto; padding: 0 var(--container-padding);">
+        <div style="max-width: 1340px; margin: 0 auto; padding: 0 var(--container-padding);">
             <br>
             <br>
             <h1>.accordion</h1>
 
+            <p>
+                Simple default case. Traditional behavior: opening one item closes the others. Closing the current item is allowed. Works similarly on desktop and smartphones.
+            </p>
+            <br>
 
             <div class="accordion">
                 <!--
@@ -22,7 +26,7 @@
                 <div class="accordion__body">
                     <div class="accordion__item">
                         <button class="accordion__handler" type="button">
-                            How are prices calculated?
+                            Lorem ipsum dolor sit amet
                         </button>
                         <div class="accordion__dropdown" style="display: none;">
                             <div class="wysiwyg wysiwyg--halved">
@@ -32,7 +36,7 @@
                     </div>
                     <div class="accordion__item">
                         <button class="accordion__handler" type="button">
-                            What’s the difference between Wanderlust Lite and Pro?
+                            Consectetur adipisicing
                         </button>
                         <div class="accordion__dropdown" style="display: none;">
                             <div class="wysiwyg wysiwyg--halved">
@@ -43,7 +47,7 @@
                     </div>
                     <div class="accordion__item">
                         <button class="accordion__handler" type="button">
-                            Can I ship you my hard drives?
+                            Fuga iusto molestias natus nostrum repellendus
                         </button>
                         <div class="accordion__dropdown" style="display: none;">
                             <div class="wysiwyg wysiwyg--halved">
@@ -54,7 +58,7 @@
                     </div>
                     <div class="accordion__item">
                         <button class="accordion__handler" type="button">
-                            I am just a beginner, can you help me?
+                            Ab ad amet consectetur dignissimos dolorem ipsa itaque
                         </button>
                         <div class="accordion__dropdown" style="display: none;">
                             <div class="wysiwyg wysiwyg--halved">
@@ -71,6 +75,10 @@
             <br>
             <br>
             <h2>.accordion--steps</h2>
+            <p>
+                On desktops, we have a slideshow that must be synced with the accordion. This means that at least one item must always be expanded.
+                On smartphones, it works the same as other accordions (image slides are located inside the accordion items).
+            </p>
             <br>
 
             <div class="accordion accordion--steps">
@@ -202,6 +210,11 @@
             <br>
             <br>
             <h2>.accordion--faq</h2>
+            <p>
+                Due to the two-column layout on desktops, we can't close sibling items when expanding others (that just looks strange).
+                So, allow the items to expand freely and independently of each other. On smartphones, it works the same as other accordions.
+            </p>
+            <br>
 
             <div class="accordion accordion--faq">
                 <!--

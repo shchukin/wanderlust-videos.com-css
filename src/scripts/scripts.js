@@ -4,9 +4,11 @@
         /* Global constants  */
 
         let isDesktop;
+        let isMobile;
 
         function initGlobalConstant() {
             isDesktop = window.matchMedia("(min-width: 740px)").matches;
+            isMobile = !isDesktop;
         }
 
         initGlobalConstant();
@@ -73,12 +75,17 @@
             const headerHeight = $header.length ? $header.outerHeight() : 0;
             const expandingAnimationTime = 300;
 
-            /* Default behavior for all devices OR fallback for accordion--steps and accordion--faq on mobile
-             *
+            /* On smartphone, all the accordions behaves the same.
+             * On desktop default accordion also behaves the same but .accordion--steps and .accordion--faq are exception.
+             * Their behaviour is written inside "else" down below
              */
-            if ((!$accordion.hasClass('accordion--steps') && !$accordion.hasClass('accordion--faq')) || !isDesktop) {
+            if (isMobile || (!$accordion.hasClass('accordion--steps') && !$accordion.hasClass('accordion--faq'))) {
 
-                /* Close current item if user want that */
+                /* This is pretty traditional logic: opening one item closes the others.
+                 * Closing the current item is allowed:
+                 */
+
+                /* Close the current item if user want that */
                 if ($item.hasClass('accordion__item--expanded')) {
                     $item.removeClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
@@ -99,10 +106,10 @@
 
                 /* Scroll document the way that currently open question will be on top of the screen
                  * This is necessary in the case if the item above is closing moving newly open question
-                 * behind the screen. Note that you have to do it after items are collapsed to calculate
-                 * coordinates correctly (after everything stop moving).
+                 * behind the screen. Note that to calculate coordinates correctly you have to run it
+                 * after everything stop moving.
                  */
-                if(!isDesktop) {
+                if(isMobile) {
                     setTimeout(function (){
                         $('html, body').animate({
                             scrollTop: $item.offset().top + 1 /* plus one is to hide the border behind the screen */
@@ -111,7 +118,7 @@
                 }
             }
 
-            /* Special behavior for accordion--steps (desktop only) */
+            /* Special behavior for .accordion--steps (desktop only) */
             else if ($accordion.hasClass('accordion--steps') && isDesktop) {
 
                 /* Can't close current item because whole section, including slideshow will collapse */
@@ -151,24 +158,9 @@
                       .find('.accordion__dropdown')
                       .slideUp(expandingAnimationTime);
                 } else {
-
                     $item.addClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
                       .slideDown(expandingAnimationTime);
-
-                    /* Scroll document the way that currently open question will be on top of the screen
-                     * This is necessary in the case if the item above is closing moving newly open question
-                     * behind the screen. Note that you have to do it after items are collapsed to calculate
-                     * coordinates correctly (after everything stop moving).
-                     */
-                    if(!isDesktop) {
-                        setTimeout(function (){
-                            $('html, body').animate({
-                                scrollTop: $item.offset().top + 1 /* plus one is to hide the border behind the screen */
-                            }, 200);
-                        }, expandingAnimationTime);
-                    }
-
                 }
             }
         });
