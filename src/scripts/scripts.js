@@ -62,7 +62,12 @@
         });
 
 
-        /* Accordion */
+        /* Accordion
+         *
+         * At the moment there are two accordions in the project: "Steps" and "Faq".
+         * Both work in non-traditional way with their own features.
+         * So there are two separated code pieces and no global code for them.
+         */
 
         $('.accordion--steps .accordion__handler').on('click', function() {
             const $item = $(this).closest('.accordion__item');
@@ -73,13 +78,15 @@
             const headerHeight = $header.length ? $header.outerHeight() : 0;
             const expandingAnimationTime = 300;
 
-            // On desktop one item is always active
+            /* On desktop one item is always active, and also there is slideshow presented */
             if (isDesktop) {
 
+                /* Can't close current item because whole section, including slideshow will collapse */
                 if ($item.hasClass('accordion__item--expanded')) {
                     return;
                 }
 
+                /* Open itself */
                 $item.addClass('accordion__item--expanded')
                   .find('.accordion__dropdown')
                   .slideDown(expandingAnimationTime);
@@ -90,7 +97,7 @@
                   .find('.accordion__dropdown')
                   .slideUp(expandingAnimationTime);
 
-                /* Images slideshow */
+                /* Sync with images slideshow */
                 if ($preview.length) {
                     $preview.find('.accordion__slide')
                       .removeClass('accordion__slide--current')
@@ -101,9 +108,13 @@
                       .addClass('accordion__slide--current')
                       .fadeIn(expandingAnimationTime);
                 }
-            } else {
+            }
 
-                /* On smartphone logic is more traditional. Images are inside of items now */
+            /* On smartphone logic is more traditional: can close current item now and there
+             * is no more slideshow to sync.
+             */
+            else {
+
                 if ($item.hasClass('accordion__item--expanded')) {
                     $item.removeClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
