@@ -133,5 +133,35 @@
             }
         });
 
+
+        $('.accordion--faq .accordion__handler').on('click', function() {
+            const $item = $(this).closest('.accordion__item');
+            const $header = $('.header');
+            const headerHeight = $header.length ? $header.outerHeight() : 0;
+            const expandingAnimationTime = 300;
+
+            if ($item.hasClass('accordion__item--expanded')) {
+                $item.removeClass('accordion__item--expanded')
+                  .find('.accordion__dropdown')
+                  .slideUp(expandingAnimationTime);
+            } else {
+
+                $item.addClass('accordion__item--expanded')
+                  .find('.accordion__dropdown')
+                  .slideDown(expandingAnimationTime);
+
+                // Scroll to the item with offset for header
+                // Have to do it after timeout because need to wait until things collapsed to get the final cooridinate
+                if(!isDesktop) {
+                    setTimeout(function (){
+                        $('html, body').animate({
+                            scrollTop: $item.offset().top + 1 /* plus one is to hide border */
+                        }, 200);
+                    }, expandingAnimationTime);
+                }
+
+            }
+        });
+
     });
 })(jQuery);
