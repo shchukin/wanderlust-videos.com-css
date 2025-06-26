@@ -1,0 +1,45 @@
+.difference {
+    padding-top: 61px;
+    padding-bottom: 75px;
+}
+    .difference__heading {
+        max-width: 620px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .difference__description {
+        max-width: 711px;
+        margin-top: 19px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .difference__body {
+        margin-top: 64px;
+        height: 200px;
+        background: purple;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .difference {
+        padding-top: 82px;
+        padding-bottom: 100px;
+    }
+        .difference__heading {
+            max-width: 750px;
+        }
+
+        .difference__description {
+            max-width: 884px;
+            margin-top: 25px;
+        }
+
+        .difference__body {
+            margin-top: 86px;
+        }
+}

@@ -24,6 +24,29 @@
 
 
 
+.title--small {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+@media (1850px <= width) {
+
+    .title--small {
+        font-size: 36px;
+        line-height: 43px;
+    }
+}
+
+@media (width < 740px) {
+
+    .title--small {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+
+
 .title--smaller {
     font-size: 24px;
     line-height: 28px;
