@@ -62,14 +62,9 @@
         });
 
 
-        /* Accordion
-         *
-         * At the moment there are two accordions in the project: "Steps" and "Faq".
-         * Both work in non-traditional way with their own features.
-         * So there are two separated code pieces and no global code for them.
-         */
+        /* Accordion */
 
-        $('.accordion--steps .accordion__handler').on('click', function() {
+        $('.accordion__handler').on('click', function() {
             const $item = $(this).closest('.accordion__item');
             const $accordion = $item.closest('.accordion');
             const index = $item.index();
@@ -78,44 +73,12 @@
             const headerHeight = $header.length ? $header.outerHeight() : 0;
             const expandingAnimationTime = 300;
 
-            /* On desktop one item is always active, and also there is slideshow presented */
-            if (isDesktop) {
+            /* On smartphone all accordions works the same and their logic is kinda traditional:
+               user can close current item, there is no slideshow to sync and so on.
+            */
+            if (!isDesktop) {
 
-                /* Can't close current item because whole section, including slideshow will collapse */
-                if ($item.hasClass('accordion__item--expanded')) {
-                    return;
-                }
-
-                /* Open itself */
-                $item.addClass('accordion__item--expanded')
-                  .find('.accordion__dropdown')
-                  .slideDown(expandingAnimationTime);
-
-                /* Close siblings */
-                $item.siblings('.accordion__item')
-                  .removeClass('accordion__item--expanded')
-                  .find('.accordion__dropdown')
-                  .slideUp(expandingAnimationTime);
-
-                /* Sync with images slideshow */
-                if ($preview.length) {
-                    $preview.find('.accordion__slide')
-                      .removeClass('accordion__slide--current')
-                      .fadeOut(expandingAnimationTime);
-
-                    $preview.find('.accordion__slide')
-                      .eq(index)
-                      .addClass('accordion__slide--current')
-                      .fadeIn(expandingAnimationTime);
-                }
-            }
-
-            /* On smartphone logic is more traditional: can close current item now and there
-             * is no more slideshow to sync.
-             */
-            else {
-
-                /* Close self if user want that */
+                /* Close current item if user want that */
                 if ($item.hasClass('accordion__item--expanded')) {
                     $item.removeClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
@@ -146,39 +109,67 @@
                         }, 200);
                     }, expandingAnimationTime);
                 }
-
             }
-        });
 
+            /* On desktop one item is always active, and also there is slideshow presented */
+            else {
 
-            
-        $('.accordion--faq .accordion__handler').on('click', function() {
-            const $item = $(this).closest('.accordion__item');
-            const $header = $('.header');
-            const headerHeight = $header.length ? $header.outerHeight() : 0;
-            const expandingAnimationTime = 300;
+                if( $accordion.hasClass('accordion--steps') ) {
+                    /* Can't close current item because whole section, including slideshow will collapse */
+                    if ($item.hasClass('accordion__item--expanded')) {
+                        return;
+                    }
 
-            if ($item.hasClass('accordion__item--expanded')) {
-                $item.removeClass('accordion__item--expanded')
-                  .find('.accordion__dropdown')
-                  .slideUp(expandingAnimationTime);
-            } else {
+                    /* Open itself */
+                    $item.addClass('accordion__item--expanded')
+                      .find('.accordion__dropdown')
+                      .slideDown(expandingAnimationTime);
 
-                $item.addClass('accordion__item--expanded')
-                  .find('.accordion__dropdown')
-                  .slideDown(expandingAnimationTime);
+                    /* Close siblings */
+                    $item.siblings('.accordion__item')
+                      .removeClass('accordion__item--expanded')
+                      .find('.accordion__dropdown')
+                      .slideUp(expandingAnimationTime);
 
-                /* Scroll document the way that currently open question will be on top of the screen
-                 * This is necessary in the case if the item above is closing moving newly open question
-                 * behind the screen. Note that you have to do it after items are collapsed to calculate
-                 * coordinates correctly (after everything stop moving).
-                 */
-                if(!isDesktop) {
-                    setTimeout(function (){
-                        $('html, body').animate({
-                            scrollTop: $item.offset().top + 1 /* plus one is to hide the border behind the screen */
-                        }, 200);
-                    }, expandingAnimationTime);
+                    /* Sync with images slideshow */
+                    if ($preview.length) {
+                        $preview.find('.accordion__slide')
+                          .removeClass('accordion__slide--current')
+                          .fadeOut(expandingAnimationTime);
+
+                        $preview.find('.accordion__slide')
+                          .eq(index)
+                          .addClass('accordion__slide--current')
+                          .fadeIn(expandingAnimationTime);
+                    }
+                }
+
+                if( $accordion.hasClass('accordion--faq') ) {
+
+                    if ($item.hasClass('accordion__item--expanded')) {
+                        $item.removeClass('accordion__item--expanded')
+                          .find('.accordion__dropdown')
+                          .slideUp(expandingAnimationTime);
+                    } else {
+
+                        $item.addClass('accordion__item--expanded')
+                          .find('.accordion__dropdown')
+                          .slideDown(expandingAnimationTime);
+
+                        /* Scroll document the way that currently open question will be on top of the screen
+                         * This is necessary in the case if the item above is closing moving newly open question
+                         * behind the screen. Note that you have to do it after items are collapsed to calculate
+                         * coordinates correctly (after everything stop moving).
+                         */
+                        if(!isDesktop) {
+                            setTimeout(function (){
+                                $('html, body').animate({
+                                    scrollTop: $item.offset().top + 1 /* plus one is to hide the border behind the screen */
+                                }, 200);
+                            }, expandingAnimationTime);
+                        }
+
+                    }
                 }
 
             }
