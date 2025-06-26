@@ -48,10 +48,10 @@
                 <div class="how__body">
                     <div class="accordion accordion--steps">
                         <!--
-                            First of .accordion__slide has class accordion__slide--current while remaining ones have style="display: none;"
+                          • Note .accordion--steps option.
+                          • First of .accordion__slide has class accordion__slide--current while remaining ones have style="display: none;"
                             First of .accordion__item has class accordion__item--expanded while remaining ones have .accordion__dropdown CHILD with style="display: none;"
-                            Output it HTML just like that so the elements won't flash on document load.
-                            Note that at least one element is always expanded.
+                            (This is necessary so the page won't flash on document load)
                         -->
                         <div class="accordion__desktop-preview">
                             <div class="accordion__slide accordion__slide--current">
@@ -341,10 +341,8 @@
                 <div class="faq__body">
                     <div class="accordion accordion--faq">
                         <!--
-                            Note "accordion--faq" option
-                            First of .accordion__slide has class accordion__slide--current while remaining ones have style="display: none;"
-                            First of .accordion__item has class accordion__item--expanded while remaining ones have .accordion__dropdown CHILD with style="display: none;"
-                            Output it HTML just like that so the elements won't flash on document load.
+                            • Note "accordion--faq" option.
+                            • All of .accordion__dropdown have style="display: none; by default
                         -->
                         <div class="accordion__body">
                             <div class="accordion__item">
