@@ -1,0 +1,13 @@
+.rush-edits {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+@media (1850px <= width) {
+
+    .rush-edits {
+        padding-top: 63px;
+        padding-bottom: 63px;
+    }
+}
