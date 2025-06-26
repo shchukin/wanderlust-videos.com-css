@@ -93,7 +93,7 @@
                     if(!isDesktop) {
                         setTimeout(function (){
                             $('html, body').animate({
-                                scrollTop: $item.offset().top
+                                scrollTop: $item.offset().top + 1 /* p;us one is to hide border */
                             }, 200);
                         }, slideAnimationTime);
                     }
