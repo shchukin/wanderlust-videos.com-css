@@ -32,10 +32,20 @@
         .team__list {
             margin-top: 70px;
             display: grid;
-            grid-template-columns: repeat(6, minmax(0, 1fr));
+
+            /* variant based on with:
+               grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+             */
+            grid-template-columns: repeat(5, minmax(0, 1fr));
             gap: 24px;
             justify-content: stretch;
         }
+
+        /* 11+ items */
+        .team__list:has(.team__member:nth-child(11)) {
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+        }
+
             .team__member {
 
             }

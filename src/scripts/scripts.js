@@ -165,5 +165,13 @@
             }
         });
 
+
+        /* Team: add container--wid if 11+ members */
+
+        const $teamList = $('.team__list');
+        if ($teamList.find('.team__member').length >= 11) {
+            $teamList.closest('.container').addClass('container--wide');
+        }
+
     });
 })(jQuery);
