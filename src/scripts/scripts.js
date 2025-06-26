@@ -73,10 +73,10 @@
             const headerHeight = $header.length ? $header.outerHeight() : 0;
             const expandingAnimationTime = 300;
 
-            /* On smartphone all accordions works the same and their logic is kinda traditional:
-               user can close current item, there is no slideshow to sync and so on.
-            */
-            if (!isDesktop) {
+            /* Default behavior for all devices OR fallback for accordion--steps and accordion--faq on mobile
+             *
+             */
+            if ((!$accordion.hasClass('accordion--steps') && !$accordion.hasClass('accordion--faq')) || !isDesktop) {
 
                 /* Close current item if user want that */
                 if ($item.hasClass('accordion__item--expanded')) {
@@ -111,67 +111,65 @@
                 }
             }
 
-            /* On desktop one item is always active, and also there is slideshow presented */
-            else {
+            /* Special behavior for accordion--steps (desktop only) */
+            else if ($accordion.hasClass('accordion--steps') && isDesktop) {
 
-                if( $accordion.hasClass('accordion--steps') ) {
-                    /* Can't close current item because whole section, including slideshow will collapse */
-                    if ($item.hasClass('accordion__item--expanded')) {
-                        return;
-                    }
+                /* Can't close current item because whole section, including slideshow will collapse */
+                if ($item.hasClass('accordion__item--expanded')) {
+                    return;
+                }
 
-                    /* Open itself */
+                /* Open itself */
+                $item.addClass('accordion__item--expanded')
+                  .find('.accordion__dropdown')
+                  .slideDown(expandingAnimationTime);
+
+                /* Close siblings */
+                $item.siblings('.accordion__item')
+                  .removeClass('accordion__item--expanded')
+                  .find('.accordion__dropdown')
+                  .slideUp(expandingAnimationTime);
+
+                /* Sync with images slideshow */
+                if ($preview.length) {
+                    $preview.find('.accordion__slide')
+                      .removeClass('accordion__slide--current')
+                      .fadeOut(expandingAnimationTime);
+
+                    $preview.find('.accordion__slide')
+                      .eq(index)
+                      .addClass('accordion__slide--current')
+                      .fadeIn(expandingAnimationTime);
+                }
+            }
+
+            /* Special behavior for accordion--faq (desktop only) */
+            else if ($accordion.hasClass('accordion--faq') && isDesktop) {
+
+                if ($item.hasClass('accordion__item--expanded')) {
+                    $item.removeClass('accordion__item--expanded')
+                      .find('.accordion__dropdown')
+                      .slideUp(expandingAnimationTime);
+                } else {
+
                     $item.addClass('accordion__item--expanded')
                       .find('.accordion__dropdown')
                       .slideDown(expandingAnimationTime);
 
-                    /* Close siblings */
-                    $item.siblings('.accordion__item')
-                      .removeClass('accordion__item--expanded')
-                      .find('.accordion__dropdown')
-                      .slideUp(expandingAnimationTime);
-
-                    /* Sync with images slideshow */
-                    if ($preview.length) {
-                        $preview.find('.accordion__slide')
-                          .removeClass('accordion__slide--current')
-                          .fadeOut(expandingAnimationTime);
-
-                        $preview.find('.accordion__slide')
-                          .eq(index)
-                          .addClass('accordion__slide--current')
-                          .fadeIn(expandingAnimationTime);
+                    /* Scroll document the way that currently open question will be on top of the screen
+                     * This is necessary in the case if the item above is closing moving newly open question
+                     * behind the screen. Note that you have to do it after items are collapsed to calculate
+                     * coordinates correctly (after everything stop moving).
+                     */
+                    if(!isDesktop) {
+                        setTimeout(function (){
+                            $('html, body').animate({
+                                scrollTop: $item.offset().top + 1 /* plus one is to hide the border behind the screen */
+                            }, 200);
+                        }, expandingAnimationTime);
                     }
+
                 }
-
-                if( $accordion.hasClass('accordion--faq') ) {
-
-                    if ($item.hasClass('accordion__item--expanded')) {
-                        $item.removeClass('accordion__item--expanded')
-                          .find('.accordion__dropdown')
-                          .slideUp(expandingAnimationTime);
-                    } else {
-
-                        $item.addClass('accordion__item--expanded')
-                          .find('.accordion__dropdown')
-                          .slideDown(expandingAnimationTime);
-
-                        /* Scroll document the way that currently open question will be on top of the screen
-                         * This is necessary in the case if the item above is closing moving newly open question
-                         * behind the screen. Note that you have to do it after items are collapsed to calculate
-                         * coordinates correctly (after everything stop moving).
-                         */
-                        if(!isDesktop) {
-                            setTimeout(function (){
-                                $('html, body').animate({
-                                    scrollTop: $item.offset().top + 1 /* plus one is to hide the border behind the screen */
-                                }, 200);
-                            }, expandingAnimationTime);
-                        }
-
-                    }
-                }
-
             }
         });
 
