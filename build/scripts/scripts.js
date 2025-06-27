@@ -112,7 +112,7 @@
                 if(isMobile) {
                     setTimeout(function (){
                         $('html, body').animate({
-                            scrollTop: $item.offset().top + 1 - headerHeight /* plus one is to hide the border behind the screen */
+                            scrollTop: $item.offset().top - headerHeight + 2 /* +2 is to hide the border behind the screen */
                         }, 200);
                     }, expandingAnimationTime);
                 }
