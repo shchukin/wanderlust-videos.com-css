@@ -1,5 +1,4 @@
 .panel {
-    max-width: 980px;
     margin-left: auto;
     margin-right: auto;
     padding: 57px 0 74px 60px;
@@ -43,7 +42,6 @@
 @media (1850px <= width) {
 
     .panel {
-        max-width: 1206px;
         padding: 76px 0 98px 80px;
         border-radius: 26px;
     }
