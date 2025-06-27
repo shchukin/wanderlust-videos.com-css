@@ -46,15 +46,20 @@
 
 
 .wysiwyg h2 {
-
+    margin-top: calc(1.5 * var(--body-line-height));
+    margin-bottom: var(--body-line-height);
+    font-weight: normal;
+    color: #670aea;
 }
 
 .wysiwyg h3 {
-
+    font-weight: normal;
+    color: #670aea;
 }
 
 .wysiwyg h4 {
-
+    font-weight: normal;
+    color: #670aea;
 }
 
 .wysiwyg h2:first-child,
