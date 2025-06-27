@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    min-width: 1200px;
     max-width: 1400px;
     border-left: var(--container-padding) solid transparent;
     border-right: var(--container-padding) solid transparent;
@@ -12,17 +11,24 @@
     max-width: 1580px;
 }
 
+.container--tiny {
+    max-width: 1100px;
+}
+
 
 @media (1850px <= width) {
 
     .container {
         width: 1580px;
-        min-width: 0;
         max-width: none;
     }
 
     .container--wide {
         width: 1820px;
+    }
+
+    .container--tiny {
+        max-width: 1280px;
     }
 }
 
@@ -31,7 +37,6 @@
 
     .container {
         width: auto;
-        min-width: 0;
         max-width: 420px;
     }
 }
