@@ -7,14 +7,14 @@
     .tariffs__cell {
         vertical-align: top;
         border-top: 1px solid #E0E0E0;
-        padding: 14px 34px 13px;
+        padding: 13px 20px 11px;
         font-size: 14px;
-        line-height: 20px;
+        line-height: 18px;
         color: #2d2d2d;
     }
 
     .tariffs__section--body .tariffs__row:first-child .tariffs__cell {
-        padding-top: 34px;
+        padding-top: 26px;
     }
 
 
@@ -33,19 +33,19 @@
         border-top-color: #F5F5F5;
         background-color: #F5F5F5;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 20px;
     }
 
     .tariffs__section--head .tariffs__row:last-child .tariffs__cell--pro {
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
     }
 
     .tariffs__section--body .tariffs__row:last-child .tariffs__cell--pro {
-        padding-bottom: 44px;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        padding-bottom: 33px;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
     }
 
 
@@ -61,25 +61,25 @@
 
     .tariffs__section--head .tariffs__cell {
         border-top: none;
-        padding-top: 50px;
-        padding-bottom: 19px;
+        padding-top: 38px;
+        padding-bottom: 15px;
         text-align: left;
     }
 
     .tariffs__section--head .tariffs__cell--feature {
-        padding-top: 134px;
+        padding-top: 100px;
     }
         .tariffs__column-name {
             font-weight: 500;
-            font-size: 24px;
-            line-height: 30px;
+            font-size: 20px;
+            line-height: 26px;
         }
 
         .tariffs__description {
-            margin-top: 13px;
+            margin-top: 10px;
             font-weight: normal;
-            font-size: 14px;
-            line-height: 17px;
+            font-size: 13px;
+            line-height: 16px;
         }
 
         .tariffs__cell--pro .tariffs__description {
@@ -92,5 +92,92 @@
 
 
         .tariffs__action {
-            margin-top: 30px;
+            margin-top: 20px;
         }
+
+
+
+@media (1850px <= width) {
+
+    .tariffs {
+
+    }
+        .tariffs__cell {
+            padding: 14px 34px 13px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        .tariffs__section--body .tariffs__row:first-child .tariffs__cell {
+            padding-top: 34px;
+        }
+
+
+        /* Feature cell */
+
+        .tariffs__cell--feature {
+
+        }
+
+
+        /* Pro cell */
+
+        .tariffs__cell--pro {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        .tariffs__section--head .tariffs__row:last-child .tariffs__cell--pro {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+
+        .tariffs__section--body .tariffs__row:last-child .tariffs__cell--pro {
+            padding-bottom: 44px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+
+        /* Lite cell */
+
+        .tariffs__cell--lite {
+
+        }
+
+
+
+        /* Head */
+
+        .tariffs__section--head .tariffs__cell {
+            padding-top: 50px;
+            padding-bottom: 19px;
+        }
+
+        .tariffs__section--head .tariffs__cell--feature {
+            padding-top: 134px;
+        }
+            .tariffs__column-name {
+                font-size: 24px;
+                line-height: 30px;
+            }
+
+            .tariffs__description {
+                margin-top: 13px;
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            .tariffs__cell--pro .tariffs__description {
+
+            }
+
+            .tariffs__cell--lite .tariffs__description {
+
+            }
+
+
+            .tariffs__action {
+                margin-top: 30px;
+            }
+}
