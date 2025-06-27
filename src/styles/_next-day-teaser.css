@@ -1,0 +1,19 @@
+.next-day-teaser {
+    padding-bottom: 75px;
+}
+
+
+@media (1850px <= width) {
+
+    .next-day-teaser {
+        padding-bottom: 100px;
+    }
+}
+
+
+@media (width < 740px) {
+
+    .next-day-teaser {
+        padding-bottom: 0;
+    }
+}
