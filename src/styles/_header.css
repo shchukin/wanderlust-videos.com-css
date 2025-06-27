@@ -1,8 +1,12 @@
 .header {
     height: 80px;
-    background-color: #F4F4F4;
 }
     .header__fixed-panel {
         position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        right: 0;
         height: 80px;
+        background-color: #F4F4F4;
     }
