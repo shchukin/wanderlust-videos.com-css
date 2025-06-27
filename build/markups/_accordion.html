@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>.accordion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css?1750996467">
+    </head>
+    <body>
+
+        <div style="max-width: 1340px; margin: 0 auto; padding: 0 var(--container-padding);">
+            <br>
+            <br>
+            <h1>.accordion</h1>
+
+            <p>
+                Simple default case. Traditional behavior: opening one item closes the others. Closing the current item is allowed. Works similarly on desktop and smartphones.
+            </p>
+            <br>
+
+            <div class="accordion">
+                <!--
+                    • Note "accordion--faq" option.
+                    • All of .accordion__dropdown have style="display: none; by default
+                -->
+                <div class="accordion__body">
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            Lorem ipsum dolor sit amet
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Getting started is easy. Just sign up for your account to access your dashboard, upload footage, editing preferences and stay connected throughout the editing process. It only takes a minute!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            Consectetur adipisicing
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi deleniti doloribus eum expedita, in iusto magnam maiores molestiae non, repellat unde voluptate. Accusantium ad at consectetur</p>
+                                <p>Deserunt dolore eius error eum ex hic ipsum iusto molestias nam natus nemo nesciunt numquam odit, officia perferendis quam quasi rem rerum sed sequi sint tenetur totam veniam? Ab adipisci animi aut blanditiis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            Fuga iusto molestias natus nostrum repellendus
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
+                                <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            Ab ad amet consectetur dignissimos dolorem ipsa itaque
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
+                                <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>.accordion--steps</h2>
+            <p>
+                On desktops, we have a slideshow that must be synced with the accordion. This means that at least one item must always be expanded.
+                On smartphones, it works the same as other accordions (image slides are located inside the accordion items).
+            </p>
+            <br>
+
+            <div class="accordion accordion--steps">
+                <!--
+                  • Note .accordion--steps option.
+                  • First of .accordion__slide has class accordion__slide--current while remaining ones have style="display: none;"
+                    First of .accordion__item has class accordion__item--expanded while remaining ones have .accordion__dropdown CHILD with style="display: none;"
+                    (This is necessary so the page won't flash on document load)
+                -->
+                <div class="accordion__desktop-preview">
+                    <div class="accordion__slide accordion__slide--current">
+                        <!-- Images are strictly 540x480 (and 540x480@2x)
+                             Also make sure to duplicate the same image inside .accordion__mobile-image
+                             (one shown on desktops, and a copy shown on mobiles in another DOM area)
+                        -->
+                        <img class="accordion__image"
+                             srcset="../temp/accordion/step-1@2x.jpg 1.5x"
+                             src="../temp/accordion/step-1@1x.jpg"
+                             width="540"
+                             height="480"
+                             alt=""
+                        >
+                    </div>
+                    <div class="accordion__slide" style="display: none;">
+                        <!-- Images are strictly 540x480 (and 540x480@2x)
+                             Also make sure to duplicate the same image inside .accordion__mobile-image
+                             (one shown on desktops, and a copy shown on mobiles in another DOM area)
+                        -->
+                        <img class="accordion__image"
+                             srcset="../temp/accordion/step-2@2x.jpg 1.5x"
+                             src="../temp/accordion/step-2@1x.jpg"
+                             width="540"
+                             height="480"
+                             alt=""
+                        >
+                    </div>
+                    <div class="accordion__slide" style="display: none;">
+                        <!-- Images are strictly 540x480 (and 540x480@2x)
+                             Also make sure to duplicate the same image inside .accordion__mobile-image
+                             (one shown on desktops, and a copy shown on mobiles in another DOM area)
+                        -->
+                        <img class="accordion__image"
+                             srcset="../temp/accordion/step-3@2x.jpg 1.5x"
+                             src="../temp/accordion/step-3@1x.jpg"
+                             width="540"
+                             height="480"
+                             alt=""
+                        >
+                    </div>
+                </div>
+                <div class="accordion__body">
+                    <div class="accordion__item accordion__item--expanded">
+                        <button class="accordion__handler" type="button">
+                            Step 1: Set up your Wanderlust Videos account
+                        </button>
+                        <div class="accordion__dropdown">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Getting started is easy. Just sign up for your account to access your dashboard, upload footage, editing preferences and stay connected throughout the editing process. It only takes a minute!</p>
+                            </div>
+                            <div class="accordion__mobile-preview">
+                                <!-- Images are strictly 540x480 (and 540x480@2x)
+                                     Also make sure to duplicate the same image inside .accordion__image
+                                     (one shown on desktops, and a copy shown on mobiles in another DOM area)
+                                -->
+                                <img class="accordion__mobile-image"
+                                     srcset="../temp/accordion/step-1@2x.jpg 1.5x"
+                                     src="../temp/accordion/step-1@1x.jpg"
+                                     width="540"
+                                     height="480"
+                                     alt=""
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            Step 2: Upload footage to our cloud or ship us your hard drive
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi deleniti doloribus eum expedita, in iusto magnam maiores molestiae non, repellat unde voluptate. Accusantium ad at consectetur</p>
+                                <p>Deserunt dolore eius error eum ex hic ipsum iusto molestias nam natus nemo nesciunt numquam odit, officia perferendis quam quasi rem rerum sed sequi sint tenetur totam veniam? Ab adipisci animi aut blanditiis</p>
+                            </div>
+                            <div class="accordion__mobile-preview">
+                                <!-- Images are strictly 540x480 (and 540x480@2x)
+                                    Also make sure to duplicate the same image inside .accordion__image
+                                    (one shown on desktops, and a copy shown on mobiles in another DOM area)
+                               -->
+                                <img class="accordion__mobile-image"
+                                     srcset="../temp/accordion/step-2@2x.jpg 1.5x"
+                                     src="../temp/accordion/step-2@1x.jpg"
+                                     width="540"
+                                     height="480"
+                                     alt=""
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            Step 3: Share your feedback or download files
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
+                                <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                            </div>
+                            <div class="accordion__mobile-preview">
+                                <!-- Images are strictly 540x480 (and 540x480@2x)
+                                    Also make sure to duplicate the same image inside .accordion__image
+                                    (one shown on desktops, and a copy shown on mobiles in another DOM area)
+                               -->
+                                <img class="accordion__mobile-image"
+                                     srcset="../temp/accordion/step-3@2x.jpg 1.5x"
+                                     src="../temp/accordion/step-3@1x.jpg"
+                                     width="540"
+                                     height="480"
+                                     alt=""
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>.accordion--faq</h2>
+            <p>
+                Due to the two-column layout on desktops, we can't close sibling items when expanding others (that just looks strange).
+                So, allow the items to expand freely and independently of each other. On smartphones, it works the same as other accordions.
+            </p>
+            <br>
+
+            <div class="accordion accordion--faq">
+                <!--
+                    • Note "accordion--faq" option.
+                    • All of .accordion__dropdown have style="display: none; by default
+                -->
+                <div class="accordion__body">
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            How are prices calculated?
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Getting started is easy. Just sign up for your account to access your dashboard, upload footage, editing preferences and stay connected throughout the editing process. It only takes a minute!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            What’s the difference between Wanderlust Lite and Pro?
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi commodi deleniti doloribus eum expedita, in iusto magnam maiores molestiae non, repellat unde voluptate. Accusantium ad at consectetur</p>
+                                <p>Deserunt dolore eius error eum ex hic ipsum iusto molestias nam natus nemo nesciunt numquam odit, officia perferendis quam quasi rem rerum sed sequi sint tenetur totam veniam? Ab adipisci animi aut blanditiis</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            Can I ship you my hard drives?
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
+                                <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__handler" type="button">
+                            I am just a beginner, can you help me?
+                        </button>
+                        <div class="accordion__dropdown" style="display: none;">
+                            <div class="wysiwyg wysiwyg--halved">
+                                <p>Consectetur corporis culpa cumque dicta distinctio dolor dolorem</p>
+                                <p>Dolores eveniet explicabo fugiat fugit illum incidunt ipsam, laboriosam laborum libero molestiae, mollitia necessitatibus nulla officia omnis quasi qui quidem quisquam recusandae repellendus repudiandae</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script src="../vendors/inputmask/jquery.inputmask.min.js"></script>
+        <script src="../vendors/inputmask.phone/inputmask.phone.extensions.min.js"></script>
+        <script src="../vendors/inputmask.phone/phone-codes/phone-ru.min.js"></script>
+        <script src="../scripts/scripts.js?1750996467"></script>
+        <script src="../scripts/_input.js?1750996467"></script>
+        <script src="../scripts/_inputmask.js?1750996467"></script>
+
+
+    </body>
+</html>
+
