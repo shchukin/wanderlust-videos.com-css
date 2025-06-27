@@ -52,3 +52,41 @@
                 border-top-width: 26px;
             }
 }
+
+
+
+@media (width < 740px) {
+
+    .type {
+        /*position: relative;*/
+        display: block;
+        width: fit-content;
+        /*vertical-align: top;*/
+        /*top: 2px;*/
+        /*padding: 0 6px;*/
+        /*border-radius: 0 3px 3px 0;*/
+        /*font-weight: bold;*/
+        /*font-size: 14px;*/
+        /*line-height: 22px;*/
+        /*text-transform: uppercase;*/
+    }
+        .type--pro {
+            /*background-color: var(--blue);*/
+            /*color: #FFFFFF;*/
+        }
+
+        .type--lite {
+            /*margin-left: 6px;*/
+            /*background-color: var(--pink);*/
+            /*color: #FFFFFF;*/
+        }
+            .type--lite::after {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*right: 100%;*/
+                /*top: 0;*/
+                /*bottom: 0;*/
+                /*border-right: 9px solid var(--pink);*/
+                /*border-top: 22px solid transparent;*/
+            }
+}
