@@ -1,4 +1,7 @@
-.stretch-right {
-    display: block;
-    margin-right: -10px;
+@media (740px <= width) {
+
+    .stretch-right {
+        display: block;
+        margin-right: -10px;
+    }
 }

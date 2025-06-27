@@ -271,7 +271,12 @@
                 position: sticky;
                 z-index: 100;
                 top: var(--header-height);
+                margin-left: calc(-1 * var(--container-padding));
+                margin-right: calc(-1 * var(--container-padding));
+                padding-left: var(--container-padding);
+                padding-right: var(--container-padding);
                 background-color: #FFFFFF;
+                box-shadow: 0 2px 2px rgb(0 0 0 / 10%);
             }
 
             .tariffs__section--head .tariffs__cell {

@@ -41,3 +41,34 @@
             margin-top: 86px;
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .difference {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+        .difference__heading {
+            /*max-width: 620px;*/
+            /*margin: 0 auto;*/
+            /*text-align: center;*/
+            text-align: left;
+            
+        }
+
+        .difference__description {
+            /*max-width: 711px;*/
+            margin-top: 15px;
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*text-align: center;*/
+            text-align: left;
+        }
+
+        .difference__body {
+            margin-top: 42px;
+        }
+}
+
