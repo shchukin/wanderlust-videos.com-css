@@ -32,6 +32,7 @@
         --container-wide: 1740px;
         --container-narrow: 1124px;
         --container-padding: 40px;
+        --header-height: 106px;
         --body-font-size: 18px;
         --body-line-height: 30px;
     }

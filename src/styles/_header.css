@@ -1,5 +1,5 @@
 .header {
-    height: 80px;
+    height: var(--header-height);
 }
     .header__fixed-panel {
         position: fixed;
@@ -7,6 +7,62 @@
         left: 0;
         top: 0;
         right: 0;
-        height: 80px;
+        height: var(--header-height);
         background-color: #F4F4F4;
     }
+        .header__wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+            .header__logo {
+                display: block;
+                width: 111px;
+                height: 60px;
+                margin-top: -10px;
+                margin-left: -10px;
+                background-image: url("../vectors/logo-header.svg");
+                background-size: 91px 40px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                text-indent: 200%;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+
+            .header__nav {
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                align-items: center;
+            }
+                .header__link {
+                    position: relative;
+                    padding: 24px 16px;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #2d2d2d;
+                    text-decoration: none;
+                }
+                    .header__link::after {
+                        content: "";
+                        position: absolute;
+                        inset: 16px 2px;
+                        border-radius: 5px;
+                        transition: background-color var(--transition-hover);
+                    }
+
+                .header__link:hover::after {
+                    background-color: rgb(45 45 45 / 4%);
+                }
+
+                .header__link--current {
+                    color: var(--blue);
+                }
+
+            .header__actions {
+                display: flex;
+                align-items: flex-start;
+                gap: 13px;
+            }
