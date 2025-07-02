@@ -180,7 +180,7 @@
 
         let rememberedPageScrollPosition = 0;
 
-        $('.header__burger').on('click', function () {
+        $('.header__toggler').on('click', function () {
 
             if( ! $html.hasClass('burger-expanded') ) {
                 rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */

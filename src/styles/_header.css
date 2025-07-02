@@ -32,7 +32,7 @@
                 overflow: hidden;
             }
 
-            .header__burger {
+            .header__toggler {
                 display: none;
             }
 
@@ -115,7 +115,7 @@
                     background-size: 91px 40px;
                 }
 
-                .header__burger {
+                .header__toggler {
 
                 }
 
@@ -170,10 +170,37 @@
 
                 }
 
-                .header__burger {
-                    display: block;
+                .header__toggler {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: transparent;
+                    padding: 0;
+                    margin-right: calc(-1 * var(--container-padding) + 2px); /* 2px extra to avoid horizontal scrollbar on some androids */
+                    padding-right: calc(var(--container-padding) - 4px);
+                    padding-left: 40px;
+                    height: var(--header-height);
+                    border: none;
+                    font-size: 24px;
+                    color: #2d2d2d;
                     cursor: pointer;
                 }
+                    .header__burger {
+
+                    }
+
+                    .header__cross {
+                        display: none;
+                    }
+
+
+                    .burger-expanded .header__burger {
+                        display: none;
+                    }
+
+                    .burger-expanded .header__cross {
+                        display: block;
+                    }
 
                 .header__dropdown {
                     position: static;
