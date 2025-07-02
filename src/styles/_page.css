@@ -1,0 +1,7 @@
+.page {
+
+}
+
+.burger-expanded .page {
+    display: none;
+}
