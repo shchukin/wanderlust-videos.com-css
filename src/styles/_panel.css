@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
-    background-image: url("../vectors/panel.svg"), linear-gradient(256deg, #F5EEFF, #F7F7F7 17%, #F7F7F7 46%, #FFECF7);
+    background-image: url("../vectors/logo-panel.svg"), linear-gradient(256deg, #F5EEFF, #F7F7F7 17%, #F7F7F7 46%, #FFECF7);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
