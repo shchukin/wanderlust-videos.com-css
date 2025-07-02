@@ -5,6 +5,7 @@
 
         let isDesktop;
         let isMobile;
+        const $html = $('html');
 
         function initGlobalConstant() {
             isDesktop = window.matchMedia("(min-width: 740px)").matches;
@@ -169,9 +170,27 @@
         /* Team: add container--wid if 11+ members */
 
         const $teamList = $('.team__list');
+
         if ($teamList.find('.team__member').length >= 11) {
             $teamList.closest('.container').addClass('container--wide');
         }
+
+
+        /* Burger */
+
+        let rememberedPageScrollPosition = 0;
+
+        $('.header__toggler').on('click', function () {
+
+            if( ! $html.hasClass('burger-expanded') ) {
+                rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */
+                $html.addClass('burger-expanded');
+                $(window).scrollTop(0); /* При открытии меню его скролл должен быть в начале */
+            } else {
+                $html.removeClass('burger-expanded');
+                $(window).scrollTop(rememberedPageScrollPosition);/* При закрытии меню скролл должен быть там, где пользователь его оставил */
+            }
+        });
 
     });
 })(jQuery);
