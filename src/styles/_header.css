@@ -192,6 +192,10 @@
                     .header__cross {
                         display: none;
                     }
+                        .header__toggler .icon {
+                            font-size: 32px;
+                            font-weight: 300;
+                        }
 
 
                     .burger-expanded .header__burger {
