@@ -1,0 +1,43 @@
+.intro {
+    padding-top: 56px;
+    padding-bottom: 50px;
+    background-color: #100022;
+}
+    .intro__heading {
+        font-size: 36px;
+        line-height: 36px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    .intro__description {
+        max-width: 640px;
+        margin-top: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+        line-height: 28px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .intro {
+        padding-top: 101px;
+        padding-bottom: 78px;
+    }
+        .intro__heading {
+            font-size: 48px;
+            line-height: 48px;
+        }
+
+        .intro__description {
+            max-width: 720px;
+            margin-top: 19px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+}
