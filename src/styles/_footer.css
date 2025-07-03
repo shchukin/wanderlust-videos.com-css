@@ -1,4 +1,179 @@
 .footer {
-    height: 460px;
+    padding-top: 54px;
+    padding-bottom: 38px;
     background-color: #120421;
+    color: #f2f2f2;
+}
+    .footer__wrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 22%;
+    }
+        .footer__summary {
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+            .footer__logo {
+
+            }
+
+            .footer__description {
+                margin-top: 12px;
+                max-width: 240px;
+                font-size: 13px;
+                line-height: 17px;
+                color: #f2f2f2;
+            }
+
+            .footer__social-media {
+                margin-top: 34px;
+                /*margin-left: -14px;*/
+                display: flex;
+                align-items: flex-start;
+            }
+
+            .footer__legalities {
+                margin-top: 30px;
+                font-size: 12px;
+                line-height: 24px;
+                color: #dfdfdf;
+            }
+
+        .footer__navigation {
+            flex-grow: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+            .footer__column {
+
+            }
+
+            .footer__column--services {
+                flex-basis: 42%;
+            }
+
+            .footer__column:last-child {
+                padding-right: 5%;
+            }
+                .footer__main-link {
+                    font-weight: bold;
+                    font-size: 17px;
+                    line-height: 24px;
+                    color: #fcfcfc;
+                    white-space: nowrap;
+                    text-decoration: 1px underline transparent;
+                    text-underline-offset: 4px;
+                    transition: text-decoration-color var(--transition-hover);
+                }
+
+                .footer__main-link:hover {
+                    text-decoration-color: currentColor;
+                }
+
+
+                .footer__sub-menu {
+                    margin-top: 18px;
+                }
+
+                .footer__column--services .footer__sub-menu {
+                    columns: 2;
+                    gap: 6%;
+                }
+                    .footer__link {
+                        display: block;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        font-size: 15px;
+                        line-height: 22px;
+                        color: #e3e3e3;
+                        white-space: nowrap;
+                        text-decoration: 1px underline transparent;
+                        text-underline-offset: 4px;
+                        transition: text-decoration-color var(--transition-hover);
+                    }
+
+                    .footer__link:hover {
+                        text-decoration-color: currentColor;
+                    }
+
+
+
+@media (1850px <= width) {
+
+    .footer {
+        /*padding-top: 54px;*/
+        /*padding-bottom: 38px;*/
+    }
+        .footer__wrap {
+            gap: 20%;
+        }
+            .footer__summary {
+                margin-top: 6px;
+            }
+                .footer__logo {
+
+                }
+
+                .footer__description {
+                    margin-top: 15px;
+                    max-width: 264px;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+
+                .footer__social-media {
+                    margin-top: 40px;
+                    margin-left: -14px;
+                }
+
+                .footer__legalities {
+                    margin-top: 43px;
+                    font-size: 12px;
+                    line-height: 24px;
+                }
+
+            .footer__navigation {
+
+            }
+                .footer__column {
+
+                }
+
+                .footer__column--services {
+                    flex-basis: 43%;
+                }
+
+                .footer__column:last-child {
+                    padding-right: 8%;
+                }
+                    .footer__main-link {
+                        font-size: 18px;
+                        line-height: 26px;
+                        text-underline-offset: 4px;
+                    }
+
+                    .footer__main-link:hover {
+
+                    }
+
+
+                    .footer__sub-menu {
+                        margin-top: 23px;
+                    }
+
+                    .footer__column--services .footer__sub-menu {
+                        gap: 10%;
+                    }
+                        .footer__link {
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            font-size: 16px;
+                            line-height: 24px;
+                            text-underline-offset: 4px;
+                        }
+
+                        .footer__link:hover {
+
+                        }
 }

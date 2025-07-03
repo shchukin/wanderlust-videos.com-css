@@ -6,7 +6,8 @@
         z-index: 100;
         left: 0;
         top: 0;
-        right: 0;
+        width: 100%;
+        min-width: 1240px;
         height: var(--header-height);
         background-color: #F4F4F4;
     }
@@ -19,17 +20,7 @@
         }
             .header__logo {
                 display: block;
-                width: 95px;
-                height: 54px;
                 margin-top: -7px;
-                margin-left: -10px;
-                background-image: url("../vectors/logo-header.svg");
-                background-size: 75px 34px;
-                background-repeat: no-repeat;
-                background-position: center center;
-                text-indent: 200%;
-                white-space: nowrap;
-                overflow: hidden;
             }
 
             .header__toggler {
@@ -108,11 +99,7 @@
 
             }
                 .header__logo {
-                    width: 111px;
-                    height: 60px;
                     margin-top: -10px;
-                    margin-left: -10px;
-                    background-size: 91px 40px;
                 }
 
                 .header__toggler {

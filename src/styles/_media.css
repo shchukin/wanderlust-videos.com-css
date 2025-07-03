@@ -1,0 +1,45 @@
+.media {
+    position: relative;
+    display: block;
+    width: 38px;
+    height: 38px;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+    .media::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        display: block;
+        transition: background-color var(--transition-hover);
+    }
+
+    .media:hover::after {
+        background-color: rgb(255 255 255 / 10%);
+        border-radius: 50%;
+    }
+
+
+.media--facebook {
+    background-image: url("../vectors/media-facebook.svg");
+}
+
+.media--instagram {
+    background-image: url("../vectors/media-instagram.svg");
+}
+
+.media--linked-in {
+    background-image: url("../vectors/media-linked-in.svg");
+}
+
+.media--youtube {
+    background-image: url("../vectors/media-youtube.svg");
+}
+
+.media--tiktok {
+    background-image: url("../vectors/media-tiktok.svg");
+}

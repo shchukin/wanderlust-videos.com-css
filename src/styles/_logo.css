@@ -1,0 +1,35 @@
+.logo {
+    margin-left: -10px;
+    display: block;
+    width: 95px;
+    height: 54px;
+    background-image: url("../vectors/logo-header.svg");
+    background-size: 75px 34px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.logo--inverted {
+    background-image: url("../vectors/logo-footer.svg");
+}
+
+@media (1850px <= width) {
+
+    .logo {
+        width: 125px;
+        height: 68px;
+        margin-left: -10px;
+        background-size: 105px 48px;
+    }
+}
+
+
+@media (width < 740px) {
+
+    .logo {
+
+    }
+}
