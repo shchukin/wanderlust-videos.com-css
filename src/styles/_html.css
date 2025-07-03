@@ -1,5 +1,5 @@
 html {
-    min-width: 1240px;
+    min-width: 1240px; /* Use same desktop version on tablets, force horizontal scrollbar there that will turn to zoom */
     height: 100%;
 }
 

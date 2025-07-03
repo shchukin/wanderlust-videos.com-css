@@ -7,7 +7,7 @@
         left: 0;
         top: 0;
         width: 100%;
-        min-width: 1240px;
+        min-width: 1240px;/* same as min-width on <HTML> tag, but since this selector is fixed we need to repeat this min-width */
         height: var(--header-height);
         background-color: #F4F4F4;
     }
@@ -33,12 +33,22 @@
                 left: 0;
                 right: 0;
                 top: 0;
+                min-width: 1240px; /* same as min-width on <HTML> tag, but since this selector is fixed we need to repeat this min-width */
                 height: var(--header-height);
                 pointer-events: none;
             }
                 .header__drop-wrap {
                     position: relative;
                     height: var(--header-height);
+                }
+
+
+                @media (740px <= width < 1340px) {
+                    /* in this resolution, there is not enough space to make it centered, so position it relative to logo and buttons: */
+                    .header__drop-wrap {
+                        padding-left: 76px;
+                        padding-right: 282px;
+                    }
                 }
                     .header__nav {
                         height: var(--header-height);
@@ -136,7 +146,6 @@
 }
 
 
-
 @media (width < 740px) {
 
     .header {
@@ -148,7 +157,7 @@
         height: auto;
     }
         .header__fixed-panel {
-
+            min-width: 0;
         }
             .header__wrap {
 
@@ -195,6 +204,7 @@
 
                 .header__dropdown {
                     position: static;
+                    min-width: 0;
                     height: auto;
                     display: none;
                 }
