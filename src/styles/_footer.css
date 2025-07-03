@@ -2,6 +2,10 @@
     padding-top: 40px;
     padding-bottom: 30px;
     background-color: #120421;
+    background-image: url("../images/footer-desktop-top.jpg"), url("../images/footer-desktop-bottom.jpg");
+    background-size: 509px 349px, 509px 349px;
+    background-position: left top, right bottom;
+    background-repeat: no-repeat;
     color: #f2f2f2;
 }
     .footer__wrap {
@@ -106,6 +110,7 @@
     .footer {
         padding-top: 54px;
         padding-bottom: 38px;
+        background-size: 678px 465px, 678px 465px;
     }
         .footer__wrap {
 
@@ -186,6 +191,8 @@
     .footer {
         padding-top: 32px;
         padding-bottom: 60px;
+        background-image: url("../images/footer-mobile-top.jpg"), url("../images/footer-mobile-bottom.jpg");
+        background-size: 400px 360px, 580px 360px;
     }
         .footer__wrap {
             display: block;
