@@ -1,8 +1,14 @@
 .page {
-
+    height: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: column;
 }
     .page__unique-part {
-        
+        flex-grow: 1;
+    }
+
+    .page__footer {
+        flex-shrink: 0;
     }
 
 .burger-expanded .page {
