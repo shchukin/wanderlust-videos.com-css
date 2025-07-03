@@ -1,6 +1,9 @@
 .page {
 
 }
+    .page__unique-part {
+        
+    }
 
 .burger-expanded .page {
     display: none;
