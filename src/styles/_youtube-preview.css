@@ -56,6 +56,14 @@
     }
 
 
+.youtube-preview--white {
+
+}
+    .youtube-preview--white .youtube-preview__handler::after {
+        background-color: rgb(58 58 58 / 62%);
+        background-image: url("../vectors/play-white.svg");
+    }
+
 
 @media (1850px <= width) {
 
@@ -66,7 +74,7 @@
 
         }
             .youtube-preview__image {
-     
+
             }
 
             .youtube-preview__handler:hover .youtube-preview__image {
