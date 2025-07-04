@@ -1,0 +1,9 @@
+.info {
+
+}
+    .info__contains-question {
+        display: block;
+        background-image: url("../vectors/question.svg");
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
