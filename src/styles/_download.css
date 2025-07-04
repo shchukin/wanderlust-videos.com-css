@@ -9,7 +9,7 @@
         rgb(190 182 252 / 22%) 83%,
         rgb(106 20 209 / 30%)
     );
-    border-radius: 29px;
+    border-radius: 30px;
 }
 /* stylelint-enable */
 
@@ -45,7 +45,7 @@
     /* stylelint-disable */
     .download {
         padding: 64px 34px 110px;
-        border-radius: 29px;
+        border-radius: 30px;
     }
     /* stylelint-enable */
 
