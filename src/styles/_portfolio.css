@@ -88,3 +88,57 @@
                     gap: 20px;
                 }
 }
+
+
+
+@media (width < 740px) {
+
+    .portfolio {
+        padding-top: 44px;
+        padding-bottom: 60px;
+    }
+        .portfolio__heading {
+            /*max-width: 720px;*/
+            /*margin: 0 auto;*/
+            /*text-align: center;*/
+        }
+
+        .portfolio__description {
+            /*max-width: 780px;*/
+            /*margin: 14px auto 0;*/
+            /*font-size: var(--body-font-size);*/
+            /*line-height: var(--body-line-height);*/
+            /*text-align: center;*/
+        }
+
+        .portfolio__body {
+            margin-top: 40px;
+            border-top: 1px solid #d1d1d1;
+            padding-top: 42px;
+        }
+            .portfolio__section {
+                /*margin-top: 44px;*/
+            }
+
+            .portfolio__section:first-child {
+                /*margin-top: 0;*/
+            }
+                .portfolio__section-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                }
+
+                .portfolio__section-description {
+                    /*margin-top: 12px;*/
+                    /*font-size: var(--body-font-size);*/
+                    /*line-height: var(--body-line-height);*/
+                    /*color: #2f2f2f;*/
+                }
+
+                .portfolio__list {
+                    /*margin-top: 30px;*/
+                    display: grid;
+                    grid-template-columns: repeat(1, minmax(0, 1fr));
+                    /*gap: 16px;*/
+                }
+}
