@@ -1,6 +1,9 @@
 .youtube-preview {
-    /*aspect-ratio: 560 / 356 in photoshop */
     aspect-ratio: 16/9;
+    /*aspect-ratio: 560 / 356 in photoshop */
+    background-color: var(--image-fallback);
+    border-radius: 22px;
+    overflow: hidden; /* cur video corners */
 }
     .youtube-preview__handler {
         position: relative;
@@ -17,7 +20,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 22px;
             transition: filter var(--transition-hover);
         }
 
@@ -58,13 +60,13 @@
 @media (1850px <= width) {
 
     .youtube-preview {
-
+        border-radius: 29px;
     }
         .youtube-preview__handler {
 
         }
             .youtube-preview__image {
-                border-radius: 29px;
+     
             }
 
             .youtube-preview__handler:hover .youtube-preview__image {
