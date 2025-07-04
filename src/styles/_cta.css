@@ -1,0 +1,48 @@
+.cta {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+    .cta__heading {
+        max-width: 490px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .cta__action {
+        margin-top: 32px;
+        text-align: center;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .cta {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+        .cta__heading {
+            max-width: 580px;
+        }
+
+        .cta__action {
+            margin-top: 46px;
+        }
+}
+
+
+
+@media (width < 740px) {
+
+    .cta {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+        .cta__heading {
+            max-width: 320px;
+        }
+
+        .cta__action {
+
+        }
+}
