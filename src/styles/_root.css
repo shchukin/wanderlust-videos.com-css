@@ -5,7 +5,7 @@
     --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
     --transition-hover: 100ms ease;
     --transition-show: 1200ms var(--ease-out-quint);
-    --image-fallback: #F3F5F4;
+    --image-fallback: #231e3a;
     --container: 1100px;
     --container-wide: 1200px;
     --container-narrow: 1140px;
