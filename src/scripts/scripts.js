@@ -210,15 +210,14 @@
 
         /* FAQ Smooth Scrolling */
 
-        $('.info__contains-question').on('click', function(e) {
-            e.preventDefault();
-            const targetId = $(this).attr('href');
-            const $target = $(targetId);
+        $('.info__contains-question').on('click', function(event) {
+            event.preventDefault();
+            const $target = $($(this).attr('href'));
             if ($target.length) {
-                const targetOffset = $target.offset().top - headerHeight - 30; // 20px extra space
+                const targetOffset = $target.offset().top - headerHeight - 30; // 30px extra space before the target
                 $('html, body').animate({
                     scrollTop: targetOffset
-                }, 800, 'swing'); // 'swing' is default jQuery easing
+                }, 800);
             }
         });
 
