@@ -99,3 +99,54 @@
                 margin-top: 39px;
             }
 }
+
+
+
+@media (width < 740px) {
+
+    .teaser {
+        display: block;
+    }
+        .teaser__preview {
+
+        }
+            .teaser__featured-image {
+
+            }
+
+            .teaser__preview:hover .teaser__featured-image {
+
+            }
+
+        .teaser__body {
+            margin-top: 24px;
+        }
+            .teaser__pub-date {
+                /*font-size: 12px;*/
+                /*line-height: 15px;*/
+                /*color: var(--blue);*/
+            }
+
+            .teaser__heading {
+                /*margin-top: 10px;*/
+                /*margin-bottom: 0;*/
+            }
+                .teaser__link {
+                    /*text-decoration: 1.5px underline transparent;*/
+                    /*text-underline-offset: 4px;*/
+                    /*color: inherit;*/
+                }
+
+                .teaser__link:hover {
+                    /*text-decoration-color: currentColor;*/
+                }
+
+            .teaser__text {
+                /*margin-top: 18px;*/
+            }
+
+            .teaser__stats {
+                /*margin-top: 30px;*/
+            }
+}
+
