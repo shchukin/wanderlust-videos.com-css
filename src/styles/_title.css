@@ -46,6 +46,28 @@
 }
 
 
+.title--smaller-on-monitor {
+    font-size: 34px;
+    line-height: 42px;
+}
+
+@media (1850px <= width) {
+
+    .title--smaller-on-monitor {
+        font-size: 36px;
+        line-height: 43px;
+    }
+}
+
+@media (width < 740px) {
+
+    .title--smaller-on-monitor {
+        font-size: 30px;
+        line-height: 34px;
+    }
+}
+
+
 
 .title--smaller {
     font-size: 24px;

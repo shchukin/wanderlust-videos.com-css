@@ -1,6 +1,6 @@
 /* stylelint-disable */
 .download {
-    padding: 64px 34px 110px;
+    padding: 40px 20px 60px;
     background-color: #ECEDF5;
     background-image: linear-gradient(24deg,
         rgb(200 32 144 / 23%),
@@ -16,14 +16,14 @@
     .download__heading {
         display: block;
         font-weight: 500;
-        font-size: 25px;
-        line-height: 29px;
+        font-size: 22px;
+        line-height: 28px;
         color: var(--blue);
         text-align: center;
     }
 
     .download__description {
-        margin-top: 42px;
+        margin-top: 34px;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
@@ -31,9 +31,39 @@
     }
 
     .download__action {
-        margin-top: 83px;
+        margin-top: 40px;
         text-align: center;
     }
         .download__action .button {
-            gap: 20px;
+            gap: 12px;
         }
+
+
+
+@media (1850px <= width) {
+
+    /* stylelint-disable */
+    .download {
+        padding: 64px 34px 110px;
+        border-radius: 29px;
+    }
+    /* stylelint-enable */
+
+        .download__heading {
+            font-size: 25px;
+            line-height: 29px;
+        }
+
+        .download__description {
+            margin-top: 42px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .download__action {
+            margin-top: 83px;
+        }
+            .download__action .button {
+                gap: 20px;
+            }
+}

@@ -5,20 +5,17 @@
         margin-top: 0;
         margin-bottom: 0;
         margin-left: -2px;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 28px;
     }
 
     .quick-links__body {
-        margin-top: 11px;
+        margin-top: 8px;
     }
         .quick-links__link {
             display: block;
             max-width: 240px;
-            padding-top: 9px;
-            padding-bottom: 9px;
-            font-size: 15px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            font-size: 14px;
             line-height: 18px;
             color: #2d2d2d;
             text-decoration: 1px underline transparent;
@@ -31,11 +28,11 @@
         }
 
         .quick-links__link--current {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding-left: 18px;
-            font-size: 15px;
-            line-height: 24px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            padding-left: 15px;
+            font-size: 14px;
+            line-height: 20px;
             color: var(--blue);
             border-left: 1px solid currentColor;
             text-decoration: none;
@@ -48,3 +45,46 @@
         .quick-links__link--current:last-child {
             margin-bottom: 0;
         }
+
+
+
+@media (1850px <= width) {
+
+    .quick-links {
+
+    }
+        .quick-links__heading {
+
+        }
+
+        .quick-links__body {
+            margin-top: 11px;
+        }
+            .quick-links__link {
+                max-width: 240px;
+                padding-top: 9px;
+                padding-bottom: 9px;
+                font-size: 15px;
+                line-height: 18px;
+            }
+
+            .quick-links__link:hover {
+
+            }
+
+            .quick-links__link--current {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                padding-left: 18px;
+                font-size: 15px;
+                line-height: 24px;
+            }
+
+            .quick-links__link--current:first-child {
+
+            }
+
+            .quick-links__link--current:last-child {
+
+            }
+}
