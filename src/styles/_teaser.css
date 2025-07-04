@@ -32,6 +32,7 @@
         .teaser__heading {
             margin-top: 10px;
             margin-bottom: 0;
+            font-weight: 500;
         }
             .teaser__link {
                 text-decoration: 1.5px underline transparent;
@@ -146,7 +147,7 @@
             }
 
             .teaser__stats {
-                /*margin-top: 30px;*/
+                
             }
 }
 

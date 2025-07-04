@@ -29,3 +29,26 @@
 
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .post-stats {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        /*font-size: 13px;*/
+        /*line-height: 17px;*/
+        /*color: #000000;*/
+    }
+        .post-stats__param {
+
+        }
+
+        .post-stats__separator {
+            display: none;
+        }
+}
+
+
