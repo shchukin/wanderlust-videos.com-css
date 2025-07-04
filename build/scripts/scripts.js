@@ -3,13 +3,15 @@
 
         /* Global constants  */
 
+        const $html = $('html');
         let isDesktop;
         let isMobile;
-        const $html = $('html');
+        let headerHeight;
 
         function initGlobalConstant() {
             isDesktop = window.matchMedia("(min-width: 740px)").matches;
             isMobile = !isDesktop;
+            headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height')) || 0;
         }
 
         initGlobalConstant();
@@ -73,7 +75,6 @@
             const index = $item.index();
             const $preview = $accordion.find('.accordion__desktop-preview');
             const $header = $('.header');
-            const headerHeight = $header.length ? $header.outerHeight() : 0;
             const expandingAnimationTime = 300;
 
             /* On smartphone, all the accordions behaves the same.
@@ -204,6 +205,20 @@
                 allowfullscreen: true
             });
             $(this).closest('.youtube-preview').empty().append(iframe);
+        });
+
+
+        /* FAQ Smooth Scrolling */
+
+        $('.info__contains-question').on('click', function(event) {
+            event.preventDefault();
+            const $target = $($(this).attr('href'));
+            if ($target.length) {
+                const targetOffset = $target.offset().top - headerHeight - 30; // 30px extra space before the target
+                $('html, body').animate({
+                    scrollTop: targetOffset
+                }, 800);
+            }
         });
 
     });
