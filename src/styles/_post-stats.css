@@ -1,0 +1,29 @@
+.post-stats {
+    font-size: 13px;
+    line-height: 17px;
+}
+    .post-stats__param {
+
+    }
+
+    .post-stats__separator {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .post-stats {
+        font-size: 14px;
+        line-height: 18px;
+    }
+        .post-stats__param {
+
+        }
+
+        .post-stats__separator {
+
+        }
+}

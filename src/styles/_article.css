@@ -22,17 +22,8 @@
             }
                 .article__stats {
                     margin-top: 15px;
-                    font-size: 13px;
-                    line-height: 17px;
                 }
-                    .article__param {
 
-                    }
-
-                    .article__separator {
-                        margin-left: 4px;
-                        margin-right: 4px;
-                    }
 
     .article__body {
         margin-top: 30px;
@@ -90,18 +81,10 @@
                 .article__heading {
 
                 }
-                    .article__stats {
-                        margin-top: 18px;
-                        font-size: 14px;
-                        line-height: 18px;
-                    }
-                        .article__param {
 
-                        }
-
-                        .article__separator {
-
-                        }
+                .article__stats {
+                    margin-top: 18px;
+                }
 
         .article__body {
             margin-top: 38px;
@@ -153,16 +136,11 @@
                 .article__heading {
 
                 }
-                    .article__stats {
 
-                    }
-                        .article__param {
+                .article__stats {
 
-                        }
+                }
 
-                        .article__separator {
-
-                        }
 
         .article__body {
             display: block;
