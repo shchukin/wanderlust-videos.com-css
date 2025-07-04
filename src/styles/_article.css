@@ -2,14 +2,6 @@
     padding-top: 60px;
     padding-bottom: 60px;
 }
-
-@media (1850px <= width) {
-    .article {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-
     .article__head {
 
     }
@@ -38,9 +30,10 @@
 
             }
                 .article__featured-image {
+                    vertical-align: top;
                     width: 100%;
                     height: auto;
-                    vertical-align: top;
+                    background-color: var(--image-fallback);
                     border-radius: 22px;
                 }
 
@@ -61,14 +54,18 @@
                 top: calc(var(--header-height) + 24px);
                 margin-top: 24px;
             }
-            
-            
-            
+
+
+
 @media (1850px <= width) {
     
     .article {
         padding-top: 88px;
         padding-bottom: 88px;
+
+        /* make smaller container: */
+        padding-left: 40px;
+        padding-right: 40px;
     }
         .article__head {
             display: grid;
