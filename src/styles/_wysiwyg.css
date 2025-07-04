@@ -75,10 +75,23 @@
 }
 
 
+.wysiwyg figure {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .wysiwyg img {
     width: 100%;
     height: auto;
     vertical-align: top;
+    border-radius: 22px;
+}
+
+@media (1850px <= width) {
+
+    .wysiwyg img {
+        border-radius: 29px;
+    }
 }
 
 .wysiwyg a {

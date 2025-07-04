@@ -57,4 +57,12 @@
 }
 
 
+.link--inverted-decoration {
+    text-decoration-color: transparent;
+}
+
+.link--inverted-decoration:hover {
+    text-decoration-color: currentColor;
+}
+
 
