@@ -1,0 +1,54 @@
+.youtube-preview {
+    /*aspect-ratio: 560 / 356 in photoshop */
+    aspect-ratio: 16/9;
+}
+    .youtube-preview__handler {
+        position: relative;
+        vertical-align: top;
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+        .youtube-preview__image {
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 29px;
+            transition: filter var(--transition-hover);
+        }
+
+        .youtube-preview__handler:hover .youtube-preview__image {
+            filter: brightness(105%) contrast(105%);
+        }
+
+        .youtube-preview__handler::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            display: block;
+            width: 114px;
+            height: 114px;
+            background-color: rgb(255 255 255 / 62%);
+            background-image: url("../vectors/play.svg");
+            background-size: 48px 48px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
+            transition: background-color var(--transition-hover);
+        }
+
+        .youtube-preview__handler:hover::after {
+            background-color: rgb(255 255 255 / 70%);
+        }
+
+    .youtube-preview__video {
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        border: none;
+    }

@@ -192,5 +192,19 @@
             }
         });
 
+
+        /* Youtube Preview Player */
+
+        $('.youtube-preview__handler').on('click', function() {
+            const ytUrl = $(this).data('yt-url');
+            const iframe = $('<iframe>', {
+                class: 'youtube-preview__video',
+                src: ytUrl + '?autoplay=1',
+                allow: 'autoplay; encrypted-media',
+                allowfullscreen: true
+            });
+            $(this).closest('.youtube-preview').empty().append(iframe);
+        });
+
     });
 })(jQuery);

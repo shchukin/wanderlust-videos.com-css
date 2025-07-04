@@ -44,7 +44,7 @@
                 margin-top: 30px;
                 display: grid;
                 grid-template-columns: repeat(3, minmax(0, 1fr));
-                gap: 16px;
+                gap: 24px;
             }
 
 
@@ -85,7 +85,7 @@
 
                 .portfolio__list {
                     margin-top: 40px;
-                    gap: 20px;
+                    gap: 30px;
                 }
 }
 
