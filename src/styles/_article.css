@@ -127,3 +127,64 @@
                     margin-top: 32px;
                 }
 }
+
+
+
+@media (width < 740px) {
+
+    .article {
+        padding-top: 40px;
+
+    }
+        .article__head {
+
+        }
+            .article__head-inner {
+
+            }
+                .article__heading {
+
+                }
+                    .article__stats {
+
+                    }
+                        .article__param {
+
+                        }
+
+                        .article__separator {
+
+                        }
+
+        .article__body {
+            display: block;
+        }
+            .article__content {
+
+            }
+                .article__preview {
+
+                }
+                    .article__featured-image {
+
+                    }
+
+                .article__text {
+
+                }
+
+
+            .article__sidebar {
+                margin-top: 60px;
+            }
+                .article__links {
+
+                }
+
+                .article__bar {
+                    position: sticky;
+                    top: calc(var(--header-height) + 24px);
+                    margin-top: 24px;
+                }
+}
+
