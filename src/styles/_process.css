@@ -1,0 +1,13 @@
+.process {
+    background-color: #130221;
+    background-image: url("../images/process-desktop.jpg");
+    background-size: 1920px 964px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+    .process__logo {
+        background-image: url("../vectors/process-logo.svg");
+        background-size: 900px 409px;
+        background-repeat: no-repeat;
+        background-position: calc(50% - 500px) calc(100% + 66px);
+    }
