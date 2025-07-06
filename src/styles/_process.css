@@ -4,10 +4,98 @@
     background-size: 1920px 964px;
     background-repeat: no-repeat;
     background-position: center center;
+    color: #f2f2f2;
 }
-    .process__logo {
+    .process__logo-background {
         background-image: url("../vectors/process-logo.svg");
         background-size: 900px 409px;
         background-repeat: no-repeat;
-        background-position: calc(50% - 500px) calc(100% + 66px);
+        background-position: calc(50% - 524px) calc(100% + 66px);
     }
+        .process__wrap {
+            padding-top: 184px;
+            padding-bottom: 151px;
+            padding-right: 36px;
+            display: grid;
+            grid-template-columns: 720px 480px;
+            justify-content: space-between;
+        }
+            .process__head {
+
+            }
+                .process__heading {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
+                .process__description {
+                    margin-top: 22px;
+                    font-size: 18px;
+                    line-height: 30px;
+                }
+
+                .process__actions {
+                    margin-top: 67px;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 20px;
+                }
+                    .process__actions .button {
+                        min-width: 200px;
+                    }
+
+        .process__guide {
+            margin-top: 27px;
+        }
+            .process__step {
+                position: relative;
+                padding-bottom: 45px;
+                border-bottom: 1px solid rgb(212 212 212 / 61%);
+                margin-bottom: 45px;
+            }
+
+            .process__step:last-child {
+                margin-bottom: 0;
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+                .process__step::before {
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: 20px;
+                    bottom: 20px;
+                    width: 1px;
+                    background-color: rgb(212 212 212 / 50%);
+                }
+
+                .process__index {
+                    position: absolute;
+                    left: -94px;
+                    top: -8px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 51px;
+                    height: 51px;
+                    background-image: url("../vectors/process-index.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 28px;
+                    text-align: center;
+                    color: #ffffff;
+                }
+
+                .process__step-heading {
+                    font-size: 30px;
+                    line-height: 34px;
+                }
+
+                .process__step-description {
+                    margin-top: 16px;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
