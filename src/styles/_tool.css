@@ -1,0 +1,53 @@
+.tool {
+    /*min-height: 300px;*/
+    padding: 28px 24px 32px 14px;
+    border: 1px solid #DDDDDD;
+    border-radius: 22px;
+}
+    .tool__icon {
+        vertical-align: top;
+        width: 36px;
+        height: 36px;
+    }
+
+    .tool__title {
+        margin-top: 30px;
+        margin-bottom: 0;
+        display: block;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .tool__description {
+        margin-top: 6px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .tool {
+        min-height: 300px;
+        padding: 39px 32px 43px 16px;
+        border-radius: 30px;
+    }
+        .tool__icon {
+            width: 44px;
+            height: 44px;
+        }
+
+        .tool__title {
+            margin-top: 38px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .tool__description {
+            margin-top: 8px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+}
