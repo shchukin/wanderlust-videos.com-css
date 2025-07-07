@@ -49,3 +49,29 @@
             gap: 30px;
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .listing {
+        padding-bottom: 60px;
+    }
+        .listing__heading {
+
+        }
+
+        .listing__description {
+       
+        }
+
+        .listing__body {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 26px;
+        }
+}
+
+
+
