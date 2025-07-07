@@ -17,7 +17,7 @@
         }
             .pre-header .link {
                 text-decoration-thickness: 0.75px;
-                text-underline-offset: 3px;
+                text-underline-offset: 2.5px;
             }
 
     .pre-header__close {
@@ -91,3 +91,37 @@
                 font-size: 24px;
             }
 }
+
+
+
+@media (width < 740px) {
+
+    .pre-header {
+
+    }
+        .pre-header__wrap {
+
+        }
+            .pre-header__message {
+
+            }
+                .pre-header .link {
+
+                }
+
+        .pre-header__close {
+            width: 75px;
+        }
+            .pre-header__close::before {
+
+            }
+
+            .pre-header__close:hover::before {
+
+            }
+
+            .pre-header__close .icon {
+
+            }
+}
+
