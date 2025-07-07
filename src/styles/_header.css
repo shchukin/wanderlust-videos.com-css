@@ -8,81 +8,78 @@
     background-color: var(--header-color);
     transition: background-color 300ms ease;
 }
-        .header__wrap {
-            position: relative;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    .header__wrap {
+        position: relative;
+        height: var(--header-height);
+    }
+        .header__logo {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 10px;
         }
-            .header__logo {
-                display: block;
-                margin-top: -7px;
+
+        .header__toggler {
+            display: none;
+        }
+
+        .header__dropdown {
+
+        }
+            .header__nav {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: var(--header-height);
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                align-items: center;
             }
 
-            .header__toggler {
-                display: none;
+            @media (740px <= width < 1340px) {
+                /* in this resolution, there is not enough space to make it centered, so position it relative to logo and buttons: */
+                .header__nav {
+                    left: 76px;
+                    right: 282px;
+                }
             }
-
-            .header__dropdown {
-
-            }
-                .header__drop-wrap {
+                .header__link {
                     position: relative;
-                    height: var(--header-height);
+                    padding: 20px 14px;
+                    font-size: 15px;
+                    line-height: 22px;
+                    color: #2d2d2d;
+                    text-decoration: none;
                 }
-
-
-                @media (740px <= width < 1340px) {
-                    /* in this resolution, there is not enough space to make it centered, so position it relative to logo and buttons: */
-                    .header__drop-wrap {
-                        padding-left: 76px;
-                        padding-right: 282px;
-                    }
-                }
-                    .header__nav {
-                        height: var(--header-height);
-                        width: fit-content;
-                        margin-left: auto;
-                        margin-right: auto;
-                        display: flex;
-                        align-items: center;
-                    }
-                        .header__link {
-                            position: relative;
-                            padding: 20px 14px;
-                            font-size: 15px;
-                            line-height: 22px;
-                            color: #2d2d2d;
-                            text-decoration: none;
-                        }
-                            /* hover */
-                            .header__link::after {
-                                content: "";
-                                position: absolute;
-                                inset: 10px 2px;
-                                border-radius: 5px;
-                                transition: background-color var(--transition-hover);
-                            }
-
-                        .header__link:hover::after {
-                            background-color: rgb(45 45 45 / 4%);
-                        }
-
-                        .header__link--current {
-                            color: var(--blue);
-                        }
-
-                    .header__actions {
+                    /* hover */
+                    .header__link::after {
+                        content: "";
                         position: absolute;
-                        right: 0;
-                        top: 0;
-                        height: var(--header-height);
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-                        pointer-events: auto;
+                        inset: 10px 2px;
+                        border-radius: 5px;
+                        transition: background-color var(--transition-hover);
                     }
+
+                .header__link:hover::after {
+                    background-color: rgb(45 45 45 / 4%);
+                }
+
+                .header__link--current {
+                    color: var(--blue);
+                }
+
+            .header__actions {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: var(--header-height);
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
 
 
 
@@ -91,47 +88,44 @@
     .header {
 
     }
-        .header__fixed-panel {
+        .header__wrap {
 
         }
-            .header__wrap {
+            .header__logo {
+                top: 16px;
+            }
+
+            .header__toggler {
 
             }
-                .header__logo {
-                    margin-top: -10px;
-                }
 
-                .header__toggler {
+            .header__dropdown {
 
-                }
-
-                .header__dropdown {
+            }
+                .header__nav {
 
                 }
-                    .header__nav {
+                    .header__link {
+                        padding: 24px 16px;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                        .header__link::after {
+                            inset: 16px 2px;
+                            border-radius: 5px;
+                        }
+
+                    .header__link:hover::after {
 
                     }
-                        .header__link {
-                            padding: 24px 16px;
-                            font-size: 16px;
-                            line-height: 24px;
-                        }
-                            .header__link::after {
-                                inset: 16px 2px;
-                                border-radius: 5px;
-                            }
 
-                        .header__link:hover::after {
+                    .header__link--current {
 
-                        }
-
-                        .header__link--current {
-
-                        }
-
-                    .header__actions {
-                        gap: 13px;
                     }
+
+                .header__actions {
+                    gap: 13px;
+                }
 }
 
 
@@ -140,103 +134,100 @@
     .header {
         min-width: 0;
     }
+        .header__wrap {
+
+        }
+            .header__logo {
+
+            }
+
+            .header__toggler {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: transparent;
+                padding: 0;
+                margin-right: calc(-1 * var(--container-padding) + 2px); /* 2px extra to avoid horizontal scrollbar on some androids */
+                padding-right: calc(var(--container-padding) - 4px);
+                padding-left: 40px;
+                height: var(--header-height);
+                border: none;
+                font-size: 24px;
+                color: #2d2d2d;
+                cursor: pointer;
+            }
+                .header__burger {
+
+                }
+
+                .header__cross {
+                    display: none;
+                }
+                    .header__toggler .icon {
+                        font-size: 32px;
+                        font-weight: 300;
+                    }
+
+
+                .burger-expanded .header__burger {
+                    display: none;
+                }
+
+                .burger-expanded .header__cross {
+                    display: block;
+                }
+
+            .header__dropdown {
+                position: static;
+                min-width: 0;
+                height: auto;
+                display: none;
+            }
+
+            .burger-expanded .header__dropdown {
+                display: block;
+            }
+                .header__nav {
+                    margin: 0;
+                    width: auto;
+                    height: auto;
+                    display: block;
+                }
+                    .header__link {
+                        display: block;
+                        margin-left: calc(-1 * var(--container-padding) / 2);
+                        margin-right: calc(-1 * var(--container-padding) / 2);
+                        padding: 10px calc(var(--container-padding) / 2);
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                        /* hover */
+                        .header__link::after {
+                            display: none;
+                        }
+
+                    .header__link:hover::after {
+
+                    }
+
+                    .header__link--current {
+
+                    }
+
+                .header__actions {
+                    margin-top: 24px;
+                    position: static;
+                    height: auto;
+                }
+
+
 
     .burger-expanded .header {
         height: auto;
     }
-        .header__fixed-panel {
-
+        .burger-expanded .header__wrap {
+            height: auto;
         }
-            .header__wrap {
-
-            }
-                .header__logo {
-
-                }
-
-                .header__toggler {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: transparent;
-                    padding: 0;
-                    margin-right: calc(-1 * var(--container-padding) + 2px); /* 2px extra to avoid horizontal scrollbar on some androids */
-                    padding-right: calc(var(--container-padding) - 4px);
-                    padding-left: 40px;
-                    height: var(--header-height);
-                    border: none;
-                    font-size: 24px;
-                    color: #2d2d2d;
-                    cursor: pointer;
-                }
-                    .header__burger {
-
-                    }
-
-                    .header__cross {
-                        display: none;
-                    }
-                        .header__toggler .icon {
-                            font-size: 32px;
-                            font-weight: 300;
-                        }
-
-
-                    .burger-expanded .header__burger {
-                        display: none;
-                    }
-
-                    .burger-expanded .header__cross {
-                        display: block;
-                    }
-
-                .header__dropdown {
-                    position: static;
-                    min-width: 0;
-                    height: auto;
-                    display: none;
-                }
-
-                .burger-expanded .header__dropdown {
-                    display: block;
-                }
-                    .header__drop-wrap {
-                        height: auto;
-                        padding-top: 24px;
-                        padding-bottom: 40px;
-                    }
-                        .header__nav {
-                            margin: 0;
-                            width: auto;
-                            height: auto;
-                            display: block;
-                        }
-                            .header__link {
-                                display: block;
-                                margin-left: calc(-1 * var(--container-padding) / 2);
-                                margin-right: calc(-1 * var(--container-padding) / 2);
-                                padding: 10px calc(var(--container-padding) / 2);
-                                font-size: 16px;
-                                line-height: 24px;
-                            }
-                                /* hover */
-                                .header__link::after {
-                                    display: none;
-                                }
-
-                            .header__link:hover::after {
-
-                            }
-
-                            .header__link--current {
-
-                            }
-
-                        .header__actions {
-                            margin-top: 24px;
-                            position: static;
-                            height: auto;
-                        }
 }
 
 
@@ -245,6 +236,6 @@
     background-color: #FFFFFF;
 }
 
-.page-scrolled .header--white .header__fixed-panel {
+.page-scrolled .header--white {
     background-color: var(--header-color);
 }

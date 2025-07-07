@@ -1,4 +1,5 @@
 .pre-header {
+    height: 40px;
     background-image: linear-gradient(to right, #5808fb, #c41781);
     color: #FFFFFF;
 }
