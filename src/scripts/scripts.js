@@ -224,6 +224,18 @@
 
         /* Splide */
 
+        new Splide( '.splide--portfolio', {
+            perPage: 3,
+            gap: 30,
+            pagination: false,
+            breakpoints: {
+                740: {
+                    perPage: 1,
+                    pagination: true
+                },
+            }
+        } ).mount();
+
         new Splide( '.splide--tools', {
             perPage: 4,
             gap: 30,

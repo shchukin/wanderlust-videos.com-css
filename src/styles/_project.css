@@ -1,0 +1,20 @@
+.project {
+
+}
+    .project__preview {
+
+    }
+
+    .project__heading {
+        margin-top: 39px;
+        margin-bottom: 0;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .project__description {
+        margin-top: 24px;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
