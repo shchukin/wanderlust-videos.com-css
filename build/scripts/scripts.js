@@ -18,6 +18,53 @@
         window.addEventListener('resize', initGlobalConstant);
 
 
+        /* Page Scrolled */
+
+        $(window).on('scroll', isPageScrolled);
+        $(document).ready(isPageScrolled);
+
+        function isPageScrolled() {
+            if (! $html.hasClass('burger-expanded')) { /* This condition is important: when burger is expanded we still need to know was the page scrolled or not,
+                                                          to keep pre-header or not. See .page-scrolled.burger-expanded .pre-header { display: none;} */
+                if ($(window).scrollTop() > 10) {
+                    $html.addClass('page-scrolled');
+                } else {
+                    $html.removeClass('page-scrolled');
+                }
+            }
+        }
+
+
+        /* Pre-header */
+        $('.pre-header__close').on('click', function () {
+            $(this).closest('.pre-header').remove();
+        })
+
+
+        /* Burger */
+
+        let rememberedPageScrollPosition = 0;
+
+        $('.header__toggler').on('click', function () {
+
+            if( ! $html.hasClass('burger-expanded') ) {
+                rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */
+                $html.addClass('burger-expanded');
+                $(window).scrollTop(0); /* При открытии меню его скролл должен быть в начале */
+            } else {
+                $html.removeClass('burger-expanded');
+                $(window).scrollTop(rememberedPageScrollPosition);/* При закрытии меню скролл должен быть там, где пользователь его оставил */
+            }
+        });
+
+        /* Close burger by click under navigation (expanded header) */
+        $(document).on('click', function (event) {
+            if (!$(event.target).closest('.header').length) {
+                $html.removeClass('burger-expanded');
+            }
+        });
+
+
 
         /* Select placeholder */
         function selectPlaceholder($element) {
@@ -177,23 +224,6 @@
         }
 
 
-        /* Burger */
-
-        let rememberedPageScrollPosition = 0;
-
-        $('.header__toggler').on('click', function () {
-
-            if( ! $html.hasClass('burger-expanded') ) {
-                rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */
-                $html.addClass('burger-expanded');
-                $(window).scrollTop(0); /* При открытии меню его скролл должен быть в начале */
-            } else {
-                $html.removeClass('burger-expanded');
-                $(window).scrollTop(rememberedPageScrollPosition);/* При закрытии меню скролл должен быть там, где пользователь его оставил */
-            }
-        });
-
-
         /* Youtube Preview Player */
 
         $('.youtube-preview__handler').on('click', function() {
@@ -220,6 +250,45 @@
                 }, 800);
             }
         });
+
+
+        /* Splide */
+
+        new Splide( '.splide--portfolio', {
+            perPage: 3,
+            gap: 30,
+            pagination: false,
+            breakpoints: {
+                740: {
+                    perPage: 1,
+                    pagination: true
+                },
+            }
+        } ).mount();
+
+        new Splide( '.splide--tools', {
+            perPage: 4,
+            gap: 30,
+            pagination: false,
+            breakpoints: {
+                740: {
+                    perPage: 1,
+                    pagination: true
+                },
+            }
+        } ).mount();
+
+        new Splide( '.splide--love', {
+            perPage: 4,
+            gap: 30,
+            pagination: false,
+            breakpoints: {
+                740: {
+                    perPage: 1,
+                    pagination: true
+                },
+            }
+        } ).mount();
 
     });
 })(jQuery);
