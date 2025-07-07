@@ -7,6 +7,7 @@
         height: 100%;
         border-radius: 22px;
         overflow: hidden; /* cut all corners */
+        background-color: var(--image-fallback);
     }
         .main-video__video {
             vertical-align: top;
