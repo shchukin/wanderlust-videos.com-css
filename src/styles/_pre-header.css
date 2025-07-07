@@ -11,17 +11,21 @@
         justify-content: center;
     }
         .pre-header__message {
-            font-size: 14px;
-            line-height: 18px;
+            font-size: 13px;
+            line-height: 16px;
             text-align: center;
         }
+            .pre-header .link {
+                text-decoration-thickness: 0.75px;
+                text-underline-offset: 3px;
+            }
 
     .pre-header__close {
         position: absolute;
         right: 0;
         top: 0;
         bottom: 0;
-        width: 60px;
+        width: 50px;
         background-color: transparent;
         border: none;
         padding: 0;
@@ -55,4 +59,35 @@
 
 .page-scrolled.burger-expanded .pre-header {
     display: none;
+}
+
+
+
+@media (1850px <= width) {
+
+    .pre-header {
+
+    }
+        .pre-header__wrap {
+
+        }
+            .pre-header__message {
+                font-size: 14px;
+                line-height: 18px;
+            }
+
+        .pre-header__close {
+            width: 60px;
+        }
+            .pre-header__close::before {
+
+            }
+
+            .pre-header__close:hover::before {
+
+            }
+
+            .pre-header__close .icon {
+                font-size: 24px;
+            }
 }
