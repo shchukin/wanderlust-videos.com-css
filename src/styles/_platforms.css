@@ -1,0 +1,28 @@
+.platforms {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+    .platforms__heading {
+
+    }
+
+    .platforms__body {
+        margin-top: 42px;
+    }
+
+
+
+@media (width < 740px) {
+
+    .platforms {
+        padding-top: 156px;
+        padding-bottom: 179px;
+    }
+        .platforms__heading {
+
+        }
+
+        .platforms__body {
+            margin-top: 68px;
+        }
+}
