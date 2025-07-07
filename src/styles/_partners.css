@@ -15,8 +15,14 @@
         align-items: flex-start;
     }
         .partners__item {
-
+            opacity: 50%;
+            transition: opacity var(--transition-hover);
         }
+
+        .partners__item:hover {
+            opacity: 100%;
+        }
+
             .partners__image {
                 vertical-align: top;
                 width: 100%;
