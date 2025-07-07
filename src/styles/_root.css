@@ -11,6 +11,7 @@
     --container-narrow: 1140px;
     --container-padding: 30px;
     --header-height: 80px;
+    --pre-header-height: 36px;
     --input-border: #B3B3B3;
     --input-border-hover-and-focus: #7E7E7E;
     --placeholder-color: #999999;
@@ -33,6 +34,7 @@
         --container-narrow: 1124px;
         --container-padding: 40px;
         --header-height: 106px;
+        --pre-header-height: 40px;
         --body-font-size: 18px;
         --body-line-height: 30px;
     }
@@ -41,6 +43,7 @@
 @media (width < 740px) {
     :root {
         --header-height: 70px;
+        --pre-header-height: 32px;
     }
 }
 

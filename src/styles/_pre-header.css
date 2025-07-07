@@ -1,11 +1,55 @@
 .pre-header {
-    height: 40px;
+    position: relative;
+    height: var(--pre-header-height);
     background-image: linear-gradient(to right, #5808fb, #c41781);
     color: #FFFFFF;
 }
     .pre-header__wrap {
-
+        height: var(--pre-header-height);
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+        .pre-header__message {
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+        }
+
+    .pre-header__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 60px;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+        .pre-header__close::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            display: block;
+            width: calc(3 / 4 * var(--pre-header-height));
+            height: calc(3 / 4 * var(--pre-header-height));
+            border-radius: 50%;
+            transition: background-color var(--transition-hover);
+        }
+
+        .pre-header__close:hover::before {
+            background-color: rgb(255 255 255 / 10%);
+        }
+
+        .pre-header__close .icon {
+            font-size: 20px;
+            color: #FFFFFF;
+        }
 
 
 
