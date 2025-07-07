@@ -1,0 +1,120 @@
+.contacts {
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+    .contacts__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .contacts__description {
+        max-width: 540px;
+        margin-top: 18px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: var(--body-font-size);
+        line-height: var(--body-line-height);
+        text-align: center;
+    }
+
+    .contacts__body {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 9fr) minmax(0, 14fr);
+        gap: 80px;
+    }
+        .contacts__channel {
+
+        }
+            .contacts__sub-heading {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .contacts__widget {
+                margin-top: 24px;
+            }
+
+
+
+@media (1850px <= width) {
+
+    .contacts {
+        padding-top: 96px;
+        padding-bottom: 114px;
+    }
+        .contacts__heading {
+
+        }
+
+        .contacts__description {
+            max-width: 600px;
+            margin-top: 24px;
+        }
+
+        .contacts__body {
+            margin-top: 55px;
+            grid-template-columns: minmax(0, 9fr) minmax(0, 14fr);
+            gap: 169px;
+        }
+            .contacts__channel {
+
+            }
+                .contacts__sub-heading {
+
+                }
+
+                .contacts__widget {
+                    margin-top: 45px;
+                }
+}
+
+
+
+@media (width < 740px) {
+
+    .contacts {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+        .contacts__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+            /*text-align: center;*/
+        }
+
+        .contacts__description {
+            /*max-width: 540px;*/
+            /*margin-top: 18px;*/
+            /*margin-left: auto;*/
+            /*margin-right: auto;*/
+            /*font-size: var(--body-font-size);*/
+            /*line-height: var(--body-line-height);*/
+            /*text-align: center;*/
+        }
+
+        .contacts__body {
+            /*margin-top: 40px;*/
+            display: block;
+            /*grid-template-columns: minmax(0, 9fr) minmax(0, 14fr);*/
+            /*gap: 169px;*/
+        }
+            .contacts__channel {
+                margin-top: 60px;
+            }
+
+            .contacts__channel:first-child {
+                margin-top: 0;
+            }
+                .contacts__sub-heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                }
+
+                .contacts__widget {
+                    /*margin-top: 24px;*/
+                }
+}
+
+
