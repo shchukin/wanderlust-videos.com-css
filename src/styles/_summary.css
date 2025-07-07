@@ -115,3 +115,56 @@
                         line-height: 24px;
                     }
 }
+
+
+
+@media (width < 740px) {
+
+    .summary {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+        .summary__background {
+            padding: 50px 32px;
+        }
+            .summary__body {
+                display: block;
+            }
+                .summary__primary {
+                    margin-top: 0;
+                }
+                    .summary__heading {
+
+                    }
+
+                    .summary__description {
+                        margin-top: 24px;
+                    }
+
+                .summary__video {
+                    margin-top: 32px;
+                }
+
+            .summary__numbers {
+                margin-top: 50px;
+                display: block;
+            }
+                .summary__stat {
+                    margin-top: 32px;
+                }
+
+                .summary__stat:first-child {
+                    margin-top: 0;
+                }
+                    .summary__param {
+
+                    }
+
+                    .summary__unit {
+
+                    }
+
+                    .summary__stat-description {
+                        margin-top: 12px;
+                    }
+}
