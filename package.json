@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "wanderlust-videos",
   "devDependencies": {
     "del": "2.2.0",
     "gulp": "5.0.0",
