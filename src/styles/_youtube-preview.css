@@ -95,3 +95,37 @@
 
         }
 }
+
+
+
+@media (width < 740px) {
+
+    .youtube-preview {
+
+    }
+        .youtube-preview__handler {
+
+        }
+            .youtube-preview__image {
+
+            }
+
+            .youtube-preview__handler:hover .youtube-preview__image {
+
+            }
+
+            .youtube-preview__handler::after {
+                width: 58px;
+                height: 58px;
+                background-size: 24px 24px;
+            }
+
+            .youtube-preview__handler:hover::after {
+
+            }
+
+        .youtube-preview__video {
+
+        }
+}
+
