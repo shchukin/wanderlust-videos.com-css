@@ -1,5 +1,5 @@
 .info {
-    padding-top: 60px;
+    padding-top: var(--top-padding);
 }
     .info__heading {
         margin-top: 0;
@@ -106,7 +106,7 @@
 @media (1850px <= width) {
 
     .info {
-        padding-top: 96px;
+
     }
         .info__heading {
 
@@ -187,106 +187,68 @@
 @media (width < 740px) {
 
     .info {
-        padding-top: 40px;
+
     }
         .info__heading {
-            /*margin-top: 0;*/
-            /*margin-bottom: 0;*/
-            /*text-align: center;*/
+
         }
 
         .info__description {
-            /*max-width: 760px;*/
-            /*margin-top: 10px;*/
-            /*margin-left: auto;*/
-            /*margin-right: auto;*/
-            /*font-size: var(--body-font-size);*/
-            /*line-height: var(--body-line-height);*/
-            /*text-align: center;*/
+
         }
 
         .info__table-of-contains {
-            /*margin-top: 34px;*/
             padding: 16px 20px 24px;
-            /*background-color: #FAF6F5;*/
-            /*background-image: linear-gradient(45deg, #f0e7fd, #f8f8f6 33%, #fdeef3);*/
-            /*border-radius: 22px;*/
             columns: unset;
-            /*column-gap: 60px;*/
         }
             .info__contains-section {
                 padding-top: 14px;
                 padding-bottom: 14px;
-                /*break-inside: avoid;*/
             }
                 .info__contains-heading {
-                    /*margin-top: 0;*/
-                    /*margin-bottom: 0;*/
-                    /*display: block;*/
-                    /*color: #2d2d2d;*/
+
                 }
 
                 .info__contains-list {
-                    /*margin-top: 18px;*/
+
                 }
                     .info__contains-question {
-                        /*display: block;*/
-                        /*padding-left: 24px;*/
-                        /*padding-top: 8px;*/
-                        /*padding-bottom: 8px;*/
-                        /*background-image: url("../vectors/help.svg");*/
-                        /*background-size: 16px 16px;*/
-                        /*background-repeat: no-repeat;*/
-                        /*background-position: left 11px;*/
-                        /*font-size: 16px;*/
-                        /*line-height: 20px;*/
-                        /*color: var(--blue);*/
-                        /*text-decoration: 1.25px underline transparent;*/
-                        /*text-underline-offset: 3px;*/
-                        /*transition: text-decoration-color var(--transition-hover);*/
+
                     }
 
                     .info__contains-question:hover {
-                        /*text-decoration-color: currentColor;*/
+
                     }
 
         .info__body {
-            /*margin-top: 40px;*/
+
         }
             .info__section {
-                /*margin-top: 28px;*/
-                /*padding-bottom: 28px;*/
-                /*border-bottom: 1px solid #E4E4E4;*/
+
             }
             .info__section:first-child {
-                /*margin-top: 0;*/
+
             }
                 .info__section-heading {
-                    /*margin-top: 0;*/
-                    /*margin-bottom: 0;*/
+
                 }
 
                 .info__section-list {
-                    /*margin-top: 18px;*/
+
                 }
                     .info__item {
-                        /*margin-top: 28px;*/
+
                     }
 
                     .info__item:first-child {
-                        /*margin-top: 0;*/
+
                     }
                         .info__question {
-                            /*margin-top: 0;*/
-                            /*margin-bottom: 0;*/
-                            /*color: var(--blue);*/
+
                         }
 
                         .info__answer {
-                            /*margin-top: 12px;*/
-                            /*font-size: var(--body-font-size);*/
-                            /*line-height: var(--body-line-height);*/
-                            /*color: #2d2d2d;*/
+
                         }
 }
 

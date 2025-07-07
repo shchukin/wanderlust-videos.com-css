@@ -1,5 +1,5 @@
 .agreement {
-    padding-top: 60px;
+    padding-top: var(--top-padding);
     padding-bottom: 75px;
 }
     .agreement__heading {

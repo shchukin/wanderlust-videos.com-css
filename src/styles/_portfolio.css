@@ -1,5 +1,5 @@
 .portfolio {
-    padding-top: 64px;
+    padding-top: var(--top-padding);
     padding-bottom: 64px;
 }
     .portfolio__heading {
@@ -52,7 +52,6 @@
 @media (1850px <= width) {
 
     .portfolio {
-        padding-top: 96px;
         padding-bottom: 98px;
     }
         .portfolio__heading {
@@ -94,7 +93,6 @@
 @media (width < 740px) {
 
     .portfolio {
-        padding-top: 44px;
         padding-bottom: 60px;
     }
         .portfolio__heading {

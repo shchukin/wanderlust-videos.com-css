@@ -1,5 +1,5 @@
 .why {
-    padding-top: 60px;
+    padding-top: var(--top-padding);
     padding-bottom: 80px;
 }
     .why__wrapper {
@@ -160,7 +160,6 @@
 @media (1850px <= width) {
 
     .why {
-        padding-top: 84px;
         padding-bottom: 114px;
     }
         .why__wrapper {

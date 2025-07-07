@@ -1,5 +1,5 @@
 .about {
-    padding-top: 70px;
+    padding-top: var(--top-padding);
 }
     .about__intro {
         display: grid;
@@ -62,7 +62,7 @@
 @media (1850px <= width) {
 
     .about {
-        padding-top: 105px;
+
     }
         .about__intro {
 
@@ -111,7 +111,7 @@
 @media (width < 740px) {
 
     .about {
-        padding-top: 40px;
+
     }
         .about__intro {
             display: block;

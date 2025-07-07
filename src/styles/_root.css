@@ -12,6 +12,7 @@
     --container-padding: 30px;
     --header-height: 80px;
     --pre-header-height: 36px;
+    --top-padding: 60px;
     --input-border: #B3B3B3;
     --input-border-hover-and-focus: #7E7E7E;
     --placeholder-color: #999999;
@@ -37,6 +38,7 @@
         --pre-header-height: 40px;
         --body-font-size: 18px;
         --body-line-height: 30px;
+        --top-padding: 80px;
     }
 }
 
@@ -44,6 +46,7 @@
     :root {
         --header-height: 70px;
         --pre-header-height: 32px;
+        --top-padding: 40px;
     }
 }
 
