@@ -227,7 +227,6 @@
         new Splide( '.splide--init-tools', {
             perPage: 3,
             gap: 30,
-            arrowPath: 'M22 26L20.6 24.55L24.15 21H12V19H24.15L20.6 15.45L22 14L28 20L22 26Z',
             pagination: false,
             breakpoints: {
                 740: {

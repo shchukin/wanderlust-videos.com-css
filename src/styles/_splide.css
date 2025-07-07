@@ -1,6 +1,16 @@
 .splide {
     position: relative;
 }
+    .splide__track {
+        overflow: visible; /* cut carousel edges manually */
+    }
+        .splide__list {
+
+        }
+            .splide__slide {
+
+            }
+
     .splide__arrows {
         position: absolute;
         right: 0;
@@ -41,31 +51,59 @@
         .splide__arrow--next {
 
         }
-            .splide__arrow svg {
-                vertical-align: top;
-                width: 34px;
-                height: 34px;
-                fill: #000000;
+            .splide__arrow .icon {
+                font-size: 20px;
+                color: #000000;
             }
 
             .splide__arrow--prev svg {
                 transform: scaleX(-100%);
             }
 
-    .splide__track {
-        overflow: visible; /* cut carousel edges manually */
-    }
-        .splide__list {
-
+        .splide__pagination {
+            display: flex;
+            align-items: flex-start;
         }
-            .splide__slide {
-
+            .splide__pagination__page {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 16px;
+                height: 36px;
+                padding: 0;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
             }
+                .splide__pagination__page::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 5px;
+                }
 
-    .splide__pagination {
+                .splide__pagination__page:hover::before {
+                    background-color: #EFEFEF;
+                }
 
-    }
+                .splide__pagination__page::after {
+                    content: "";
+                    position: relative;
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    background-color: #DDDDDD;
+                    border-radius: 50%;
+                    transition: background-color 200ms ease;
+                }
 
+                .splide__pagination__page.is-active::after {
+                    background-color: #2d2d2d;
+                }
 
 
 @media (1850px <= width) {
@@ -99,9 +137,8 @@
             .splide__arrow--next {
 
             }
-                .splide__arrow svg {
-                    width: 40px;
-                    height: 40px;
+                .splide__arrow .icon {
+                    font-size: 24px;
                 }
 
                 .splide__arrow--prev svg {
@@ -132,6 +169,10 @@
     }
         .splide__arrows {
             position: static;
+            margin-top: 24px;
+            margin-bottom: 0;
+            display: flex;
+            justify-content: center;
             /*right: 0;*/
             /*bottom: 100%;*/
             /*margin-bottom: 50px;*/
