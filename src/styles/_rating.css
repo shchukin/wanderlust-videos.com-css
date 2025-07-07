@@ -1,0 +1,29 @@
+.rating {
+    width: 95px;
+    height: 16px;
+    background-image: url("../vectors/rating-background.svg");
+    background-size: 95px 16px;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+    .rating__progress {
+        height: 100%;
+        background-image: url("../vectors/rating-fill.svg");
+        background-size: 95px 16px;
+        background-repeat: no-repeat;
+        background-position: left top;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .rating {
+        width: 107px;
+        height: 18px;
+        background-size: 107px 18px;
+    }
+        .rating__progress {
+            background-size: 107px 18px;
+        }
+}
