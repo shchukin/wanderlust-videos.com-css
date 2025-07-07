@@ -24,29 +24,6 @@
 
 
 
-.title--larger {
-    font-size: 60px;
-    line-height: 72px;
-}
-
-@media (1850px <= width) {
-
-    .title--larger {
-        font-size: 72px;
-        line-height: 87px;
-    }
-}
-
-@media (width < 740px) {
-
-    .title--larger {
-        font-size: 40px;
-        line-height: 48px;
-    }
-}
-
-
-
 .title--small {
     font-size: 30px;
     line-height: 38px;
