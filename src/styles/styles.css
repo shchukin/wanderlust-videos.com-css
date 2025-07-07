@@ -1,5 +1,6 @@
 @import url("_fonts.css");
 @import url("../vendors/normalize/normalize.css");
+@import url("../vendors/splide/css/splide-core.min.css");
 @import url("../vendors/magnific-popup/magnific-popup.css");
 @import url("_box-sizing.css");
 @import url("_visuallyhidden.css");
@@ -67,4 +68,5 @@
 @import url("_process.css");
 @import url("_platforms.css");
 @import url("_tool.css");
+@import url("_splide.css");
 
