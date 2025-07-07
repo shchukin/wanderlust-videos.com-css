@@ -240,10 +240,6 @@
 
 
 
-.header--white {
+html:not(.page-scrolled) .header--white {
     background-color: #FFFFFF;
-}
-
-.page-scrolled .header--white {
-    background-color: var(--header-color);
 }
