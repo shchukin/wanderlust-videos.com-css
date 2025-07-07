@@ -24,7 +24,8 @@
         $(document).ready(isPageScrolled);
 
         function isPageScrolled() {
-            if (! $html.hasClass('burger-expanded')) {
+            if (! $html.hasClass('burger-expanded')) { /* This condition is important: when burger is expanded we still need to know was the page scrolled or not,
+                                                          to keep pre-header or not. See .page-scrolled.burger-expanded .pre-header { display: none;} */
                 if ($(window).scrollTop() > 10) {
                     $html.addClass('page-scrolled');
                 } else {
