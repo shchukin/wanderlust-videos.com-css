@@ -1,7 +1,7 @@
 .youtube-preview {
     aspect-ratio: 16/9;
     /*aspect-ratio: 560 / 356 in photoshop */
-    background-color: var(--image-fallback);
+    background-color: #000000;
     border-radius: 22px;
     overflow: hidden; /* cur video corners */
 }
