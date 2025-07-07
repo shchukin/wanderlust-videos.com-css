@@ -3,7 +3,13 @@
     padding: 28px 24px 32px 14px;
     border: 1px solid #DDDDDD;
     border-radius: 22px;
+    transition: border-color var(--transition-hover);
 }
+
+.tool:hover {
+    border-color: #E86BAC;
+}
+
     .tool__icon {
         vertical-align: top;
         width: 36px;
