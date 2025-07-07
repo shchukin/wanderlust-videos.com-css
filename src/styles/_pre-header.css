@@ -9,6 +9,6 @@
 
 
 
-.burger-expanded .pre-header {
+.page-scrolled.burger-expanded .pre-header {
     display: none;
 }
