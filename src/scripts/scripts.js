@@ -35,6 +35,30 @@
         }
 
 
+        /* Pre-header */
+        $('.pre-header__close').on('click', function () {
+            $(this).closest('.pre-header').remove();
+        })
+
+
+        /* Burger */
+
+        let rememberedPageScrollPosition = 0;
+
+        $('.header__toggler').on('click', function () {
+
+            if( ! $html.hasClass('burger-expanded') ) {
+                rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */
+                $html.addClass('burger-expanded');
+                $(window).scrollTop(0); /* При открытии меню его скролл должен быть в начале */
+            } else {
+                $html.removeClass('burger-expanded');
+                $(window).scrollTop(rememberedPageScrollPosition);/* При закрытии меню скролл должен быть там, где пользователь его оставил */
+            }
+        });
+
+
+
         /* Select placeholder */
         function selectPlaceholder($element) {
             if ($element.val() === 'placeholder') {
@@ -191,23 +215,6 @@
         if ($teamList.find('.team__member').length >= 11) {
             $teamList.closest('.container').addClass('container--wide');
         }
-
-
-        /* Burger */
-
-        let rememberedPageScrollPosition = 0;
-
-        $('.header__toggler').on('click', function () {
-
-            if( ! $html.hasClass('burger-expanded') ) {
-                rememberedPageScrollPosition = $(window).scrollTop(); /* Запомнить скролл пользователя, так как display: none на .page его сбросит (смотри .burger-expanded .page) */
-                $html.addClass('burger-expanded');
-                $(window).scrollTop(0); /* При открытии меню его скролл должен быть в начале */
-            } else {
-                $html.removeClass('burger-expanded');
-                $(window).scrollTop(rememberedPageScrollPosition);/* При закрытии меню скролл должен быть там, где пользователь его оставил */
-            }
-        });
 
 
         /* Youtube Preview Player */
