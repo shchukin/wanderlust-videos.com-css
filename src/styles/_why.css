@@ -388,10 +388,34 @@
 }
 
 
+
+
 .why--on-index-page {
-    padding-top: 128px;
+    padding-top: 80px;
     padding-bottom: 80px;
 }
-    .why--on-index-page .why__reason {
-        margin-top: 22px;
+
+    .why--on-index-page .why__description {
+        width: 990px;
     }
+
+    .why--on-index-page .why__reason {
+        margin-top: 18px;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .why--on-index-page {
+        padding-top: 128px;
+        padding-bottom: 80px;
+    }
+        .why--on-index-page .why__description {
+            width: 1120px;
+        }
+
+        .why--on-index-page .why__reason {
+            margin-top: 22px;
+        }
+}
