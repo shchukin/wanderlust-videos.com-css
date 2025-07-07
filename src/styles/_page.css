@@ -1,5 +1,5 @@
 .page {
-    height: calc(100% - var(--header-height));
+    min-height: calc(100svh - var(--header-height)); /* Footer to bottom */
     display: flex;
     flex-direction: column;
 }
