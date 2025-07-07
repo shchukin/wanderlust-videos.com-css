@@ -224,8 +224,20 @@
 
         /* Splide */
 
-        new Splide( '.splide--init-tools', {
-            perPage: 3,
+        new Splide( '.splide--tools', {
+            perPage: 4,
+            gap: 30,
+            pagination: false,
+            breakpoints: {
+                740: {
+                    perPage: 1,
+                    pagination: true
+                },
+            }
+        } ).mount();
+
+        new Splide( '.splide--love', {
+            perPage: 4,
             gap: 30,
             pagination: false,
             breakpoints: {

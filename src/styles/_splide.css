@@ -173,6 +173,7 @@
             margin-bottom: 0;
             display: flex;
             justify-content: center;
+            gap: 12px;
             /*right: 0;*/
             /*bottom: 100%;*/
             /*margin-bottom: 50px;*/
@@ -234,5 +235,74 @@
 
         .splide__pagination {
 
+        }
+}
+
+
+
+.splide--inverted-colors {
+
+}
+    .splide--inverted-colors .splide__arrows {
+
+    }
+        .splide--inverted-colors .splide__arrow {
+            border-color: #736873;
+        }
+        .splide--inverted-colors .splide__arrow:hover {
+            background-color: rgb(255 255 255 / 10%);
+        }
+            .splide--inverted-colors .splide__arrow .icon {
+                border-color: #736873;
+                color: #FFFFFF;
+            }
+
+        .splide--inverted-colors .splide__pagination__page {
+
+        }
+            .splide--inverted-colors .splide__pagination__page::before {
+
+            }
+
+            .splide--inverted-colors .splide__pagination__page:hover::before {
+                background-color: rgb(255 255 255 / 10%);
+            }
+
+            .splide--inverted-colors .splide__pagination__page::after {
+                background-color: rgb(255 255 255 / 30%);
+            }
+
+        .splide--inverted-colors .splide__pagination__page.is-active::after {
+            background-color: #FFFFFF;
+        }
+
+
+
+.splide--love {
+
+}
+    .splide--love .splide__arrows {
+        margin-bottom: 62px;
+    }
+
+
+@media (1850px <= width) {
+
+    .splide--love {
+
+    }
+        .splide--love .splide__arrows {
+            margin-bottom: 94px;
+        }
+}
+
+
+@media (width < 740px) {
+
+    .splide--love {
+
+    }
+        .splide--love .splide__arrows {
+            margin-bottom: 0;
         }
 }
