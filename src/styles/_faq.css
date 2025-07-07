@@ -2,37 +2,40 @@
     padding-top: 54px;
     padding-bottom: 78px;
 }
-    .faq__head {
-        position: relative;
+    .faq__wrap {
+
     }
-        .faq__inner {
-            max-width: 760px;
+        .faq__head {
+            position: relative;
         }
+            .faq__inner {
+                max-width: 760px;
+            }
 
-        .faq__heading {
-            margin-top: 0;
-            margin-bottom: 0;
+            .faq__heading {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            .faq__description {
+                margin-top: 18px;
+                font-size: var(--body-font-size);
+                line-height: var(--body-line-height);
+            }
+
+            .faq__answers {
+                margin-top: 18px;
+            }
+
+            .faq__request {
+                position: absolute;
+                right: 0;
+                top: 36px;
+            }
+
+        .faq__body {
+            margin-top: 42px;
         }
-
-        .faq__description {
-            margin-top: 18px;
-            font-size: var(--body-font-size);
-            line-height: var(--body-line-height);
-        }
-
-        .faq__answers {
-            margin-top: 18px;
-        }
-
-        .faq__request {
-            position: absolute;
-            right: 0;
-            top: 36px;
-        }
-
-    .faq__body {
-        margin-top: 42px;
-    }
 
 
 
@@ -42,34 +45,37 @@
         padding-top: 70px;
         padding-bottom: 104px;
     }
-        .faq__head {
+        .faq__wrap {
 
         }
-            .faq__inner {
-                max-width: 850px;
-            }
-
-            .faq__heading {
+            .faq__head {
 
             }
+                .faq__inner {
+                    max-width: 850px;
+                }
 
-            .faq__description {
-                margin-top: 24px;
-                line-height: var(--body-line-height);
+                .faq__heading {
+
+                }
+
+                .faq__description {
+                    margin-top: 24px;
+                    line-height: var(--body-line-height);
+                }
+
+                .faq__answers {
+                    margin-top: 24px;
+                }
+
+                .faq__request {
+
+                    top: 48px;
+                }
+
+            .faq__body {
+                margin-top: 42px;
             }
-
-            .faq__answers {
-                margin-top: 24px;
-            }
-
-            .faq__request {
-
-                top: 48px;
-            }
-
-        .faq__body {
-            margin-top: 42px;
-        }
 }
 
 
@@ -80,38 +86,41 @@
         /*padding-top: 54px;*/
         /*padding-bottom: 78px;*/
     }
-        .faq__head {
-            /*position: relative;*/
+        .faq__wrap {
+
         }
-            .faq__inner {
-                /*max-width: 760px;*/
+            .faq__head {
+                /*position: relative;*/
             }
+                .faq__inner {
+                    /*max-width: 760px;*/
+                }
 
-            .faq__heading {
-                /*margin-top: 0;*/
-                /*margin-bottom: 0;*/
+                .faq__heading {
+                    /*margin-top: 0;*/
+                    /*margin-bottom: 0;*/
+                }
+
+                .faq__description {
+                    /*margin-top: 18px;*/
+                    /*font-size: var(--body-font-size);*/
+                    /*line-height: var(--body-line-height);*/
+                }
+
+                .faq__answers {
+                    display: none;
+                }
+
+                .faq__request {
+                    margin-top: 24px;
+                    position: static;
+                    /*right: 0;*/
+                    /*top: 36px;*/
+                }
+
+            .faq__body {
+                /*margin-top: 42px;*/
             }
-
-            .faq__description {
-                /*margin-top: 18px;*/
-                /*font-size: var(--body-font-size);*/
-                /*line-height: var(--body-line-height);*/
-            }
-
-            .faq__answers {
-                display: none;
-            }
-
-            .faq__request {
-                margin-top: 24px;
-                position: static;
-                /*right: 0;*/
-                /*top: 36px;*/
-            }
-
-        .faq__body {
-            /*margin-top: 42px;*/
-        }
 }
 
 

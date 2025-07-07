@@ -1,0 +1,17 @@
+.listing {
+
+}
+    .listing__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .listing__description {
+        font-size: 18px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .listing__body {
+
+    }
