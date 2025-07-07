@@ -10,6 +10,12 @@
             .splide__slide {
                 display: flex;
                 flex-direction: column;
+                opacity: 61%;
+                transition: opacity 300ms ease;
+            }
+
+            .splide__slide.is-visible {
+                opacity: 100%;
             }
 
     .splide__arrows {
