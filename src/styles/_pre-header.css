@@ -109,19 +109,26 @@
 
                 }
 
-        .pre-header__close {
-            width: 75px;
-        }
-            .pre-header__close::before {
-
+            .pre-header__close {
+                width: 75px;
             }
 
-            .pre-header__close:hover::before {
+            @media (width < 540px) {
 
+                .pre-header__close {
+                    width: 75px;
             }
+                }
+                .pre-header__close::before {
 
-            .pre-header__close .icon {
+                }
 
-            }
+                .pre-header__close:hover::before {
+
+                }
+
+                .pre-header__close .icon {
+
+                }
 }
 
