@@ -1,15 +1,19 @@
 .platforms {
     padding-top: 80px;
     padding-bottom: 100px;
+    overflow: hidden;
 }
-    .platforms__heading {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+    .platforms__wrap {
 
-    .platforms__body {
-        margin-top: 42px;
     }
+        .platforms__heading {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .platforms__body {
+            margin-top: 42px;
+        }
 
 
 
@@ -19,11 +23,35 @@
         padding-top: 156px;
         padding-bottom: 179px;
     }
-        .platforms__heading {
+        .platforms__wrap {
 
         }
+            .platforms__heading {
 
-        .platforms__body {
-            margin-top: 68px;
-        }
+            }
+
+            .platforms__body {
+                margin-top: 68px;
+            }
 }
+
+
+
+@media (width < 740px) {
+
+    .platforms {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+        .platforms__wrap {
+
+        }
+            .platforms__heading {
+
+            }
+
+            .platforms__body {
+                margin-top: 32px;
+            }
+}
+
