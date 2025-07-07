@@ -72,8 +72,8 @@
 
     .main-video.container {
         max-width: none;
-        border-left-width: calc(1/2 * var(--container-padding));
-        border-right-width: calc(1/2 * var(--container-padding));
+        border-left-width: calc(var(--container-padding) / 2);
+        border-right-width: calc(var(--container-padding) / 2);
     }
         .main-video__inner {
 

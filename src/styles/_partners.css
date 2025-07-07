@@ -66,8 +66,8 @@
 
         .partners__list {
             margin-top: 20px;
-            margin-left: calc(-1 * 1/2 * var(--container-padding));
-            margin-right: calc(-1 * 1/2 * var(--container-padding));
+            margin-left: calc(-1 * var(--container-padding) / 2);
+            margin-right: calc(-1 * var(--container-padding) / 2);
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }

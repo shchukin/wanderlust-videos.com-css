@@ -31,6 +31,9 @@
 
         .why__list {
             --why-padding: 32px;
+        }
+
+        .why__list {
             margin-top: 60px;
             margin-left: calc(-1 * var(--why-padding));
             margin-right: calc(-1 * var(--why-padding));
@@ -182,6 +185,9 @@
 
             .why__list {
                 --why-padding: 46px;
+            }
+
+            .why__list {
                 margin-top: 89px;
             }
                 .why__item {

@@ -1,9 +1,9 @@
 .accordion {
     display: flex;
     align-items: flex-start;
+    gap: 80px;
     --accordion-h-padding: 18px;
     --right-padding-under-icon: 46px;
-    gap: 80px;
 }
     .accordion__desktop-preview {
         flex-shrink: 0;
@@ -108,9 +108,9 @@
 @media (1850px <= width) {
 
     .accordion {
+        gap: 164px;
         --accordion-h-padding: 24px;
         --right-padding-under-icon: 54px;
-        gap: 164px;
     }
         .accordion__desktop-preview {
             width: 540px;

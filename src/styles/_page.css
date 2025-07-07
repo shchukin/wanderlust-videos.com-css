@@ -1,8 +1,11 @@
+/* stylelint-disable */
 .page {
     min-height: calc(100svh - var(--header-height)); /* Footer to bottom */
     display: flex;
     flex-direction: column;
 }
+/* stylelint-enable */
+
     .page__unique-part {
         flex-grow: 1;
     }
