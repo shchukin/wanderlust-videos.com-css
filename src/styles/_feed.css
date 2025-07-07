@@ -64,31 +64,24 @@
 @media (width < 740px) {
 
     .feed {
-        /*padding-top: 44px;*/
-        /*padding-bottom: 60px;*/
+
     }
         .feed__list {
 
         }
             .feed__item {
                 margin-top: 40px;
-                /*border-top: 2px solid #E4E4E4;*/
                 padding-top: 40px;
                 padding-left: 0;
             }
 
             .feed__item:first-child {
-                /*margin-top: 0;*/
-                /*border-top: none;*/
-                /*padding-top: 0;*/
+
             }
 
         .feed__navigation {
-            /*margin-top: 60px;*/
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            /*align-items: center;*/
-            /*justify-content: center;*/
             gap: 16px;
         }
             .feed__navigation .button {

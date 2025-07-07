@@ -83,28 +83,24 @@
 @media (width < 740px) {
 
     .faq {
-        /*padding-top: 54px;*/
-        /*padding-bottom: 78px;*/
+
     }
         .faq__wrap {
 
         }
             .faq__head {
-                /*position: relative;*/
+
             }
                 .faq__inner {
-                    /*max-width: 760px;*/
+
                 }
 
                 .faq__heading {
-                    /*margin-top: 0;*/
-                    /*margin-bottom: 0;*/
+
                 }
 
                 .faq__description {
-                    /*margin-top: 18px;*/
-                    /*font-size: var(--body-font-size);*/
-                    /*line-height: var(--body-line-height);*/
+
                 }
 
                 .faq__answers {
@@ -114,12 +110,10 @@
                 .faq__request {
                     margin-top: 24px;
                     position: static;
-                    /*right: 0;*/
-                    /*top: 36px;*/
                 }
 
             .faq__body {
-                /*margin-top: 42px;*/
+
             }
 }
 

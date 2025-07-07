@@ -80,13 +80,12 @@
             }
 
             .panel__description {
-                /*margin-top: 24px;*/
+
             }
 
         .panel__icon {
             order: -1;
             width: auto;
-            /*width: 348px;*/
             margin-left: -8px;
             font-weight: 200;
             font-size: 64px;

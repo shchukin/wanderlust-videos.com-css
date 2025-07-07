@@ -35,16 +35,14 @@
 @media (width < 740px) {
 
     .post-stats {
-        /*display: flex;*/
-        /*flex-direction: column;*/
-        /*gap: 4px;*/
+
     }
         .post-stats__param {
 
         }
 
         .post-stats__separator {
-            /*display: none;*/
+
         }
 }
 

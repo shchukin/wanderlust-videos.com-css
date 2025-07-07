@@ -123,8 +123,6 @@
             .about__description {
                 margin-left: 0;
                 margin-top: 20px;
-                /*font-size: 15px;*/
-                /*line-height: 26px;*/
             }
 
 
@@ -133,11 +131,8 @@
             border-top: 1px solid #D1D1D1;
             padding-top: 40px;
             display: block;
-            /*grid-template-columns: repeat(3, minmax(0, 3fr));*/
-            /*gap: 81px;*/
         }
             .about__feature {
-                /*position: relative;*/
                 margin-top: 32px;
                 padding-top: 0;
                 padding-bottom: 0;
@@ -152,18 +147,14 @@
             }
 
             .about__feature:first-child::before {
-                /*display: none;*/
+
             }
                 .about__sub-heading {
-                    /*margin-top: 0;*/
-                    /*margin-bottom: 0;*/
+
                 }
 
                 .about__entry {
-                    /*margin-top: 18px;*/
-                    /*margin-bottom: 0;*/
-                    /*font-size: 15px;*/
-                    /*line-height: 26px;*/
+
                 }
 }
 
