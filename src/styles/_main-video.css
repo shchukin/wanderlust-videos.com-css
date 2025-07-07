@@ -1,11 +1,11 @@
 .main-video {
     position: relative;
-    height: calc(100vh - 200px);
+    height: calc(100vh - var(--pre-header-height) - var(--header-height) - var(--container-padding));
 }
     .main-video__inner {
         position: relative;
         height: 100%;
-        border-radius: 30px;
+        border-radius: 22px;
         overflow: hidden; /* cut all corners */
     }
         .main-video__video {
@@ -22,10 +22,35 @@
 
         .main-video__heading {
             position: absolute;
-            left: 85px;
-            bottom: 200px;
-            max-width: 1340px;
+            left: 64px;
+            bottom: 20%;
+            max-width: 1100px;
             margin-top: 0;
             margin-bottom: 0;
             color: #FFFFFF;
         }
+
+
+
+@media (1850px <= width) {
+
+    .main-video {
+        height: calc(100vh - var(--pre-header-height) - 2 * var(--header-height));
+    }
+        .main-video__inner {
+            border-radius: 30px;
+        }
+            .main-video__video {
+
+            }
+
+            .main-video__fader {
+
+            }
+
+            .main-video__heading {
+                left: 85px;
+                bottom: 25%;
+                max-width: 1340px;
+            }
+}
