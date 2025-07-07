@@ -181,8 +181,12 @@
                 }
 
             .header__dropdown {
-                position: static;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 100%;
                 min-width: 0;
+                padding-top: 24px;
                 height: auto;
                 display: none;
             }
@@ -191,6 +195,7 @@
                 display: block;
             }
                 .header__nav {
+                    position: sticky;
                     margin: 0;
                     width: auto;
                     height: auto;
@@ -226,10 +231,10 @@
 
 
     .burger-expanded .header {
-        height: auto;
+
     }
         .burger-expanded .header__wrap {
-            height: auto;
+
         }
 }
 
