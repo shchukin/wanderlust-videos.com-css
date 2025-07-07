@@ -18,6 +18,19 @@
         window.addEventListener('resize', initGlobalConstant);
 
 
+        /* Page Scrolled */
+
+        $(window).on('scroll', isPageScrolled);
+        $(document).ready(isPageScrolled);
+
+        function isPageScrolled() {
+            if ($(window).scrollTop() > 10) {
+                $html.addClass('page-scrolled');
+            } else {
+                $html.removeClass('page-scrolled');
+            }
+        }
+
 
         /* Select placeholder */
         function selectPlaceholder($element) {

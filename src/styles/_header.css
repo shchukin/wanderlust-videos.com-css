@@ -9,7 +9,8 @@
         width: 100%;
         min-width: 1240px;/* same as min-width on <HTML> tag, but since this selector is fixed we need to repeat this min-width */
         height: var(--header-height);
-        background-color: #F4F4F4;
+        background-color: var(--header-color);
+        transition: background-color 300ms ease;
     }
         .header__wrap {
             position: relative;
@@ -252,3 +253,14 @@
 }
 
 
+
+.header--white {
+
+}
+    .header--white .header__fixed-panel {
+        background-color: #FFFFFF;
+    }
+
+    .page-scrolled .header--white .header__fixed-panel {
+        background-color: var(--header-color);
+    }
