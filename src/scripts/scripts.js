@@ -57,6 +57,13 @@
             }
         });
 
+        /* Close burger by click under navigation (expanded header) */
+        $(document).on('click', function (event) {
+            if (!$(event.target).closest('.header').length) {
+                $html.removeClass('burger-expanded');
+            }
+        });
+
 
 
         /* Select placeholder */
