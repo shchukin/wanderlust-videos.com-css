@@ -2,6 +2,10 @@
     padding-top: 80px;
     padding-bottom: 100px;
     background-color: #1b0639;
+    background-image: url("../images/portfolio-preview.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     color: #ffffff;
     overflow: hidden;
 }
@@ -44,6 +48,7 @@
     .portfolio-preview {
         padding-top: 50px;
         padding-bottom: 70px;
+        background-image: url("../images/portfolio-preview-mobile.jpg");
     }
         .portfolio-preview__wrap {
 
