@@ -42,8 +42,8 @@
 @media (width < 740px) {
 
     .portfolio-preview {
-        padding-top: 60px;
-        padding-bottom: 80px;
+        padding-top: 50px;
+        padding-bottom: 70px;
     }
         .portfolio-preview__wrap {
 
