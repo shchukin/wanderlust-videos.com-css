@@ -120,6 +120,13 @@
                         width: 210px;
                     }
 
+        .why__bottom-action {
+            margin-top: 80px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
 
 .why--how-it-works {
     background-color: #120421;
@@ -381,3 +388,10 @@
 }
 
 
+.why--on-index-page {
+    padding-top: 128px;
+    padding-bottom: 80px;
+}
+    .why--on-index-page .why__reason {
+        margin-top: 22px;
+    }
