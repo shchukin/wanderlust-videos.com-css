@@ -1,17 +1,13 @@
 .header {
+    position: sticky;
+    z-index: 100;
+    left: 0;
+    top: 0;
     height: var(--header-height);
+    min-width: 1240px;/* same as min-width on <HTML> tag, but since this selector is fixed we need to repeat this min-width */
+    background-color: var(--header-color);
+    transition: background-color 300ms ease;
 }
-    .header__fixed-panel {
-        position: fixed;
-        z-index: 100;
-        left: 0;
-        top: 0;
-        width: 100%;
-        min-width: 1240px;/* same as min-width on <HTML> tag, but since this selector is fixed we need to repeat this min-width */
-        height: var(--header-height);
-        background-color: var(--header-color);
-        transition: background-color 300ms ease;
-    }
         .header__wrap {
             position: relative;
             height: 100%;
@@ -29,14 +25,7 @@
             }
 
             .header__dropdown {
-                position: fixed;
-                z-index: 100;
-                left: 0;
-                right: 0;
-                top: 0;
-                min-width: 1240px; /* same as min-width on <HTML> tag, but since this selector is fixed we need to repeat this min-width */
-                height: var(--header-height);
-                pointer-events: none;
+
             }
                 .header__drop-wrap {
                     position: relative;
@@ -58,7 +47,6 @@
                         margin-right: auto;
                         display: flex;
                         align-items: center;
-                        pointer-events: auto;
                     }
                         .header__link {
                             position: relative;
@@ -150,15 +138,14 @@
 @media (width < 740px) {
 
     .header {
-
+        min-width: 0;
     }
 
     .burger-expanded .header {
-        padding-top: var(--header-height);
         height: auto;
     }
         .header__fixed-panel {
-            min-width: 0;
+
         }
             .header__wrap {
 
@@ -255,12 +242,9 @@
 
 
 .header--white {
-
+    background-color: #FFFFFF;
 }
-    .header--white .header__fixed-panel {
-        background-color: #FFFFFF;
-    }
 
-    .page-scrolled .header--white .header__fixed-panel {
-        background-color: var(--header-color);
-    }
+.page-scrolled .header--white .header__fixed-panel {
+    background-color: var(--header-color);
+}
