@@ -5,7 +5,7 @@
     top: 0;
     height: var(--header-height);
     min-width: 1240px;/* same as min-width on <HTML> tag, but since this selector is fixed we need to repeat this min-width */
-    background-color: var(--header-color);
+    background-color: #F4F4F4;
     transition: background-color 300ms ease;
 }
     .header__wrap {
@@ -240,6 +240,6 @@
 
 
 
-html:not(.page-scrolled) .header--white {
+html:not(.page-scrolled):not(.burger-expanded) .header--white {
     background-color: #FFFFFF;
 }

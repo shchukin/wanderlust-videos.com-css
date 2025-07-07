@@ -6,3 +6,9 @@
     .pre-header__wrap {
 
     }
+
+
+
+.burger-expanded .pre-header {
+    display: none;
+}
