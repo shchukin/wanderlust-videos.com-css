@@ -242,7 +242,7 @@
                     },
                 }
             } ).mount();
-            
+
         }
 
         /* Select placeholder */

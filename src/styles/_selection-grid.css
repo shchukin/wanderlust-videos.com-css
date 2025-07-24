@@ -1,0 +1,5 @@
+.selection-grid {
+    columns: 2;
+    gap: 24px;
+    break-inside: avoid;
+}
