@@ -114,3 +114,29 @@
 .choice--full-width {
     width: 100%;
 }
+
+
+
+@media (1850px <= width) {
+
+    .choice {
+        min-width: 22px;
+        min-height: 40px;
+    }
+        .choice__widget {
+
+        }
+
+        .choice__label {
+            padding: 9px 0 9px 34px;
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .choice__icon {
+            top: 9px;
+            width: 22px;
+            height: 22px;
+            background-size: 20px 20px;
+        }
+}
