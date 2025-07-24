@@ -12,3 +12,22 @@
 .helper + .helper {
     padding-top: 4px;
 }
+
+
+
+@media (1850px <= width) {
+
+    .helper {
+        padding-top: 8px;
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    .helper--error {
+
+    }
+
+    .helper + .helper {
+        padding-top: 5px;
+    }
+}

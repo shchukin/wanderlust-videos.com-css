@@ -7,3 +7,14 @@
     line-height: 24px;
     color: #333333;
 }
+
+
+
+@media (1850px <= width) {
+
+    .label {
+        padding-bottom: 10px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
