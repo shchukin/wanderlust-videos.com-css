@@ -9,6 +9,12 @@
         margin-top: 0;
     }
 
+    .form__field--split {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
     .form__submit {
         margin-top: 24px;
     }
@@ -16,3 +22,33 @@
         .form__submit .button {
             width: 100%;
         }
+
+
+
+
+@media (1850px <= width) {
+
+    .form {
+
+    }
+        .form__field {
+            margin-top: 28px;
+        }
+
+        .form__field:first-child {
+
+        }
+
+        .form__field--split {
+
+            gap: 28px;
+        }
+
+        .form__submit {
+            margin-top: 28px;
+        }
+            .form__submit.button,
+            .form__submit .button {
+
+            }
+}

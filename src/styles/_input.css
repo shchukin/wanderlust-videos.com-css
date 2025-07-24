@@ -149,3 +149,35 @@ select.input__widget:disabled {
             color: #000000; /* Browsers on Windows inherit grey color from <select> to <option>`s. Reset it. */
         }
 
+
+
+
+@media (1850px <= width) {
+
+    .input {
+
+    }
+        .input__widget {
+            height: 56px;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            border-radius: 5px;
+            font-size: 17px; /* not less than 16px (otherwise mobile browsers will zoom in on focus) */
+            line-height: 26px;
+        }
+
+    /* stylelint-disable */
+    textarea.input__widget {
+        min-height: 56px; /* 1 row */
+        max-height: calc(10*26px + 2*13px + 2*2px); /* rows + vertical paddings + vertical borders */
+    }
+    /* stylelint-enable */
+
+
+    select.input__widget {
+        padding-right: 56px;
+        background-size: 18px 18px;
+        background-position: right 18px center;
+    }
+}
+
