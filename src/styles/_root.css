@@ -51,9 +51,15 @@
 }
 
 
-@media (350px <= width < 740px) {
+@media (370px <= width < 740px) {
     :root {
         --container-padding: 24px;
+    }
+}
+
+@media (350px <= width < 370px) {
+    :root {
+        --container-padding: 20px;
     }
 }
 
