@@ -134,6 +134,24 @@
 }
 
 
+.button--submit {
+    /*padding: 7px 30px;*/
+    /*font-size: 15px;*/
+    /*line-height: 22px;*/
+    /*border-radius: 20px;*/
+}
+
+@media (1850px <= width) {
+
+    .button--submit {
+        padding: 14px 36px;
+        font-size: 18px;
+        line-height: 24px;
+        border-radius: 10px;
+    }
+}
+
+
 
 .button:disabled,
 .button:disabled:hover,

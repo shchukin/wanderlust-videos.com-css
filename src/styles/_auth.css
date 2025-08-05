@@ -34,7 +34,7 @@
         margin-top: 22px;
         margin-left: auto;
         margin-right: auto;
-        padding: 66px 74px 102px;
+        padding: 66px 67px 102px;
         background-image: linear-gradient(45deg, #f0e7fd, #f8f8f6 33%, #fdeef3);
         border-radius: 30px;
     }
@@ -49,8 +49,20 @@
                 margin-top: 0;
             }
 
+        .auth__recovery {
+            margin-top: -56px;
+            height: 56px;
+            width: fit-content;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 22px;
+            color: #2d2d2d;
+        }
+
         .auth__submit {
-            margin-top: 37px;
+            margin-top: 34px;
         }
             .auth__submit .button {
                 width: 100%;
@@ -68,8 +80,8 @@
                 content: "";
                 position: absolute;
                 top: 0;
-                left: 8px;
-                right: 8px;
+                left: 28px;
+                right: 28px;
                 display: block;
                 height: 1px;
                 background-color: #ACACAC;
