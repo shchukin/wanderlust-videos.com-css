@@ -140,3 +140,10 @@
             background-size: 20px 20px;
         }
 }
+
+
+
+.choice--input-size {
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+}
