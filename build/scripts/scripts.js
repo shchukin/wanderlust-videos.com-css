@@ -278,5 +278,19 @@
             $(this).parents('.input').nextUntil(':not(.helper--error)').remove();
         });
 
+
+        /* Password eye */
+        $('.input__show-password').on('click', function() {
+            const $icon = $(this).find('.icon');
+            const $input = $(this).parents('.input').find('.input__widget');
+
+            if ($input.attr('type') === 'password') {
+                $icon.text('visibility');
+                $input.attr('type', 'text');
+            } else {
+                $icon.text('visibility_off');
+                $input.attr('type', 'password');
+            }
+        });
     });
 })(jQuery);
