@@ -14,7 +14,7 @@
         font-family: inherit;
         font-size: 16px; /* not less than 16px (otherwise mobile browsers will zoom in on focus) */
         line-height: 24px;
-        color: #000000;
+        color: #2d2d2d;
         opacity: 1; /* reset select:disabled default fade on iOS */
         -webkit-tap-highlight-color: transparent;
         transition: background-color var(--transition-hover),
