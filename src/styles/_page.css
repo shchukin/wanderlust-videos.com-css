@@ -8,6 +8,8 @@
 
     .page__unique-part {
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
 
     .page__footer {
