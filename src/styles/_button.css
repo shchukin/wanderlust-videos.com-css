@@ -156,7 +156,7 @@
 .button:disabled,
 .button:disabled:hover,
 .button:disabled:active {
-    background-color: #F6F6F6;
+    background-color: var(--disabled-background);
     color: var(--disabled-color);
     translate: none;
     cursor: default;

@@ -1,5 +1,5 @@
 .input {
-
+    position: relative;
 }
     .input__widget {
         vertical-align: top;
@@ -180,3 +180,35 @@ select.input__widget:disabled {
     }
 }
 
+
+
+.input__show-password {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    aspect-ratio: 1/1;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+    .input__show-password::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    .input__show-password:hover::before {
+        background-color: #FCF2F4;
+    }
+
+    .input__show-password .icon {
+        position: relative;
+        font-size: 20px;
+        color: #909090;
+    }

@@ -49,7 +49,9 @@
         background-image: url("../vectors/choice-radio.svg"); /* by default it can't be seen because of white background */
         border-radius: 50%;
     }
-
+        .choice__inner {
+            /* This one is needed in case of link inside. Without it flex will destroy link */
+        }
 
 /* Hovered */
 
