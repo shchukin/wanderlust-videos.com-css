@@ -77,7 +77,7 @@
 
         }
             .contains__section {
-                padding-left: 110px;
+                padding-left: 90px;
             }
                 .contains__section::before {
                     top: 100px;

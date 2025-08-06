@@ -1,0 +1,28 @@
+.start {
+    padding: 91px 90px 120px;
+}
+    .start__heading {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .start__body {
+        margin-top: 24px;
+        display: flex;
+        align-items: flex-start;
+        gap: 98px;
+    }
+        .start__description {
+
+        }
+
+        .start__actions {
+            margin-top: 7px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+            .start__actions .button {
+                padding-left: 42px;
+                padding-right: 42px;
+            }
