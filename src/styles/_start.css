@@ -1,5 +1,5 @@
 .start {
-    padding: 91px 90px 120px;
+    padding: 60px 70px 80px;
 }
     .start__heading {
         margin-top: 0;
@@ -7,22 +7,92 @@
     }
 
     .start__body {
-        margin-top: 24px;
+        margin-top: 20px;
         display: flex;
         align-items: flex-start;
-        gap: 98px;
+        gap: 80px;
     }
         .start__description {
-
+            max-width: 700px;
         }
 
         .start__actions {
-            margin-top: 7px;
+            margin-left: auto;
+            margin-top: 4px;
             display: flex;
             align-items: flex-start;
-            gap: 16px;
+            gap: 12px;
         }
             .start__actions .button {
-                padding-left: 42px;
-                padding-right: 42px;
+                padding-left: 34px;
+                padding-right: 34px;
             }
+
+
+
+@media (1850px <= width) {
+
+    .start {
+        padding: 91px 90px 120px;
+    }
+        .start__heading {
+
+        }
+
+        .start__body {
+            margin-top: 24px;
+            gap: 98px;
+        }
+            .start__description {
+                max-width: none;
+            }
+
+            .start__actions {
+                margin-top: 7px;
+                gap: 16px;
+            }
+                .start__actions .button {
+                    padding-left: 42px;
+                    padding-right: 42px;
+                }
+}
+
+
+
+@media (width < 740px) {
+
+    .start {
+        padding-left: 0;
+        padding-right: 0;
+    }
+        .start__heading {
+            /*margin-top: 0;*/
+            /*margin-bottom: 0;*/
+        }
+
+        .start__body {
+            /*margin-top: 20px;*/
+            display: block;
+            /*align-items: flex-start;*/
+            /*gap: 80px;*/
+        }
+            .start__description {
+                /*max-width: 700px;*/
+            }
+
+            .start__actions {
+                /*margin-left: auto;*/
+                /*margin-top: 4px;*/
+                margin-top: 24px;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: stretch;
+                /*gap: 12px;*/
+            }
+                .start__actions .button {
+                    /*padding-left: 34px;*/
+                    /*padding-right: 34px;*/
+                }
+}
+
+
