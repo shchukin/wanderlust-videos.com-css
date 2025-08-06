@@ -154,3 +154,73 @@
                         }
 }
 
+
+
+.contains--inverted {
+    /*padding-top: 60px;*/
+    /*padding-bottom: 80px;*/
+    background-color: #F6F6F6;
+}
+    .contains--inverted .contains__wrap {
+        /*display: grid;*/
+        /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
+    }
+        .contains--inverted .contains__section {
+            /*position: relative;*/
+            /*padding-left: 70px;*/
+        }
+            .contains--inverted .contains__section::before {
+                /*content: "";*/
+                /*position: absolute;*/
+                /*top: 70px;*/
+                /*bottom: 0;*/
+                /*left: 0;*/
+                /*width: 1px;*/
+                background-color: #E4E4E4;
+            }
+
+            .contains--inverted .contains__section:first-child::before {
+                /*display: none;*/
+            }
+
+            .contains--inverted .contains__heading {
+                /*margin-top: 0;*/
+                /*margin-bottom: 0;*/
+                color: #252525;
+            }
+
+            .contains--inverted .contains__list {
+                /*margin-top: 40px;*/
+                /*margin-bottom: 0;*/
+                /*padding-left: 0;*/
+                /*padding-right: 50px;*/
+                /*list-style: none;*/
+            }
+                .contains--inverted .contains__item {
+                    /*margin-top: 32px;*/
+                    /*min-height: 30px;*/
+                    /*position: relative;*/
+                    /*padding-left: 40px;*/
+                    /*font-size: 15px;*/
+                    /*line-height: 22px;*/
+                    color: #252525;
+                }
+
+                .contains--inverted .contains__item:first-child {
+                    /*margin-top: 0;*/
+                }
+                    .contains--inverted .contains__item::before {
+                        /*content: "";*/
+                        /*position: absolute;*/
+                        /*left: 0;*/
+                        /*top: -1px;*/
+                        /*width: 26px;*/
+                        /*height: 26px;*/
+                        /*display: block;*/
+                        background-image: url("../vectors/check_circle-black.svg");
+                        /*background-size: contain;*/
+                        /*background-repeat: no-repeat;*/
+                        /*background-position: center center;*/
+                    }
+
+

@@ -41,3 +41,41 @@
             margin-top: 43px;
         }
 }
+
+
+
+.pricing--lite {
+
+}
+    .pricing--lite .pricing__heading {
+
+    }
+
+    .pricing--lite .pricing__description {
+        max-width: 600px;
+    }
+
+    .pricing--lite .pricing__link {
+
+    }
+
+
+
+@media (1850px <= width) {
+
+    .pricing--lite .pricing {
+
+    }
+        .pricing--lite .pricing__heading {
+
+        }
+
+        .pricing--lite .pricing__description {
+
+        }
+
+        .pricing--lite .pricing__link {
+
+        }
+}
+
