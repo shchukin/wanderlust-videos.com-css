@@ -224,3 +224,15 @@
 .button--grey:hover {
     background-color: #F5F5F5;
 }
+
+
+.button--transparent {
+    background-color: transparent;
+    color: var(--pink);
+}
+
+
+.button--transparent:hover {
+    background-color: var(--pink);
+    color: #FFFFFF;
+}

@@ -191,7 +191,7 @@
 
         /* FAQ Smooth Scrolling */
 
-        $('.info__contains-question').on('click', function(event) {
+        $('.info__contains-question, .anchor').on('click', function(event) {
             event.preventDefault();
             const $target = $($(this).attr('href'));
             if ($target.length) {
