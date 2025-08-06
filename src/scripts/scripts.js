@@ -189,7 +189,7 @@
         });
 
 
-        /* FAQ Smooth Scrolling */
+        /* Smooth Scrolling */
 
         $('.anchor').on('click', function(event) {
             event.preventDefault();
@@ -207,41 +207,50 @@
 
         if( $('.splide').length ) {
 
-            new Splide( '.splide--portfolio', {
-                perPage: 3,
-                gap: 30,
-                pagination: false,
-                breakpoints: {
-                    740: {
-                        perPage: 1,
-                        pagination: true
-                    },
-                }
-            } ).mount();
+            // Initialize portfolio carousel if it exists
+            if( $('.splide--portfolio').length ) {
+                new Splide( '.splide--portfolio', {
+                    perPage: 3,
+                    gap: 30,
+                    pagination: false,
+                    breakpoints: {
+                        740: {
+                            perPage: 1,
+                            pagination: true
+                        },
+                    }
+                } ).mount();
+            }
 
-            new Splide( '.splide--tools', {
-                perPage: 4,
-                gap: 30,
-                pagination: false,
-                breakpoints: {
-                    740: {
-                        perPage: 1,
-                        pagination: true
-                    },
-                }
-            } ).mount();
+            // Initialize tools carousel if it exists
+            if( $('.splide--tools').length ) {
+                new Splide( '.splide--tools', {
+                    perPage: 4,
+                    gap: 30,
+                    pagination: false,
+                    breakpoints: {
+                        740: {
+                            perPage: 1,
+                            pagination: true
+                        },
+                    }
+                } ).mount();
+            }
 
-            new Splide( '.splide--love', {
-                perPage: 4,
-                gap: 30,
-                pagination: false,
-                breakpoints: {
-                    740: {
-                        perPage: 1,
-                        pagination: true
-                    },
-                }
-            } ).mount();
+            // Initialize love carousel if it exists
+            if( $('.splide--love').length ) {
+                new Splide( '.splide--love', {
+                    perPage: 4,
+                    gap: 30,
+                    pagination: false,
+                    breakpoints: {
+                        740: {
+                            perPage: 1,
+                            pagination: true
+                        },
+                    }
+                } ).mount();
+            }
 
         }
 
