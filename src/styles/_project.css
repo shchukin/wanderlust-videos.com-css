@@ -1,5 +1,7 @@
 .project {
-
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
     .project__preview {
 
@@ -19,6 +21,13 @@
         text-align: center;
     }
 
+    .project__details {
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        padding-top: 24px;
+    }
 
 
 @media (1850px <= width) {
@@ -38,5 +47,9 @@
             margin-top: 24px;
             font-size: 16px;
             line-height: 24px;
+        }
+
+        .project__details {
+            padding-top: 30px;
         }
 }
