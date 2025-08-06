@@ -189,7 +189,7 @@
         });
 
 
-        /* FAQ Smooth Scrolling */
+        /* Smooth Scrolling */
 
         $('.anchor').on('click', function(event) {
             event.preventDefault();
@@ -205,8 +205,8 @@
 
         /* Splide */
 
-        if( $('.splide').length ) {
-
+        // Initialize portfolio carousel if it exists
+        if( $('.splide--portfolio').length ) {
             new Splide( '.splide--portfolio', {
                 perPage: 3,
                 gap: 30,
@@ -218,7 +218,10 @@
                     },
                 }
             } ).mount();
+        }
 
+        // Initialize tools carousel if it exists
+        if( $('.splide--tools').length ) {
             new Splide( '.splide--tools', {
                 perPage: 4,
                 gap: 30,
@@ -230,7 +233,10 @@
                     },
                 }
             } ).mount();
+        }
 
+        // Initialize love carousel if it exists
+        if( $('.splide--love').length ) {
             new Splide( '.splide--love', {
                 perPage: 4,
                 gap: 30,
@@ -242,8 +248,8 @@
                     },
                 }
             } ).mount();
-
         }
+
 
         /* Select placeholder */
         function selectPlaceholder($element) {
