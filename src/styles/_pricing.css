@@ -1,0 +1,43 @@
+.pricing {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+    .pricing__heading {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .pricing__description {
+        max-width: 1100px;
+        margin: 10px auto 0;
+        font-size: var(--body-font-size);
+        line-height: var(--body-line-height);
+        text-align: center;
+    }
+
+    .pricing__link {
+        margin: 30px auto 0;
+        width: fit-content;
+    }
+
+
+
+@media (1850px <= width) {
+
+    .pricing {
+        padding-top: 96px;
+        padding-bottom: 54px;
+    }
+        .pricing__heading {
+
+        }
+
+        .pricing__description {
+            max-width: 1240px;
+            margin-top: 13px;
+        }
+
+        .pricing__link {
+            margin-top: 43px;
+        }
+}
