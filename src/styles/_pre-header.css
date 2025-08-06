@@ -57,8 +57,11 @@
 
 
 
-.page-scrolled.burger-expanded .pre-header {
-    display: none;
+@media (width < 740px) {
+    
+    .page-scrolled.burger-expanded .pre-header {
+        display: none;
+    }
 }
 
 

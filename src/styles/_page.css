@@ -16,6 +16,9 @@
         flex-shrink: 0;
     }
 
-.burger-expanded .page {
-    display: none;
+
+@media (width < 740px) {
+    .burger-expanded .page {
+        display: none;
+    }
 }
