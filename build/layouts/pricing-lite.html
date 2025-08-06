@@ -49,13 +49,37 @@
                 </button>
                 <div class="header__dropdown">
                     <nav class="header__nav">
-                        <a class="header__link" href="why.html">Why Wanderlust</a>
-                        <a class="header__link" href="about-us.html">About us</a>
-                        <a class="header__link" href="portfolio.html">Portfolio</a>
-                        <a class="header__link" href="how-it-works.html">How it works</a>
-                        <a class="header__link" href="#">Pricing</a>
-                        <a class="header__link" href="blog.html">Blog</a>
-                        <a class="header__link" href="contact-us.html">Contact Us</a>
+                        <div class="header__item">
+                            <a class="header__link" href="why.html">Why Wanderlust</a>
+                        </div>
+                        <div class="header__item">
+                            <a class="header__link" href="about-us.html">About us</a>
+                        </div>
+                        <div class="header__item">
+                            <a class="header__link" href="portfolio.html">Portfolio</a>
+                        </div>
+                        <div class="header__item">
+                            <a class="header__link" href="how-it-works.html">How it works</a>
+                        </div>
+                        <div class="header__item">
+                            <a class="header__link" href="#">
+                                Pricing
+                            </a>
+                            <div class="header__sub-menu">
+                                <a class="header__sub-link" href="#">
+                                    Wanderlust <span class="type type--pro">Pro</span>
+                                </a>
+                                <a class="header__sub-link" href="#">
+                                    Wanderlust <span class="type type--lite">Lite</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__item">
+                            <a class="header__link" href="blog.html">Blog</a>
+                        </div>
+                        <div class="header__item">
+                            <a class="header__link" href="contact-us.html">Contact Us</a>
+                        </div>
                     </nav>
                     <div class="header__actions">
                         <a class="button button--pink" href="#">
@@ -72,17 +96,18 @@
 
         <div class="page">
             <div class="page__unique-part">
-                <div class="pricing container">
+                <!-- note class ↓↓↓ pricing--lite ↓↓↓ -->
+                <div class="pricing pricing--lite container">
                     <h1 class="pricing__heading title">
-                        Pricing: Wanderlust Pro
+                        Pricing: Wanderlust Lite
                     </h1>
                     <div class="pricing__description wysiwyg">
-                        We offer solutions to both professional videograpers and beginners and photographers. Are you on a budget? Don’t need extensive custom edits? Wanderlust PRO is designed for filmmakers who value a higher level of customization, creativity, and support. If you’re used to the premium features
+                        We offer solutions to both professional videograpers and beginners and photographers. Are you on a budget? Don’t need extensive custom edits?
                     </div>
                     <div class="pricing__link">
-                        <a class="button button--larger button--grey-outline" href="pricing-lite.html">
+                        <a class="button button--larger button--grey-outline" href="pricing-pro.html">
                             <span class="button__label">
-                                <span class="desktop-only">Click here to see </span>Wanderlust Lite prices
+                                <span class="desktop-only">Click here to see </span>Wanderlust Pro prices
                             </span>
                         </a>
                     </div>
@@ -245,75 +270,8 @@
                         </div>
                     </div>
                 </section>
-                <section class="platforms">
-                    <div class="platforms__wrap container container--wide">
-                        <h2 class="platforms__heading title">
-                            More videos
-                        </h2>
-                        <div class="platforms__body">
-                            <div class="splide splide--tools">
-                                <div class="splide__track">
-                                    <div class="splide__list">
-                                        <div class="splide__slide">
-                                            <div class="tool">
-                                                <div class="tool__title">Ceremony clean edit</div>
-                                                <div class="tool__description">Edits come to life in Adobe Premiere, where our creative process meets technical mastery and intentional storytelling.</div>
-                                                <div class="tool__price">From $441</div>
-                                            </div>
-                                        </div>
-                                        <div class="splide__slide">
-                                            <div class="tool">
-                                                <div class="tool__title">Highlight Film</div>
-                                                <div class="tool__description">Resolve lets us push visual quality further, delivering striking, color-driven edits that feel timeless and emotionally grounded.</div>
-                                                <div class="tool__price">From $621</div>
-                                            </div>
-                                        </div>
-                                        <div class="splide__slide">
-                                            <div class="tool">
-                                                <div class="tool__title">Elopement video</div>
-                                                <div class="tool__description">Each edit is crafted to feel natural, emotionally resonant, and beautifully paced from start to finish.</div>
-                                                <div class="tool__price">From $287</div>
-                                            </div>
-                                        </div>
-                                        <div class="splide__slide">
-                                            <div class="tool">
-                                                <div class="tool__title">Frame.io</div>
-                                                <div class="tool__description">Real-time review tools help us stay aligned, cut revision cycles, and deliver exactly what our partners expect.</div>
-                                                <div class="tool__price">From $441</div>
-                                            </div>
-                                        </div>
-                                        <div class="splide__slide">
-                                            <div class="tool">
-                                                <div class="tool__title">Save the date</div>
-                                                <div class="tool__description">Real-time review tools help us stay aligned, cut revision cycles, and deliver exactly what our partners expect.</div>
-                                                <div class="tool__price">From $89</div>
-                                            </div>
-                                        </div>
-                                        <div class="splide__slide">
-                                            <div class="tool">
-                                                <div class="tool__title">Viral Pack (x3)</div>
-                                                <div class="tool__description">We license high-quality music that adds emotional depth, elevating each moment without distracting from the story.</div>
-                                                <div class="tool__price">From $89</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="splide__arrows">
-                                    <button class="splide__arrow splide__arrow--prev">
-                                        <span class="icon">west</span>
-                                    </button>
-                                    <div class="splide__pagination">
-
-                                    </div>
-                                    <button class="splide__arrow splide__arrow--next">
-                                        <span class="icon">east</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="contains">
+                <!-- note class ↓↓↓↓ contains--inverted ↓↓↓↓ -->
+                <div class="contains contains--inverted">
                     <div class="contains__wrap container">
                         <section class="contains__section">
                             <h2 class="contains__heading title">
