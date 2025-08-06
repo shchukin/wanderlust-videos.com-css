@@ -6,11 +6,21 @@
     flex-direction: column;
     justify-content: center;
 }
+    .auth__brand {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .auth__heading {
-        margin-top: 0;
+        margin-top: 20px;
         margin-bottom: 0;
         color: #2b2a2a;
         text-align: center;
+    }
+
+    .auth__heading:first-child {
+        margin-top: 0;
     }
 
     .auth__description {
@@ -121,7 +131,7 @@
         padding-bottom: 120px;
     }
         .auth__heading {
-
+            margin-top: 40px;
         }
 
         .auth__description {
