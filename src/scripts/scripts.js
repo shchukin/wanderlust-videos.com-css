@@ -67,17 +67,18 @@
 
         /* Header submenu */
 
-        $('.header__item:has(.header__sub-menu) .header__link').on('click', function (){
+        $('.header__item:has(.header__sub-menu) .header__link').on('click', function (event) {
+            event.stopPropagation(); /* So the target/closest won't work */
             $(this).parents('.header__item').toggleClass('header__item--expanded');
         });
 
-        $(document).on('click', function(event) {
+        $(document).on('click', function (event) {
             if (!$(event.target).closest('.header__item').length) {
                 $('.header__item').removeClass('header__item--expanded');
             }
         });
 
-        $(document).on('keyup', function(event) {
+        $(document).on('keyup', function (event) {
             if (event.keyCode == 27) {
                 $('.header__item').removeClass('header__item--expanded');
             }
