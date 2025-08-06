@@ -118,17 +118,13 @@
 @media (width < 740px) {
 
     .contains {
-        /*padding-top: 60px;*/
-        /*padding-bottom: 80px;*/
-        /*background-color: #130221;*/
+
     }
         .contains__wrap {
             display: block;
-            /*grid-template-columns: repeat(2, minmax(0, 1fr));*/
         }
             .contains__section {
                 margin-top: 60px;
-                /*position: relative;*/
                 padding-left: 0;
             }
 
@@ -140,43 +136,21 @@
                 }
 
                 .contains__heading {
-                    /*margin-top: 0;*/
-                    /*margin-bottom: 0;*/
-                    /*color: #e3e3e3;*/
+
                 }
 
                 .contains__list {
-                    /*margin-top: 40px;*/
-                    /*margin-bottom: 0;*/
-                    /*padding-left: 0;*/
-                    /*padding-right: 50px;*/
-                    /*list-style: none;*/
+                    padding-right: 0;
                 }
                     .contains__item {
-                        /*margin-top: 32px;*/
-                        /*min-height: 30px;*/
-                        /*position: relative;*/
-                        /*padding-left: 40px;*/
-                        /*font-size: 15px;*/
-                        /*line-height: 22px;*/
-                        /*color: #f2f2f2;*/
+
                     }
 
                     .contains__item:first-child {
-                        /*margin-top: 0;*/
+
                     }
                         .contains__item::before {
-                            /*content: "";*/
-                            /*position: absolute;*/
-                            /*left: 0;*/
-                            /*top: -1px;*/
-                            /*width: 26px;*/
-                            /*height: 26px;*/
-                            /*display: block;*/
-                            /*background-image: url("../vectors/check_circle-white.svg");*/
-                            /*background-size: contain;*/
-                            /*background-repeat: no-repeat;*/
-                            /*background-position: center center;*/
+                            
                         }
 }
 
