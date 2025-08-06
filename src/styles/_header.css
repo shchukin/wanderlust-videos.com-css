@@ -96,7 +96,8 @@
                         transition: transform 200ms ease;
                     }
 
-                    .header__item:has(.header__sub-menu):hover .header__link::after {
+                    .header__item:has(.header__sub-menu):hover .header__link::after,
+                    .header__item--expanded .header__link::after {
                         transform: scaleY(-1);
                     }
 
@@ -116,7 +117,7 @@
                         visibility: visible;
                     }
 
-                    .header__item:has(.header__sub-menu):focus-within .header__sub-menu {
+                    .header__item--expanded .header__sub-menu {
                         opacity: 1;
                         visibility: visible;
                     }
@@ -284,25 +285,40 @@
                     height: auto;
                     display: block;
                 }
-                    .header__link {
-                        display: block;
-                        margin-left: calc(-1 * var(--container-padding) / 2);
-                        margin-right: calc(-1 * var(--container-padding) / 2);
-                        padding: 10px calc(var(--container-padding) / 2);
-                        font-size: 16px;
-                        line-height: 24px;
+                    .header__item {
+
                     }
-                        /* hover */
-                        .header__link::before {
-                            display: none;
+                        .header__link {
+                            margin-left: calc(-1 * var(--container-padding) / 2);
+                            margin-right: calc(-1 * var(--container-padding) / 2);
+                            padding: 10px calc(var(--container-padding) / 2);
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                            /* hover */
+                            .header__link::before {
+                                display: none;
+                            }
+
+                        .header__link:hover::before {
+
                         }
 
-                    .header__link:hover::before {
+                        .header__link--current {
 
+                        }
+
+                    .header__sub-menu {
+                        position: static;
+                        display: none;
                     }
 
-                    .header__link--current {
+                    .header__item:has(.header__sub-menu):hover .header__sub-menu {
+                        display: block;
+                    }
 
+                    .header__item--expanded .header__sub-menu {
+                        display: block;
                     }
 
                 .header__actions {
