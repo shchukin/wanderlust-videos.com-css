@@ -62,6 +62,10 @@
 
             }
 
+            .auth__field--full-width {
+                grid-column: span 2;
+            }
+
         .auth__recovery {
             margin-top: -46px; /* equal to .input height and also to .choice--input-size */
             height: 46px; /* equal to .input height and also to .choice--input-size */
