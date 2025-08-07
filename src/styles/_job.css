@@ -8,13 +8,6 @@
         text-align: center;
     }
 
-    .agreement__apply {
-        margin-top: 28px;
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .agreement__body {
         margin-top: 40px;
     }
@@ -29,10 +22,6 @@
     }
         .agreement__heading {
 
-        }
-
-        .agreement__apply {
-            margin-top: 40px;
         }
 
         .agreement__body {
