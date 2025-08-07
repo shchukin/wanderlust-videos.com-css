@@ -79,6 +79,9 @@
 
                 .footer__sub-menu {
                     margin-top: 18px;
+                    margin-bottom: 0;
+                    padding-left: 0;
+                    list-style: none;
                 }
 
                 .footer__column--services .footer__sub-menu {
@@ -86,7 +89,7 @@
                     gap: 6%;
                     break-inside: avoid;
                 }
-                    .footer__link {
+                    .footer__item {
                         display: block;
                         padding-top: 8px;
                         padding-bottom: 8px;
@@ -94,12 +97,15 @@
                         line-height: 22px;
                         color: #e3e3e3;
                         white-space: nowrap;
+                    }
+
+                    .footer__item--clickable {
                         text-decoration: 1px underline transparent;
                         text-underline-offset: 4px;
                         transition: text-decoration-color var(--transition-hover);
                     }
 
-                    .footer__link:hover {
+                    .footer__item--clickable:hover {
                         text-decoration-color: currentColor;
                     }
 
@@ -171,7 +177,7 @@
                     .footer__column--services .footer__sub-menu {
                         gap: 10%;
                     }
-                        .footer__link {
+                        .footer__item {
                             padding-top: 10px;
                             padding-bottom: 10px;
                             font-size: 16px;
@@ -179,7 +185,7 @@
                             text-underline-offset: 4px;
                         }
 
-                        .footer__link:hover {
+                        .footer__item--clickable:hover {
 
                         }
 }
@@ -247,7 +253,7 @@
                     .footer__column--services .footer__sub-menu {
 
                     }
-                        .footer__link {
+                        .footer__item {
                             width: fit-content;
                             padding-top: 4px;
                             padding-bottom: 4px;
@@ -255,13 +261,13 @@
                             line-height: 20px;
                         }
 
-                        .footer__link:hover {
+                        .footer__item--clickable:hover {
 
                         }
 
                         @media (350px <= width < 370px) {
 
-                            .footer__link {
+                            .footer__item {
                                 font-size: 13px;
                                 line-height: 18px;
                             }
