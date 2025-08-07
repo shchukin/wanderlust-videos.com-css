@@ -28,7 +28,15 @@
         width: fit-content;
         padding-top: 24px;
     }
-
+        .project__cost {
+            border: 1px solid #FFFFFF;
+            border-radius: 21px;
+            padding: 9px 21px;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            color: #F2F2F2;
+        }
 
 @media (1850px <= width) {
 
@@ -52,4 +60,10 @@
         .project__details {
             padding-top: 30px;
         }
+            .project__cost {
+                border-radius: 25px;
+                padding: 12px 27px;
+                font-size: 16px;
+                line-height: 24px;
+            }
 }
