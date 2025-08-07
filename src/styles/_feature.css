@@ -25,6 +25,9 @@
         margin-top: 18px;
     }
 
+    .feature__details {
+        margin-top: 12px;
+    }
 
 
 @media (1850px <= width) {
@@ -44,5 +47,13 @@
 
         .feature__description {
             margin-top: 24px;
+        }
+
+        .feature__details {
+
+        }
+
+        .feature__details {
+            margin-top: 16px;
         }
 }
