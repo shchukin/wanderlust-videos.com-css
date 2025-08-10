@@ -1,0 +1,10 @@
+.meetings-iframe-container {
+    width: 850px;
+}
+
+@media (width < 740px) {
+
+    .meetings-iframe-container {
+        width: 100%;
+    }
+}
