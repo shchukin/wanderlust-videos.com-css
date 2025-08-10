@@ -318,5 +318,13 @@
                 $input.attr('type', 'password');
             }
         });
+
+
+        /* Init Magnific Popup */
+        $('.mfp-handler').magnificPopup({
+            type: 'inline',
+            removalDelay: 200,
+            showCloseBtn: false
+        });
     });
 })(jQuery);
