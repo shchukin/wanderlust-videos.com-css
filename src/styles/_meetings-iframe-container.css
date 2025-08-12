@@ -17,18 +17,14 @@
 
 /* Only for #request-a-call */
 
-body:has(.mfp-content #request-a-call) .mfp-container {
+.mfp-container:has(#request-a-call) {
     padding-left: 84px;
     padding-right: 84px;
-}
-
-body:has(.mfp-content #request-a-call) .mfp-bg {
     background-image: url("../vectors/cross-white.svg");
     background-size: 36px 36px;
     background-repeat: no-repeat;
     background-position: right 24px top 24px;
 }
-
 
 @media (width < 740px) {
 
@@ -37,9 +33,6 @@ body:has(.mfp-content #request-a-call) .mfp-bg {
         padding-right: var(--container-padding);
         padding-top: calc(2 * var(--container-padding) + 18px - 16px); /* 16px is the padding inside of the iframe */
         padding-bottom: calc(2 * var(--container-padding) + 18px - 16px); /* 16px is the padding inside of the iframe */
-    }
-
-    body:has(.mfp-content #request-a-call) .mfp-bg {
         background-size: 18px 18px;
         background-position: right var(--container-padding) top var(--container-padding);
     }
