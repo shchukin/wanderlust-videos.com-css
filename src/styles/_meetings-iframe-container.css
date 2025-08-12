@@ -28,7 +28,7 @@
 
 @media (width < 740px) {
 
-    body:has(.mfp-content #request-a-call) .mfp-container {
+    .mfp-container:has(#request-a-call) {
         padding-left: var(--container-padding);
         padding-right: var(--container-padding);
         padding-top: calc(2 * var(--container-padding) + 18px - 16px); /* 16px is the padding inside of the iframe */
