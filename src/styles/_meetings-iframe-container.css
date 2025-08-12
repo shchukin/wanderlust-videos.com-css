@@ -1,10 +1,46 @@
 .meetings-iframe-container {
     width: 850px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
 }
 
 @media (width < 740px) {
 
     .meetings-iframe-container {
         width: 100%;
+    }
+}
+
+
+
+/* Only for #request-a-call */
+
+body:has(.mfp-content #request-a-call) .mfp-container {
+    padding-left: 84px;
+    padding-right: 84px;
+}
+
+body:has(.mfp-content #request-a-call) .mfp-bg {
+    background-image: url("../vectors/cross-white.svg");
+    background-size: 36px 36px;
+    background-repeat: no-repeat;
+    background-position: right 24px top 24px;
+}
+
+
+@media (width < 740px) {
+
+    body:has(.mfp-content #request-a-call) .mfp-container {
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+        padding-top: calc(2 * var(--container-padding) + 18px - 16px); /* 16px is the padding inside of the iframe */
+        padding-bottom: calc(2 * var(--container-padding) + 18px - 16px); /* 16px is the padding inside of the iframe */
+    }
+
+    body:has(.mfp-content #request-a-call) .mfp-bg {
+        background-size: 18px 18px;
+        background-position: right var(--container-padding) top var(--container-padding);
     }
 }
