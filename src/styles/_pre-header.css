@@ -121,6 +121,11 @@
                 .pre-header__close {
                     width: 75px;
             }
+
+            @media (width < 350px) {
+                .pre-header__close {
+                    width: 40px;
+            }
                 }
                 .pre-header__close::before {
 
