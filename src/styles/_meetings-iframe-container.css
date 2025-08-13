@@ -20,11 +20,23 @@
 .mfp-container:has(#request-a-call) {
     padding-left: 84px;
     padding-right: 84px;
-    background-image: url("../vectors/cross-white.svg");
-    background-size: 36px 36px;
-    background-repeat: no-repeat;
-    background-position: right 24px top 24px;
 }
+    .mfp-container:has(#request-a-call)::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 84px;
+        height: 84px;
+        background-image: url("../vectors/cross-white.svg");
+        background-size: 36px 36px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        cursor: pointer;
+        opacity: 100%;
+        transition: opacity var(--transition-hover);
+    }
 
 @media (width < 740px) {
 
@@ -33,7 +45,10 @@
         padding-right: var(--container-padding);
         padding-top: calc(2 * var(--container-padding) + 18px - 16px); /* 16px is the padding inside of the iframe */
         padding-bottom: calc(2 * var(--container-padding) + 18px - 16px); /* 16px is the padding inside of the iframe */
-        background-size: 18px 18px;
-        background-position: right var(--container-padding) top var(--container-padding);
     }
+        .mfp-container:has(#request-a-call)::after {
+            width: calc(18px + 2 * var(--container-padding));
+            height: calc(18px + 2 * var(--container-padding));
+            background-size: 18px 18px;
+        }
 }
