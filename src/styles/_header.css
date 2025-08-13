@@ -8,10 +8,6 @@
     background-color: #F4F4F4;
     transition: background-color 300ms ease;
 }
-
-.header--white {
-    background-color: #FFFFFF;
-}
     .header__wrap {
         position: relative;
         height: var(--header-height);
@@ -354,8 +350,7 @@
 }
 
 
-@media (width < 740px) {
-    html:not(.page-scrolled):not(.burger-expanded) .header--white {
-        background-color: #FFFFFF;
-    }
+/* Only on top of homepage */
+html:not(.page-scrolled):not(.burger-expanded) .header--white {
+    background-color: #FFFFFF;
 }
