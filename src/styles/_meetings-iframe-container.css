@@ -21,6 +21,11 @@
     padding-left: 84px;
     padding-right: 84px;
 }
+    /* original close button */
+    .mfp-container:has(#request-a-call) .mfp-close {
+        display: none;
+    }
+
     .mfp-container:has(#request-a-call)::after {
         content: "";
         display: block;

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>.mfp</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+    <body>
+
+        <div style="max-width: 740px; margin: 0 auto; padding: 0 var(--container-padding);">
+            <br>
+            <br>
+            <h1>.mfp</h1>
+            <p>
+                Modals created via <a href="https://dimsemenov.com/plugins/magnific-popup/">Magnific Popup</a> library.
+            </p>
+
+            <br>
+            <br>
+            <h2>Basic modal</h2>
+            <p>
+                Create any html-content at the end of the page and wrap it into:<br> <b>&lt;div class="window mfp-hide" id="foo-bar-baz"&gt;...&lt;div&gt;</b> at the end of the page and id.
+            </p>
+            <p>
+                To fire this popup create a link with <b>mfp-handler</b> class targeting this modal:<br> <b>&lt;a class="mfp-handler" href="#foo-bar-baz"&gt;Click me&lt;/a&gt;</b>
+            </p>
+
+            <a class="mfp-handler" href="#basic-popup">
+                Try basic popup
+            </a>
+
+            <div class="window mfp-hide" id="basic-popup">
+                <!-- Any html inside -->
+                <div style="width: 260px; background: white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam asperiores deleniti doloribus ea eaque esse et, facilis fuga, inventore minima nemo nesciunt obcaecati pariatur praesentium quisquam reiciendis repudiandae sunt totam ut vel. Asperiores distinctio doloremque magnam odit repellat sint tempore vitae! Cupiditate facere laudantium modi necessitatibus officiis omnis quod voluptatum.</div>
+                <!--/Any html inside -->
+            </div>
+
+            <p>
+                Note that content inside must have a width.
+            </p>
+            <p>
+                Atm it is not used in the project, but this is the default case.
+            </p>
+
+            <br>
+            <br>
+            <h2>Appointment modal</h2>
+            <p>
+                This one is very specific and very troublesome popup window. There are issues with iframe width and background.
+                So, there is no way to properly position close button in this case, so it is kinda hacked. Do not copy-paste this
+                case to anywhere else.
+            </p>
+
+
+            <a class="mfp-handler" href="#request-a-call">
+                Try "Request a Call" popup
+            </a>
+
+            <div class="meetings-iframe-container mfp-hide" id="request-a-call">
+                <iframe src="https://meetings.hubspot.com/frankie-wanderlust-videos/free-consultation?embed=true&parentHubspotUtk=623857c3b045199d23e248ba29ccd013&parentPageUrl=https://wanderlust-videos.net/index.php&rand=7899944" style="width: 100%; height: 715px; border: none;"></iframe>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <h2>Youtube modal</h2>
+            <p>
+                The library itself can process YouTube urls and given iframe, so we don't need to create
+                a html code or set up widths or ratio. Only need a link to video and <b class="nobr">.mfp-youtube-handler</b> class.
+            </p>
+
+            <a class="mfp-youtube-handler" href="https://www.youtube.com/watch?v=3RU1zEbnssE">
+                Try YouTube popup
+            </a>
+
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+
+
+
+        <script src="../vendors/jquery/jquery-3.7.1.min.js"></script>
+        <script src="../vendors/splide/js/splide.min.js"></script>
+        <script src="../vendors/magnific-popup/jquery.magnific-popup.js"></script>
+        <script src="../scripts/scripts.js"></script>
+
+
+    </body>
+</html>
