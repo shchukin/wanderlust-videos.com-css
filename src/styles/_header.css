@@ -8,6 +8,10 @@
     background-color: #F4F4F4;
     transition: background-color 300ms ease;
 }
+
+.header--white {
+    background-color: #FFFFFF;
+}
     .header__wrap {
         position: relative;
         height: var(--header-height);
