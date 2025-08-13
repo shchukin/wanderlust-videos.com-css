@@ -326,5 +326,12 @@
             removalDelay: 200,
             showCloseBtn: false
         });
+
+        $('.mfp-youtube-handler').magnificPopup({
+            type: 'iframe',
+            removalDelay: 200,
+        });
+
+
     });
 })(jQuery);
